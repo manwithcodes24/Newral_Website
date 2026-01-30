@@ -20,43 +20,126 @@ const testimonials = [
         type: "image",
         bgImage: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769791807/9W6d74zIQjmmrhiQrJlFg5EACE4_zq7hzz.avif",
     },
-    
+
 ]
+
+import { Tabs } from "../ui/tabs";
+
+
+const tabs = [
+    {
+        title: "Product",
+        value: "product",
+        content: (
+            <motion.div
+                key={testimonials[0].id}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                    scale: { duration: 0.3 }
+                }}
+                className="absolute h-screen inset-0 rounded-[40px] overflow-hidden shadow-2xl"
+                style={{
+                    backgroundColor: testimonials[0].bg || '#000',
+                }}
+            >
+                {testimonials[0].type === "text" && (
+                    <div className="relative w-full h-full flex flex-col items-center justify-center p-8 md:p-20 text-center">
+                        <div className="absolute inset-0 z-0 flex items-center justify-center ">
+                            <BgSvg2 />
+                        </div>
+                        <div className="relative z-10 flex flex-col items-center">
+                            <p className="text-white text-2xl md:text-4xl font-medium leading-relaxed mb-10 max-w-6xl">
+                                {testimonials[0].quote}
+                            </p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white">
+                                    <img
+                                        src={testimonials[0].avatar}
+                                        alt={testimonials[0].author}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-left">
+                                    <p className="font-bold text-lg">{testimonials[0].author}</p>
+                                    <p className="text-blue-200 text-sm">{testimonials[0].role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+              
+            </motion.div>
+        ),
+    },
+    {
+        title: "Services",
+        value: "services",
+        content: (
+            <motion.div
+                key={testimonials[0].id}
+        
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                    scale: { duration: 0.3 }
+                }}
+                className="absolute h-screen  inset-0 rounded-[40px] overflow-hidden shadow-2xl"
+                style={{
+                    backgroundColor: testimonials[0].bg || '#000',
+                }}
+            >
+             
+                {testimonials[1].type === "image" && testimonials[1].bgImage && (
+                    <div className="relative w-full h-full flex flex-col justify-end p-8 md:p-20">
+                        <Image
+                            src={testimonials[1 ].bgImage}
+                            alt="Background"
+                            fill
+                            className="object-cover z-0"
+                            priority
+                        />
+                        {/* Gradient Overlay for readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+
+                        <div className="relative z-20 max-w-3xl">
+                            <p className="text-white text-2xl md:text-4xl font-bold leading-tight mb-8">
+                                {testimonials[1].quote}
+                            </p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white">
+                                    <img
+                                        src={testimonials[1 ].avatar}
+                                        alt={testimonials[1].author}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-left">
+                                    <p className="font-bold text-lg">{testimonials[1].author}</p>
+                                    <p className="text-white/80 text-sm">{testimonials[1].role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </motion.div>
+        ),
+    },
+   
+];
 
 export default function ReviewSection2() {
     const [index, setIndex] = useState(0)
     const [direction, setDirection] = useState(0) // -1 for left, 1 for right
     const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-    // Reset auto-change interval
-    const resetInterval = () => {
-        if (intervalRef.current) clearInterval(intervalRef.current)
-        intervalRef.current = setInterval(() => {
-            setDirection(1)
-            setIndex((prev) => (prev + 1) % testimonials.length)
-        }, 5000)
-    }
-
-    useEffect(() => {
-        resetInterval()
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current)
-        }
-    }, [])
-
-    const nextTestimonial = () => {
-        setDirection(1)
-        setIndex((prev) => (prev + 1) % testimonials.length)
-        resetInterval()
-    }
-
-    const prevTestimonial = () => {
-        setDirection(-1)
-        setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-        resetInterval()
-    }
-
-    const current = testimonials[index]
     const next = testimonials[(index + 1) % testimonials.length]
     const prev = testimonials[(index - 1 + testimonials.length) % testimonials.length]
 
@@ -99,122 +182,14 @@ export default function ReviewSection2() {
                     </p>
                 </div>
 
-                <div className="mb-24">
+                <div className="">
                     <button className="px-10 py-4 rounded-full bg-blue-600 font-medium hover:bg-blue-500 transition-all">
                         Book a call
                     </button>
                 </div>
             </div>
-
-            {/* STACKED TESTIMONIAL SECTION */}
-            <div className="relative w-full md:px-32 h-[800px] mb-20 px-4">
-                {/* Container for stacked cards */}
-                <div className="relative w-full h-full">
-                    {/* Bottom Shadow Card */}
-                    <div className="absolute top-12 -bottom-12 left-8 right-8 bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-[40px] -z-30 blur-xl" />
-                    
-                    {/* Third Layer (Back) */}
-                    <div className="absolute top-8 -bottom-8 left-16 right-16 rounded-[40px] -z-10"
-                         style={{ 
-                             backgroundColor: prev.bg || '#000',
-                             backgroundImage: prev.type === 'image' ? `url(${prev.bgImage})` : 'none',
-                             backgroundSize: 'cover',
-                             backgroundPosition: 'center',
-                         }}
-                    />
-                    
-                    {/* Second Layer (Middle) */}
-                    <div className="absolute top-4 -bottom-4 left-8 right-8 rounded-[40px] -z-5 transform scale-[0.97] opacity-80"
-                         style={{ 
-                             backgroundColor: next.bg || '#000',
-                             backgroundImage: next.type === 'image' ? `url(${next.bgImage})` : 'none',
-                             backgroundSize: 'cover',
-                             backgroundPosition: 'center'
-                         }}
-                    />
-
-                    {/* Main Card with Animation */}
-                    <AnimatePresence mode="wait" custom={direction}>
-                        <motion.div
-                            key={current.id}
-                            custom={direction}
-                            variants={slideVariants}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            transition={{
-                                x: { type: "spring", stiffness: 300, damping: 30 },
-                                opacity: { duration: 0.2 },
-                                scale: { duration: 0.3 }
-                            }}
-                            className="absolute inset-0 rounded-[40px] overflow-hidden shadow-2xl"
-                            style={{ 
-                                backgroundColor: current.bg || '#000',
-                            }}
-                        >
-                            {/* LAYOUT 1: TEXT WITH SVG BACKGROUND */}
-                            {current.type === "text" && (
-                                <div className="relative w-full h-full flex flex-col items-center justify-center p-8 md:p-20 text-center">
-                                    <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">
-                                        <BgSvg2 />
-                                    </div>
-                                    <div className="relative z-10 flex flex-col items-center">
-                                        <p className="text-white text-2xl md:text-4xl font-medium leading-relaxed mb-10 max-w-6xl">
-                                            {current.quote}
-                                        </p>
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white">
-                                                <img 
-                                                    src={current.avatar} 
-                                                    alt={current.author} 
-                                                    className="w-full h-full object-cover" 
-                                                />
-                                            </div>
-                                            <div className="text-left">
-                                                <p className="font-bold text-lg">{current.author}</p>
-                                                <p className="text-blue-200 text-sm">{current.role}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* LAYOUT 2: FULL IMAGE BACKGROUND */}
-                            {current.type === "image" && current.bgImage && (
-                                <div className="relative w-full h-full flex flex-col justify-end p-8 md:p-20">
-                                    <Image
-                                        src={current.bgImage}
-                                        alt="Background"
-                                        fill
-                                        className="object-cover z-0"
-                                        priority
-                                    />
-                                    {/* Gradient Overlay for readability */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-                                    
-                                    <div className="relative z-20 max-w-3xl">
-                                        <p className="text-white text-2xl md:text-4xl font-bold leading-tight mb-8">
-                                            {current.quote}
-                                        </p>
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white">
-                                                <img 
-                                                    src={current.avatar} 
-                                                    alt={current.author} 
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            </div>
-                                            <div className="text-left">
-                                                <p className="font-bold text-lg">{current.author}</p>
-                                                <p className="text-white/80 text-sm">{current.role}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
+            <div className="h-screen px-28 mb-96 [perspective:1000px] relative b flex flex-col  w-full  items-start justify-start">
+                <Tabs tabs={tabs} />
             </div>
         </div>
     )

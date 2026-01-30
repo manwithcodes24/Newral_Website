@@ -1,60 +1,119 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { div } from "framer-motion/client";
 
 export const TextHoverEffect = ({
   text,
-  duration = 0.2,
+  duration,
 }: {
   text: string;
   duration?: number;
+  automatic?: boolean;
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
+  const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      setMousePosition({ x, y });
+  useEffect(() => {
+    if (svgRef.current && cursor.x !== null && cursor.y !== null) {
+      const svgRect = svgRef.current.getBoundingClientRect();
+      const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
+      const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
+      setMaskPosition({
+        cx: `${cxPercentage}%`,
+        cy: `${cyPercentage}%`,
+      });
     }
-  };
+  }, [cursor]);
 
   return (
-    <div
-      ref={containerRef}
-      className=" w-full h-full select-none group"
-      onMouseMove={handleMouseMove}
-      style={{ '--mouse-x': `${mousePosition.x}%`, '--mouse-y': `${mousePosition.y}%` } as React.CSSProperties}
+   <div className="">
+     <svg
+      ref={svgRef}
+      width="100%"
+      height="60%"
+      viewBox="0 0 300 100"
+      xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
+      className="select-none"
     >
-      {/* Background text */}
-      <h2 className="absolute inset-0 flex items-center justify-center text-8xl font-bold italic font-[helvetica] text-white opacity-40 pointer-events-none">
-        {text}
-      </h2>
-
-      {/* Animated outline text */}
-      <div className="absolute inset-0 flex items-center justify-center animate-draw-outline pointer-events-none">
-        <h2 className="text-8xl font-bold italic font-[helvetica] text-transparent [stroke-dasharray:1000] [stroke-dashoffset:1000] animate-[strokeDraw_4s_ease-in-out_forwards]"
-            style={{ WebkitTextStroke: "0.3px rgba(255, 255, 255, 0.4)" }}>
-          {text}
-        </h2>
-      </div>
-
-      {/* Masked text */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute inset-0 flex items-center justify-center transition-all duration-200 ease-out group-hover:opacity-100"
-          style={{
-            maskImage: `radial-gradient(circle 100px at var(--mouse-x) var(--mouse-y), white, transparent)`,
-            WebkitMaskImage: `radial-gradient(circle 100px at var(--mouse-x) var(--mouse-y), white, transparent)`,
-            transitionDuration: `${duration}s`,
-          }}
+      <defs>
+        <linearGradient
+          id="textGradient"
+          gradientUnits="userSpaceOnUse"
+          cx="50%"
+          cy="50%"
+          r="25%"
         >
-          <h2 className="text-8xl font-bold italic font-[helvetica] text-white opacity-100">
-            {text}
-          </h2>
-        </div>
-      </div>
-    </div>
+          {/* Gradient stops for white color with opacity */}
+          <stop offset="0%" stopColor="white" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="white" stopOpacity="0.4" />
+        </linearGradient>
+
+        <motion.radialGradient
+          id="revealMask"
+          gradientUnits="userSpaceOnUse"
+          r="20%"
+          initial={{ cx: "50%", cy: "50%" }}
+          animate={maskPosition}
+          transition={{ duration: duration ?? 0, ease: "easeOut" }}
+        >
+          {/* White for visible part, black for hidden part */}
+          <stop offset="0%" stopColor="white" />
+          <stop offset="100%" stopColor="black" />
+        </motion.radialGradient>
+        
+        {/* Mask to cut text in half - only half will be visible */}
+        <mask id="textMask">
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="60%"
+            fill="url(#revealMask)"
+          />
+        </mask>
+        
+        {/* Clip path to ensure text doesn't overflow */}
+        <clipPath id="textClip">
+          <rect x="0" y="0" width="300" height="60" />
+        </clipPath>
+      </defs>
+      
+      {/* Background text with opacity 40% */}
+      <text
+        x="50%"
+        y="50%"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        className="fill-white opacity-40 italic font-[helvetica] text-8xl font-bold"
+        clipPath="url(#textClip)"
+      >
+        {text}
+      </text>
+      
+    
+      
+      {/* Foreground text that's masked (only half visible) with white color */}
+      <text
+        x="50%"
+        y="50%"
+        height={60}
+        textAnchor="middle"
+        dominantBaseline="middle"
+        stroke="url(#textGradient)"
+        strokeWidth="0.3"
+        mask="url(#textMask)"
+        clipPath="url(#textClip)"
+        className="fill-white opacity-100 italic font-[helvetica] text-8xl font-bold"
+      >
+        {text}
+      </text>
+    </svg>
+   </div>
   );
 };
