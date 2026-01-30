@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* 2. SMOOTH MARQUEE LAYER */}
-                <div className="relative z-10 w-full flex flex-col pointer-events-none gap-[-10vh]">
+                <div className="relative z-10 w-full flex flex-col  pointer-events-none -space-y-20 ">
                     <MarqueeText
                         text="INNOVATION EXCELLENCE CREATIVITY FUTURE"
                         color="text-white"
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* 3. SCALING VIDEO LAYER */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center">
+                <div className="absolute rounded-2xl inset-0 z-20 flex items-center justify-center">
                     <motion.div
                         style={{ scale, opacity }}
                         className="relative aspect-video w-[90%] max-w-4xl rounded-2xl shadow-2xl overflow-hidden bg-gray-900"
@@ -121,10 +121,10 @@ const MarqueeText = ({ text, color, speed, reverse }: MarqueeProps) => {
                 style={{ "--speed": speed } as any}
             >
                 {/* We use two spans. When the first finishes, the second is in its exact starting place, creating a loop */}
-                <span className={`text-[10vw] font-black uppercase tracking-tighter pr-12 ${color}`}>
+                <span className={`text-[10vw] font-bold uppercase tracking-tighter pr-12 ${color}`}>
                     {text}
                 </span>
-                <span className={`text-[10vw] font-black uppercase tracking-tighter pr-12 ${color}`}>
+                <span className={`text-[10vw] font-bold uppercase tracking-tighter pr-12 ${color}`}>
                     {text}
                 </span>
             </div>
