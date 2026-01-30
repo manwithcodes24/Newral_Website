@@ -1,13 +1,17 @@
 // app/page.tsx
+import CardHeroSection from "@/components/Landingpage/CardHeroSection";
 import HeroSection from "@/components/Landingpage/herosection";
+import ReviewSection from "@/components/Landingpage/Reviews";
+import ReviewSection2 from "@/components/Landingpage/Reviewsectionbottem";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <div className="h-screen bg-white">
-        <h2>This content only appears after the video shrinks to zero</h2>
-      </div>
+      <CardHeroSection />
+      <ReviewSection />
+      <ReviewSection2 />
+      
     </main>
   );
 }

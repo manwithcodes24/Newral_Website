@@ -32,7 +32,7 @@ const HeroSection = () => {
             <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
 
                 {/* 1. BACKGROUND SVG */}
-                <div className="absolute my-28 inset-0 z-0  flex items-center justify-center pointer-events-none">
+                <div className="absolute my-20 inset-0 z-0  flex items-center justify-center pointer-events-none">
                     <BgSvg />
                 </div>
 
@@ -57,27 +57,16 @@ const HeroSection = () => {
                         style={{ scale, opacity }}
                         className="relative aspect-video  w-full h-screen rounded-2xl shadow-2xl overflow-hidden bg-gray-900"
                     >
-                        {!isPlaying && (
-                            <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                                <button
-                                    onClick={handlePlay}
-                                    className="group flex flex-col items-center gap-4 transition-all hover:scale-105"
-                                >
-                                    <div className="w-20 h-20 flex items-center justify-center rounded-full border-2 border-white bg-white/10 text-white group-hover:bg-white group-hover:text-black transition-colors">
-                                        <svg className="w-8 h-8 ml-1 fill-current" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    </div>
-                                    <span className="text-white font-bold tracking-widest uppercase text-xs">Play Showreel</span>
-                                </button>
-                            </div>
-                        )}
-                        <iframe
-                            className="w-full h-full"
-                            src={`https://www.youtube.com/embed/J7ttWcfZppU?autoplay=${isPlaying ? 1 : 0}&controls=1`}
+
+                        <video
+                            className="w-full h-full object-cover"
+                            src={`https://res.cloudinary.com/dyktjldc4/video/upload/v1769788190/newral_promotion_4_zkthbx.mp4`}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
+                            autoPlay
+                            muted 
+                            loop
+                            playsInline
+                            controls={false} // ← Set to false to hide controls completely
                         />
                     </motion.div>
                 </div>
