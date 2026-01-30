@@ -55,7 +55,7 @@ const HeroSection = () => {
                 <div className="absolute rounded-2xl inset-0 z-20 flex items-center justify-center">
                     <motion.div
                         style={{ scale, opacity }}
-                        className="relative aspect-video w-[90%] max-w-4xl rounded-2xl shadow-2xl overflow-hidden bg-gray-900"
+                        className="relative aspect-video  w-full h-screen rounded-2xl shadow-2xl overflow-hidden bg-gray-900"
                     >
                         {!isPlaying && (
                             <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/40 backdrop-blur-sm">
