@@ -5,6 +5,21 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import Navbar from "@/components/Header";
 import Footer from "@/components/footer";
+import localFont from 'next/font/local';
+
+const satoshi = localFont({
+  src: [
+    { path: '../../public/fonts/satoshi/Satoshi-Light.woff2', weight: '300' },
+    { path: '../../public/fonts/satoshi/Satoshi-Regular.woff2', weight: '400' },
+    { path: '../../public/fonts/satoshi/Satoshi-Medium.woff2', weight: '500' },
+    { path: '../../public/fonts/satoshi/Satoshi-Bold.woff2', weight: '700' },
+    { path: '../../public/fonts/satoshi/Satoshi-Black.woff2', weight: '900' },
+    { path: '../../public/fonts/satoshi/Satoshi-Italic.woff2', weight: '400', style: 'italic' },
+    { path: '../../public/fonts/satoshi/Satoshi-BoldItalic.woff2', weight: '700', style: 'italic' },
+  ],
+  variable: '--font-satoshi',
+  display: 'swap',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +44,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

@@ -20,8 +20,8 @@ const HeroSection = () => {
         restDelta: 0.001,
     });
 
-    const scale = useTransform(smoothProgress, [0, 0.9], [1, 0]);
-    const opacity = useTransform(smoothProgress, [0, 0.8, 0.9], [1, 1, 0]);
+    const scale = useTransform(smoothProgress, [0, 0.9], [1, 0.5]);
+    const opacity = useTransform(smoothProgress, [0, 0.8, 0.9], [1, 1, 1]);
 
     const handlePlay = () => {
         setIsPlaying(true);

@@ -119,12 +119,14 @@
 
 body {
   font-family: var(--font-sans);
+  font-family: var(--font-satoshi), system-ui, sans-serif;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
