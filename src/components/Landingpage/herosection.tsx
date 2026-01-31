@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import BgSvg from "./bgsvg";
+import BgSvgMobile from "./bgsvgmobile";
 
 const HeroSection = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -31,13 +32,17 @@ const HeroSection = () => {
             {/* STICKY LOCKING CONTAINER */}
             <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
 
+
+
                 {/* 1. BACKGROUND SVG */}
-                <div className="absolute my-20 inset-0 z-0  flex items-center justify-center pointer-events-none">
+                <div className="hidden md:flex md:absolute md:my-20 inset-0 z-0 items-center justify-center pointer-events-none">
                     <BgSvg />
                 </div>
-
+                <div className="flex md:hidden absolute my-20 inset-0 z-0 items-center justify-center pointer-events-none">
+                    <BgSvgMobile />
+                </div>
                 {/* 2. SMOOTH MARQUEE LAYER */}
-                <div className="relative z-10 w-full flex flex-col  pointer-events-none -space-y-20 ">
+                <div className="relative z-10 w-full flex flex-col  pointer-events-none md:-space-y-20 ">
                     <MarqueeText
                         text="INNOVATION EXCELLENCE CREATIVITY FUTURE"
                         color="text-white"
@@ -61,9 +66,9 @@ const HeroSection = () => {
                         <video
                             className="w-full h-full object-cover"
                             src={`https://res.cloudinary.com/dyktjldc4/video/upload/v1769788190/newral_promotion_4_zkthbx.mp4`}
-                            title="YouTube video player"
+                            title="newral.in"
                             autoPlay
-                            muted 
+                            muted
                             loop
                             playsInline
                             controls={false} // ← Set to false to hide controls completely

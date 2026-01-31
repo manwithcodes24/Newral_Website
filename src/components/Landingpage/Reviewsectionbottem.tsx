@@ -52,7 +52,7 @@ const tabs = [
                             <BgSvg2 />
                         </div>
                         <div className="relative z-10 flex flex-col items-center">
-                            <p className="text-white text-2xl md:text-4xl font-medium leading-relaxed mb-10 max-w-6xl">
+                            <p className="text-white text-lg md:text-4xl font-medium leading-relaxed mb-10 max-w-6xl">
                                 {testimonials[0].quote}
                             </p>
                             <div className="flex items-center gap-4">
@@ -72,7 +72,7 @@ const tabs = [
                     </div>
                 )}
 
-              
+
             </motion.div>
         ),
     },
@@ -81,8 +81,7 @@ const tabs = [
         value: "services",
         content: (
             <motion.div
-                key={testimonials[0].id}
-        
+                key={testimonials[1].id}
                 initial="enter"
                 animate="center"
                 exit="exit"
@@ -91,48 +90,51 @@ const tabs = [
                     opacity: { duration: 0.2 },
                     scale: { duration: 0.3 }
                 }}
-                className="absolute h-screen  inset-0 rounded-[40px] overflow-hidden shadow-2xl"
+                className="absolute h-screen inset-0 rounded-[40px] overflow-hidden shadow-2xl"
                 style={{
-                    backgroundColor: testimonials[0].bg || '#000',
+                    backgroundColor: testimonials[1].bg || '#000',
                 }}
             >
-             
+                {/* 1. Background Layer: The "Cover" with Blur */}
                 {testimonials[1].type === "image" && testimonials[1].bgImage && (
-                    <div className="relative w-full h-full flex flex-col justify-end p-8 md:p-20">
+                    <div className="absolute inset-0 z-0">
                         <Image
-                            src={testimonials[1 ].bgImage}
-                            alt="Background"
+                            src={testimonials[1].bgImage}
+                            alt="Background Blur"
                             fill
-                            className="object-cover z-0"
+                            className="object-cover blur-2xl opacity-60 scale-110" // Scale prevents white edges from blur
                             priority
                         />
-                        {/* Gradient Overlay for readability */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+                        {/* Optional: Overlay to ensure brand color (blue) bleeds through */}
+                        <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply" />
+                    </div>
+                )}
 
-                        <div className="relative z-20 max-w-3xl">
-                            <p className="text-white text-2xl md:text-4xl font-bold leading-tight mb-8">
-                                {testimonials[1].quote}
-                            </p>
-                            <div className="flex items-center gap-4">
-                                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white">
-                                    <img
-                                        src={testimonials[1 ].avatar}
-                                        alt={testimonials[1].author}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="text-left">
-                                    <p className="font-bold text-lg">{testimonials[1].author}</p>
-                                    <p className="text-white/80 text-sm">{testimonials[1].role}</p>
-                                </div>
-                            </div>
+                {/* 2. Foreground Layer: The "Contain" image (Visible on all, optimized for mobile) */}
+                {testimonials[1].type === "image" && testimonials[1].bgImage && (
+                    <div className="relative z-10 w-full h-full flex items-center justify-center">
+                        <div className="relative w-full h-full">
+                            <Image
+                                src={testimonials[1].bgImage}
+                                alt={"Testimonial Image"}
+                                fill
+                                // object-contain ensures the image is NEVER cut off on mobile
+                                // md:object-cover allows it to fill more space on desktop if preferred
+                                className="object-contain md:object-contain "
+                                priority
+                            />
                         </div>
                     </div>
                 )}
+
+                {/* 3. Content Overlay (Optional: If you have text/quotes) */}
+                <div className="absolute bottom-0 left-0 right-0 z-20 p-8 md:p-16 bg-gradient-to-t from-black/80 to-transparent">
+                    {/* Your text content here */}
+                </div>
             </motion.div>
         ),
     },
-   
+
 ];
 
 export default function ReviewSection2() {
@@ -170,7 +172,7 @@ export default function ReviewSection2() {
             <div className="flex flex-col items-center justify-center pt-20 pb-16 px-4">
                 <div className="mb-8 flex flex-col gap-2 max-w-5xl space-y-2 text-center">
                     <h1 className="md:text-7xl text-4xl font-medium tracking-tight leading-tight">
-                        Trusted by startups featured on
+                       Trusted by Compitishun Edtech Startup featured on <br />
                         <span className="text-[#0A8CB9]"> Shark Tank</span>
                         <span className="text-[#FAE071] ml-3">India</span>
                     </h1>
@@ -178,7 +180,7 @@ export default function ReviewSection2() {
 
                 <div className="flex flex-col gap-2 max-w-2xl space-y-2 text-center">
                     <p className="text-white text-lg font-medium leading-relaxed mb-8">
-                        Newral is a technology agency that partners with ambitious startups to design and engineer scalable digital products. We work closely with founding teams to translate ideas into reliable, production-ready software.Our experience includes building solutions for
+                        At Newral, we specialize in delivering cutting-edge technology solutions that drive growth, security, and scalability. Our expertise spans multiple domains, ensuring that businesses, startups, and enterprises get the best-in-class digital products tailored to their needs.
                     </p>
                 </div>
 
@@ -188,7 +190,7 @@ export default function ReviewSection2() {
                     </button>
                 </div>
             </div>
-            <div className="h-screen px-28 mb-96 [perspective:1000px] relative b flex flex-col  w-full  items-start justify-start">
+            <div className="h-screen px-6 md:px-28 mb-96 [perspective:1000px] relative b flex flex-col  w-full  items-start justify-start">
                 <Tabs tabs={tabs} />
             </div>
         </div>

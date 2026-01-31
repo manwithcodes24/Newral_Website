@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-const text = "We boost design capacity, accelerate product development, and drive stronger bottom-line results.";
+const text = "We make technology that accelerates product development  &  Represents Bottom  line  measures.";
 
 const FinalCardExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -46,10 +46,10 @@ const FinalCardExperience = () => {
             {/* Top Tilted Card (Blue) */}
             <motion.div
               initial={{ rotate: -20 }}
-              className="absolute -top-16 -left-14 z-10 w bg-[#0066FF] px-8 py-4 rounded-xl shadow-[0_10px_40px_rgba(0,102,255,0.4)] border border-white/20"
+              className="absolute -top-16 -left-14 pointer-events-none z-10 w bg-[#0066FF] px-8 py-4 rounded-xl shadow-[0_10px_40px_rgba(0,102,255,0.4)] border border-white/20"
             >
               <span className="text-white font-sans text-xl md:text-4xl tracking-tight  ">
-                Crafting
+                Creating
               </span>
             </motion.div>
 
