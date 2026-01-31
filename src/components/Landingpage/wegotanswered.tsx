@@ -4,36 +4,36 @@ import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-mot
 
 // FAQ Data with different "sizes" for the bento look
 const FAQS = [
-    { q: "How do you start a new project?", size: "col-span-2 row-span-1" },
-    { q: "Can we start small and scale later?", size: "col-span-2 row-span-1" },
-    { q: "Do you work with existing teams?", size: "col-span-1 row-span-1" },
-    { q: "What industries do you specialize in?", size: "col-span-1 row-span-1" },
-    { q: "Long-term partnership possible?", size: "col-span-1 row-span-1" },
-    { q: "What is your development process?", size: "col-span-1 row-span-2" },
-    { q: "How do you communicate progress?", size: "col-span-2 row-span-1" },
-    { q: "Time-zone friendly collaboration?", size: "col-span-1 row-span-1" },
-    { q: "Dedicated team or shared resources?", size: "col-span-1 row-span-1" },
-    { q: "Do you build scalable architectures?", size: "col-span-2 row-span-1" },
-    { q: "How do you ensure code quality?", size: "col-span-2 row-span-1" },
-    { q: "Cloud-native or on-prem?", size: "col-span-2 row-span-1" },
-    { q: "Do you follow best security practices?", size: "col-span-2 row-span-1" },
-    { q: "Can you integrate third-party APIs?", size: "col-span-2 row-span-1" },
-    { q: "Do you handle DevOps & CI/CD?", size: "col-span-1 row-span-1" },
-    { q: "Do you provide documentation?", size: "col-span-1 row-span-1" },
-    { q: "How do you approach UX research?", size: "col-span-2 row-span-1" },
-    { q: "How do you handle user testing?", size: "col-span-1 row-span-1" },
-    { q: "Do you design for accessibility?", size: "col-span-2 row-span-1" },
-    { q: "Design system creation?", size: "col-span-2 row-span-1" },
-    { q: "Branding along with product design?", size: "col-span-1 row-span-1" },
-    { q: "What design tools do you use?", size: "col-span-1 row-span-1" },
-    { q: "Collaboration with in-house designers?", size: "col-span-2 row-span-1" },
-    { q: "MVP development support?", size: "col-span-2 row-span-1" },
-    { q: "Can you help with product strategy?", size: "col-span-2 row-span-1" },
-    { q: "Post-launch optimization?", size: "col-span-2 row-span-1" },
-    { q: "Transparent pricing?", size: "col-span-1 row-span-1" },
-    { q: "Any hidden costs?", size: "col-span-1 row-span-1" },
-    { q: "Who owns IP and source code?", size: "col-span-2 row-span-2" },
-    { q: "Client references available?", size: "col-span-2 row-span-1" },
+    { q: "How do you start a new project?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Can we start small and scale later?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Do you work with existing teams?", size: "md:col-span-1 md:row-span-1" },
+    { q: "What industries do you specialize in?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Long-term partnership possible?", size: "md:col-span-1 md:row-span-1" },
+    { q: "What is your development process?", size: "md:col-span-1 md:row-span-2" },
+    { q: "How do you communicate progress?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Time-zone friendly collaboration?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Dedicated team or shared resources?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Do you build scalable architectures?", size: "md:col-span-2 md:row-span-1" },
+    { q: "How do you ensure code quality?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Cloud-native or on-prem?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Do you follow best security practices?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Can you integrate third-party APIs?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Do you handle DevOps & CI/CD?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Do you provide documentation?", size: "md:col-span-1 md:row-span-1" },
+    { q: "How do you approach UX research?", size: "md:col-span-2 md:row-span-1" },
+    { q: "How do you handle user testing?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Do you design for accessibility?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Design system creation?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Branding along with product design?", size: "md:col-span-1 md:row-span-1" },
+    { q: "What design tools do you use?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Collaboration with in-house designers?", size: "md:col-span-2 md:row-span-1" },
+    { q: "MVP development support?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Can you help with product strategy?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Post-launch optimization?", size: "md:col-span-2 md:row-span-1" },
+    { q: "Transparent pricing?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Any hidden costs?", size: "md:col-span-1 md:row-span-1" },
+    { q: "Who owns IP and source code?", size: "md:col-span-2 md:row-span-2" },
+    { q: "Client references available?", size: "md:col-span-2 md:row-span-1" },
 
 ];
 
@@ -120,7 +120,7 @@ function BentoGrid() {
             {FAQS.map((faq, i) => (
                 <motion.div
                     key={i}
-                    className={`md:${faq.size} col-span-2 row-span-2 bg-zinc-900/40 border border-zinc-800/50 rounded-3xl p-6 flex items-center justify-center text-center`}
+                    className={`col-span-2 row-span-2 ${faq.size} bg-zinc-900/40 border border-zinc-800/50 rounded-3xl p-6 flex items-center justify-center text-center`}
                     animate={{
                         y: [0, -20, 0],
                     }}
