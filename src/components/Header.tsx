@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import BookCallButton from './BookacallButton'
 
 const navItems = ['Home', 'About us', 'Services', 'Projects', 'Contact']
 
@@ -67,9 +68,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <button className="cta-button  px-6 py-2.5 rounded-full text-sm font-semibold text-white border border-accent/50 hover:border-accent/80 transition-all duration-300">
-            Book a call
-          </button>
+            <BookCallButton />
         </div>
       </div>
     </nav>

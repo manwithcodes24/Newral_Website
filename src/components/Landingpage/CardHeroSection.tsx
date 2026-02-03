@@ -31,12 +31,12 @@ const FinalCardExperience = () => {
   const textY = useTransform(smoothProgress, [0, 0.3], [20, -80]); // Moves up with the cards
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] bg-[#000000] pt-12 font-sans">
+    <div ref={containerRef} className="relative h-[400vh] bg-[#000000] pt-12 font-sans">
       {/* STICKY VIEWPORT */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-6">
         
         {/* WRAPPER FOR BOTH CARDS AND TEXT TO KEEP THEM TOGETHER */}
-        <div className="flex flex-col items-center w-full max-w-7xl">
+        <div className="flex flex-col h-screen mt-32 justify-center items-center w-full max-w-7xl">
           
           {/* CARDS SECTION */}
           <motion.div
@@ -46,7 +46,7 @@ const FinalCardExperience = () => {
             {/* Top Tilted Card (Blue) */}
             <motion.div
               initial={{ rotate: -20 }}
-              className="absolute -top-16 -left-14 pointer-events-none z-10 w bg-[#0066FF] px-8 py-4 rounded-xl shadow-[0_10px_40px_rgba(0,102,255,0.4)] border border-white/20"
+              className="absolute -top-16 -left-14 pointer-events-none z-10 w bg-[#0066FF] px-12 py-6 rounded-xl shadow-[0_10px_40px_rgba(0,102,255,0.4)] border border-white/20"
             >
               <span className="text-white font-sans text-xl md:text-4xl tracking-tight  ">
                 Creating
@@ -54,7 +54,7 @@ const FinalCardExperience = () => {
             </motion.div>
 
             {/* Main Card (Purple) */}
-            <div className="bg-[#8A38F5] px-8 py-4 rounded-2xl shadow-[0_10px_40px_rgba(138,56,245,0.4)] border border-white/10">
+            <div className="bg-[#8A38F5] px-12 py-6 rounded-2xl shadow-[0_10px_40px_rgba(138,56,245,0.4)] border border-white/10">
               <span className="text-white font-sans text-2xl md:text-4xl  tracking-tighter whitespace-nowrap">
                 digital experience
               </span>
@@ -66,7 +66,7 @@ const FinalCardExperience = () => {
             style={{ opacity: textOpacity, y: textY }}
             className="mt-4 w-full text-center z-20"
           >
-            <p className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-4xl md:text-8xl font-bold leading-[1.1] tracking-tight">
+            <p className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-4xl md:text-8xl font-bold leading-none tracking-tight">
               {words.map((word, i) => {
                 // Word-by-word reveal starts after the initial grouping animation
                 const start = 0.25 + (i / words.length) * 0.65;

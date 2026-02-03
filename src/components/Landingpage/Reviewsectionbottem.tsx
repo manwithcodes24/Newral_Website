@@ -24,6 +24,7 @@ const testimonials = [
 ]
 
 import { Tabs } from "../ui/tabs";
+import BookCallButton from '../BookacallButton'
 
 
 const tabs = [
@@ -172,7 +173,7 @@ export default function ReviewSection2() {
             <div className="flex flex-col items-center justify-center pt-20 pb-16 px-4">
                 <div className="mb-8 flex flex-col gap-2 max-w-5xl space-y-2 text-center">
                     <h1 className="md:text-7xl text-4xl font-medium tracking-tight leading-tight">
-                       Trusted by Compitishun Edtech Startup featured on <br />
+                        Trusted by Compitishun Edtech Startup featured on <br />
                         <span className="text-[#0A8CB9]"> Shark Tank</span>
                         <span className="text-[#FAE071] ml-3">India</span>
                     </h1>
@@ -185,9 +186,8 @@ export default function ReviewSection2() {
                 </div>
 
                 <div className="">
-                    <button className="px-10 py-4 rounded-full bg-blue-600 font-medium hover:bg-blue-500 transition-all">
-                        Book a call
-                    </button>
+                    {/* CTA Button */}
+                    <BookCallButton />
                 </div>
             </div>
             <div className="h-screen px-6 md:px-28 mb-96 [perspective:1000px] relative b flex flex-col  w-full  items-start justify-start">

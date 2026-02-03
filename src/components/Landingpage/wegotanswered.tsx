@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
+import BookCallButton from "../BookacallButton";
 
 // FAQ Data with different "sizes" for the bento look
 const FAQS = [
@@ -98,15 +99,8 @@ export default function FAQBentoSection() {
                         with founding teams to translate ideas into reliable, production-ready software.
                     </p>
 
-                    <motion.a
-                        href="https://cal.com/newral"
-                        target="_blank"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-sans py-5 px-10 rounded-full text-lg transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)]"
-                    >
-                        Book a call with us
-                    </motion.a>
+                    {/* CTA Button */}
+            <BookCallButton />
                 </motion.div>
             </div>
         </section>
