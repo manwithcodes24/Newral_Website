@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LucideMoveLeft, LucideMoveRight, MoveLeft, MoveLeftIcon } from "lucide-react";
 
@@ -13,11 +13,20 @@ const reviews = [
         avatarurl: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785964/image_14_oxlnw4.png",
         companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
     },
+    {
+        id: 2,
+        name: "Ashton Cofer",
+        role: "Co-Founder & CTO of Fizz Social | Forbes 30u30",
+        feedback: "Newral has been a game-changer for us. Their scalable strong monitoring solution with streamlined DevOps pipelines let us confidently focus on growing our business. Highly recommended!",
+        avatarurl: "https://res.cloudinary.com/dyktjldc4/image/upload/e_background_removal//f_png/v1770136915/8bd40623-3461-488a-a5ef-a305fc912537_njf4jh.png",
+        companylogo: "https://media.licdn.com/dms/image/v2/C560BAQF6Xwh04dkNYg/company-logo_200_200/company-logo_200_200/0/1630655773340?e=1771459200&v=beta&t=e-vhB43_av62vilrP_nOQdrilcYuDyUnUerpUEfIsTs"
+
+    }
 ];
 
 const ReviewSection = () => {
     const [index, setIndex] = useState(0);
-
+    const [isPaused, setIsPaused] = useState(false);
     const nextReview = () => {
         setIndex((prev) => (prev + 1) % reviews.length);
     };
@@ -27,9 +36,18 @@ const ReviewSection = () => {
     };
 
     const current = reviews[index];
-
+    useEffect(() => {
+        if (isPaused) return;
+        const timer = setInterval(() => {
+            nextReview();
+        }, 2000);
+        return () => clearInterval(timer);
+    }, [index, isPaused]);
     return (
-        <section className="relative min-h-screen bg-black text-white flex flex-col justify-center overflow-hidden font-sans py-20">
+        <section
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            className="relative min-h-screen bg-black text-white flex flex-col justify-center overflow-hidden font-sans py-20">
 
             {/* MAIN CONTENT GRID */}
             <div className=" md:mx-28  px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 items-center z-10">
@@ -92,19 +110,19 @@ const ReviewSection = () => {
                 </div>
 
                 {/* RIGHT SECTION (AVATAR) */}
-                <div className="relative z-10 flex justify-end items-end">
+                <div className="relative  z-10 flex justify-end items-end">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={`avatar-${current.id}`}
                             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
                             exit={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                            className="mb-12  rounded-3xl overflow-hidden  shadow-2xl"
+                            className=" overflow-hidden  shadow-2xl"
                         >
                             <img
                                 src={current.avatarurl}
                                 alt={current.name}
-                                className="w-full h-full object-cover"
+                                className="w-auto h-auto object-cover"
                             />
                         </motion.div>
                     </AnimatePresence>
@@ -112,7 +130,7 @@ const ReviewSection = () => {
             </div>
 
             {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-            <div className="absolute bottom-20 left-[-10%] w-[120%] h-16 bg-[#0066FF] -rotate-[10deg] md:-rotate-[5deg] lg:-rotate-[5deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+            <div className="absolute bottom-14 left-[-10%] w-[120%] h-16 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
                 <div className="flex whitespace-nowrap overflow-hidden py-4">
                     <motion.div
                         animate={{ x: [0, -1000] }}

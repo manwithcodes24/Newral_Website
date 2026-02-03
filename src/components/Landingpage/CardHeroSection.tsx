@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-const text = "We make technology that accelerates product development  &  Represents Bottom  line  measures.";
+const text = "We Make Technology That Accelerates Product Development  &  Represents Bottom Line Measures.";
 
 const FinalCardExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,47 +31,26 @@ const FinalCardExperience = () => {
   const textY = useTransform(smoothProgress, [0, 0.3], [20, -80]); // Moves up with the cards
 
   return (
-    <div ref={containerRef} className="relative h-[400vh] bg-[#000000] pt-12 font-sans">
+    <div ref={containerRef} className="relative h-[300vh] bg-[#000000] pt-12 font-sans">
       {/* STICKY VIEWPORT */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-6">
-        
-        {/* WRAPPER FOR BOTH CARDS AND TEXT TO KEEP THEM TOGETHER */}
-        <div className="flex flex-col h-screen mt-32 justify-center items-center w-full max-w-7xl">
-          
-          {/* CARDS SECTION */}
-          <motion.div
-            style={{ y: cardY, scale: cardScale }}
-            className="relative z-50 flex items-center justify-center"
-          >
-            {/* Top Tilted Card (Blue) */}
-            <motion.div
-              initial={{ rotate: -20 }}
-              className="absolute -top-16 -left-14 pointer-events-none z-10 w bg-[#0066FF] px-12 py-6 rounded-xl shadow-[0_10px_40px_rgba(0,102,255,0.4)] border border-white/20"
-            >
-              <span className="text-white font-sans text-xl md:text-4xl tracking-tight  ">
-                Creating
-              </span>
-            </motion.div>
 
-            {/* Main Card (Purple) */}
-            <div className="bg-[#8A38F5] px-12 py-6 rounded-2xl shadow-[0_10px_40px_rgba(138,56,245,0.4)] border border-white/10">
-              <span className="text-white font-sans text-2xl md:text-4xl  tracking-tighter whitespace-nowrap">
-                digital experience
-              </span>
-            </div>
-          </motion.div>
+        {/* WRAPPER FOR BOTH CARDS AND TEXT TO KEEP THEM TOGETHER */}
+        <div className="flex flex-col h-screen  justify-center items-center w-full max-w-7xl">
+
+         
 
           {/* TEXT SECTION: margin-top is reduced to mt-4 for a tight fit */}
-          <motion.div 
+          <motion.div
             style={{ opacity: textOpacity, y: textY }}
-            className="mt-4 w-full text-center z-20"
+            className=" w-full text-center z-20"
           >
-            <p className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-4xl md:text-8xl font-bold leading-none tracking-tight">
+            <p className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-4xl md:text-8xl font-medium leading-none tracking-tight ">
               {words.map((word, i) => {
                 // Word-by-word reveal starts after the initial grouping animation
                 const start = 0.25 + (i / words.length) * 0.65;
                 const end = start + (1 / words.length) * 0.65;
-                
+
                 return (
                   <Word key={i} progress={smoothProgress} range={[start, end]}>
                     {word}
@@ -89,7 +68,7 @@ const FinalCardExperience = () => {
 
 const Word = ({ children, progress, range }: { children: string, progress: any, range: [number, number] }) => {
   const color = useTransform(progress, range, ["#111111", "#FFFFFF"]);
-  
+
   return (
     <motion.span style={{ color }} className="relative inline-block">
       {children}

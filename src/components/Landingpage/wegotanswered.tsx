@@ -100,7 +100,9 @@ export default function FAQBentoSection() {
                     </p>
 
                     {/* CTA Button */}
-            <BookCallButton />
+                   <div className="z-50">
+                     <BookCallButton />
+                   </div>
                 </motion.div>
             </div>
         </section>

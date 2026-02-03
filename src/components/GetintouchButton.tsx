@@ -127,7 +127,7 @@ const GetintouchButton = () => {
 
       {/* Button Text */}
       <span className="relative text-white text-sm font-medium tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
-        Book a call
+       Get in touch
       </span>
     </motion.a>
   );

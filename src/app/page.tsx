@@ -15,7 +15,7 @@ export default function Home() {
       <ReviewSection />
       <ReviewSection2 />
       <ServicesSection />
-       <BlogSection />
+      <BlogSection />
       <FAQSection />
     </main>
   );
