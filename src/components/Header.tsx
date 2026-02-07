@@ -62,7 +62,14 @@ const MenuItem = ({
   );
 };
 
-const ProductItem = ({ title, description, href, src }: any) => {
+interface ProductItemProps {
+  title: string;
+  description: string;
+  href: string;
+  src: string;
+}
+
+const ProductItem = ({ title, description, href, src }: ProductItemProps) => {
   return (
     <Link href={href} className="flex space-x-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
       <Image
@@ -80,9 +87,14 @@ const ProductItem = ({ title, description, href, src }: any) => {
   );
 };
 
-const HoveredLink = ({ children, ...rest }: any) => {
+interface HoveredLinkProps {
+  children: React.ReactNode;
+  href: string;
+}
+
+const HoveredLink = ({ children, href }: HoveredLinkProps) => {
   return (
-    <Link {...rest} className="text-neutral-400 hover:text-blue-500 text-sm block py-1 transition-colors">
+    <Link href={href} className="text-neutral-400 hover:text-blue-500 text-sm block py-1 transition-colors">
       {children}
     </Link>
   );

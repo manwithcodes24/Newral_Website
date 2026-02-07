@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { LinkPreview } from "@/components/ui/link-preview"; // Ensure path is correct
-import { cn } from "@/lib/utils";
+import { LinkPreview } from "@/components/ui/LinkPreview"; // Ensure path is correct
+import { cn } from "@/lib/Utils";
 
 const SERVICES = [
   {
@@ -104,7 +104,14 @@ export default function ServicesSection() {
     );
 }
 
-function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: any) {
+interface ServiceItemProps {
+  service: (typeof SERVICES)[0];
+  isOpen: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}
+
+function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceItemProps) {
     return (
         <motion.div
             onMouseEnter={onMouseEnter}

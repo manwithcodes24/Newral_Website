@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
 
 const text = "We Build Technology That Accelerates Product Development And Drives Real Business Impact";
 
@@ -66,7 +66,7 @@ const FinalCardExperience = () => {
   );
 };
 
-const Word = ({ children, progress, range }: { children: string, progress: any, range: [number, number] }) => {
+const Word = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
   const color = useTransform(progress, range, ["#111111", "#FFFFFF"]);
 
   return (

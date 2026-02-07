@@ -1,8 +1,8 @@
 "use client"
 
 import { Shader, ChromaFlow, Swirl } from "shaders/react"
-import { CustomCursor } from "@/components/custom-cursor"
-import { GrainOverlay } from "@/components/grain-overlay"
+import { CustomCursor } from "@/components/CustomCursor"
+import { GrainOverlay } from "@/components/GrainOverlay"
 import { useRef, useEffect, useState } from "react"
 import AboutSection from "@/components/Aboutus/TheCompany"
 import HeroAboutus from "@/components/Aboutus/HeroSection"

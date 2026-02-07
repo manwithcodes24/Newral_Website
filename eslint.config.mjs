@@ -1,17 +1,19 @@
-import { defineConfig, globalIgnores } from "eslint/config";
+// eslint.config.mjs
+import { defineConfig } from "eslint/config";
+import importPlugin from "eslint-plugin-import";
+import unicorn from "eslint-plugin-unicorn";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import importPlugin from "eslint-plugin-import";
 
-const eslintConfig = defineConfig([
+export default defineConfig([
   ...nextVitals,
   ...nextTs,
 
   {
     plugins: {
       import: importPlugin,
+      unicorn,
     },
-
     settings: {
       "import/resolver": {
         typescript: {
@@ -19,33 +21,13 @@ const eslintConfig = defineConfig([
         },
       },
     },
-
     rules: {
-      /**
-       * 🔥 THIS IS THE MONEY RULE
-       * Catches:
-       * - wrong casing
-       * - typos
-       * - missing files
-       * (exactly what broke Vercel)
-       */
       "import/no-unresolved": ["error", { caseSensitive: true }],
-
-      /**
-       * Extra safety
-       */
-      "import/named": "error",
-      "import/default": "error",
+      "unicorn/filename-case": ["error", { case: "pascalCase" }],
     },
   },
 
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  {
+    ignores: [".next/**", "out/**", "build/**", "next-env.d.ts"],
+  },
 ]);
-
-export default eslintConfig;

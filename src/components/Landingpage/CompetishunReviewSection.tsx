@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import GetintouchButton from "../GetintouchButton";
-import BgSvg2 from "./bg2-svg";
+import BgSvg2 from "./Bg2Svg";
 import StatsGrid from "./StatsGrid";
 
 // --- Supporting Component: StatsGrid (Integrated from earlier) ---

@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import BgSvg from "./bgsvg";
-import BgSvgMobile from "./bgsvgmobile";
+import BgSvg from "./BgSvg";
+import BgSvgMobile from "./BgSvgMobile";
 
 const HeroSection = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -112,7 +112,7 @@ const MarqueeText = ({ text, color, speed, reverse }: MarqueeProps) => {
         <div className="flex overflow-hidden whitespace-nowrap">
             <div
                 className={`flex whitespace-nowrap ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
-                style={{ "--speed": speed } as any}
+                style={{ "--speed": speed } as React.CSSProperties}
             >
                 {/* We use two spans. When the first finishes, the second is in its exact starting place, creating a loop */}
                 <span className={`text-[10vw] font-bold uppercase tracking-tighter pr-12 ${color}`}>

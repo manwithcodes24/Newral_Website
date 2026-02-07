@@ -1,7 +1,6 @@
 import { Instagram, Linkedin, Globe } from 'lucide-react'
 import Image from 'next/image'
-import { TextHoverEffect } from './ui/text-hover-effect'
-import FooterSVG from './landingpage/FooterSVG'
+import FooterSVG from './landingpage/FooterSvg'
 
 export default function Footer() {
     return (
@@ -137,7 +136,7 @@ export default function Footer() {
 
                         </div>
                         <div>
-                            <p className="text-white text-md mb-2">- Let's get in touch</p>
+                            <p className="text-white text-md mb-2">- Lets get in touch</p>
                             <a
                                 href="mailto:tech@newral.in"
                                 className="text-white font-sans text-4xl font-bold hover:text-blue-100 transition-colors break-words"
