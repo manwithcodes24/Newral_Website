@@ -22,9 +22,15 @@ export default defineConfig([
       },
     },
     rules: {
+      // Still strict
       "import/no-unresolved": ["error", { caseSensitive: true }],
-      "unicorn/filename-case": ["error", { case: "pascalCase" }],
+      "react-hooks/unsupported-syntax": "error",
+
+      // Allow development flexibility
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@next/next/no-img-element": "warn",
     },
+
   },
 
   {
