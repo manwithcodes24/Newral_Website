@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function AboutSection() {
   return (
-    <section className="bg-black text-white py-24 px-6 md:px-12 lg:px-24 font-sans min-h-screen flex justify-center items-end">
+    <section className="bg-black text-white py-24 px-8   font-sans min-h-screen flex justify-center items-end">
       <div className=" mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
 
         {/* Left Side: Bold Heading */}

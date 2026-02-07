@@ -52,7 +52,7 @@ export default function HeroAboutus() {
           <ArrowDown size={12} />
         </div>
       </div>
-
+ <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050505] to-transparent z-20" />
       
     </div>
     

@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import BookACallButton from "./booka-call-button";
+import GrainyButton from "./grainy-button";
+import PremiumAceternityButton from "./PremiumAceternityButton";
+
 
 const transition = {
   type: "spring" as const,
@@ -129,7 +131,7 @@ export default function Navbar() {
 
           <MenuItem setActive={setActive} active={active} item="About us" href="/Aboutus" />
 
-          <MenuItem setActive={setActive} active={active} item="Services" href="#services">
+          <MenuItem setActive={setActive} active={active} item="Services" href="/Services">
             <div className="flex flex-col space-y-3 text-sm min-w-[150px]">
               <HoveredLink href="/web">Web Design</HoveredLink>
               <HoveredLink href="/ai">AI Solutions</HoveredLink>
@@ -157,7 +159,7 @@ export default function Navbar() {
           <MenuItem setActive={setActive} active={active} item="Contact" href="#contact" />
         </nav>
 
-       <BookACallButton/>
+        <PremiumAceternityButton />
       </div>
     </header>
   );

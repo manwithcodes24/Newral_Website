@@ -78,7 +78,9 @@ export default function Home() {
           </Shader>
           <div className="absolute inset-0 bg-black/50" />
         </div>
+        
         <HeroAboutus />
+        
       </section>
       <AboutSection />
       <ExpandableCards />

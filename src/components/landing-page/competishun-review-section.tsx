@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import GetInTouchButton from "@/components/get-in-touch-button";
 import BgSvg2 from "./bg-2-svg";
 import StatsGrid from "./stats-grid";
+import PremiumAceternityButton from "../PremiumAceternityButton";
 
 
 // --- Types ---
@@ -70,7 +71,7 @@ export default function CardStackScroll() {
                     </p>
                 </div>
                 <div className="mb-12">
-                    <GetInTouchButton />
+                    <PremiumAceternityButton />
                 </div>
             </div>
 

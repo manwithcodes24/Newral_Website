@@ -23,12 +23,12 @@ const reviews = [
 
     },
     {
-        id : 3,
+        id: 3,
         name: "Sameer Bansal ",
-        role : "Founder, Bansal Classes",
-        feedback : "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handling our operations which was great experience for our students",
-        avatarurl : "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439869/Frame_1171276686_ev67pb.png",
-        companylogo : "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png"
+        role: "Founder, Bansal Classes",
+        feedback: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handling our operations which was great experience for our students",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439869/Frame_1171276686_ev67pb.png",
+        companylogo: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png"
     }
 ];
 
@@ -70,7 +70,7 @@ const ReviewSection = () => {
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.4 }}
                         >
-                            <img src={current.companylogo} alt="logo" className="h-10 w-auto object-contain" />
+                            <img src={current.companylogo} alt="logo" className="h-10 w-auto rounded-md object-contain" />
                         </motion.div>
                     </AnimatePresence>
 
@@ -125,12 +125,12 @@ const ReviewSection = () => {
                             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
                             exit={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                            className=" overflow-hidden  shadow-2xl"
+                            className=" overflow-hidden   shadow-2xl"
                         >
                             <img
                                 src={current.avatarurl}
                                 alt={current.name}
-                                className="w-auto h-auto object-cover"
+                                className="w-auto h-auto rounded-2xl object-cover"
                             />
                         </motion.div>
                     </AnimatePresence>
@@ -138,7 +138,7 @@ const ReviewSection = () => {
             </div>
 
             {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-            <div className="absolute bottom-2 left-[-10%] w-[120%] h-16 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+            <div className="absolute bottom-12 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
                 <div className="flex whitespace-nowrap overflow-hidden py-4">
                     <motion.div
                         animate={{ x: [0, -1000] }}
