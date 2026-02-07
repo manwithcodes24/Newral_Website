@@ -1,76 +1,152 @@
-'use client'
+"use client";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+import BookACallButton from "./BookacallButton";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import BookCallButton from './BookacallButton'
+const transition = {
+  type: "spring" as const,
+  mass: 0.5,
+  damping: 11.5,
+  stiffness: 100,
+  restDelta: 0.001,
+  restSpeed: 0.001,
+};
 
-const navItems = ['Home', 'About us', 'Services', 'Projects', 'Contact']
+// --- Sub-components (Aceternity Style) ---
+
+const MenuItem = ({
+  setActive,
+  active,
+  item,
+  children,
+  href,
+}: {
+  setActive: (item: string) => void;
+  active: string | null;
+  item: string;
+  children?: React.ReactNode;
+  href: string;
+}) => {
+  return (
+    <div onMouseEnter={() => setActive(item)} className="relative">
+      <Link href={href}>
+        <motion.p
+          transition={{ duration: 0.3 }}
+          className="cursor-pointer text-neutral-300 hover:text-white px-4 py-2 text-sm font-medium transition-colors"
+        >
+          {item}
+        </motion.p>
+      </Link>
+      {active !== null && (
+        <AnimatePresence>
+          {active === item && children && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85, y: 10 }}
+              transition={transition}
+              className="absolute top-[calc(100%_+_1.5rem)] left-1/2 transform -translate-x-1/2"
+            >
+              <div className="bg-[#121212] backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 shadow-[0px_10px_50px_rgba(0,0,0,0.5)]">
+                <motion.div layout className="w-max h-full p-4">
+                  {children}
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
+    </div>
+  );
+};
+
+const ProductItem = ({ title, description, href, src }: any) => {
+  return (
+    <Link href={href} className="flex space-x-3 hover:bg-white/5 p-2 rounded-lg transition-colors">
+      <Image
+        src={src}
+        width={120}
+        height={70}
+        alt={title}
+        className="shrink-0 rounded-md object-cover shadow-lg"
+      />
+      <div>
+        <h4 className="text-sm font-bold mb-1 text-white">{title}</h4>
+        <p className="text-neutral-400 text-xs max-w-[10rem] leading-relaxed">{description}</p>
+      </div>
+    </Link>
+  );
+};
+
+const HoveredLink = ({ children, ...rest }: any) => {
+  return (
+    <Link {...rest} className="text-neutral-400 hover:text-blue-500 text-sm block py-1 transition-colors">
+      {children}
+    </Link>
+  );
+};
+
+// --- Main Navbar ---
 
 export default function Navbar() {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
+  const [active, setActive] = useState<string | null>(null);
 
   return (
-    <nav className="fixed top-0 w-full z-50 rounded-b-xl backdrop-blur-md ">
-      <style>{`
+    <header className="fixed top-0 w-full z-50 flex justify-center py-6 px-4 md:px-10">
+      <div className="flex items-center justify-between w-full ">
 
-        .logo-text {
-          animation: slide-in 0.6s ease-out;
-          background: linear-gradient(135deg, #0066FF 0%, #0066FF 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          font-weight: 700;
-          letter-spacing: -1px;
-        }
+        {/* 1. Logo Left */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="https://res.cloudinary.com/dyktjldc4/image/upload/v1765014955/fymyyilfyvvf3f1qekuf.png"
+            alt="newral"
+            width={100}
+            height={40}
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
 
-        .nav-item {
-          position: relative;
-          transition: all 0.3s ease;
-        }
+        {/* 2. Central Navigation Pill */}
+        <nav
+          onMouseLeave={() => setActive(null)}
+          className="hidden md:flex items-center bg-[#1A1A1A]/80 border border-white/5 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg"
+        >
+          <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
-    
-        .cta-button {
-          position: relative;
-          animation: glow-pulse 2s ease-in-out infinite;
-          background: linear-gradient(30deg, #0066FF 30%, #77C0FF 100%);
-          transition: all 0.3s ease;
-          overflow: hidden;
-        }
+          <MenuItem setActive={setActive} active={active} item="About us" href="/Aboutus" />
 
-      `}</style>
+          <MenuItem setActive={setActive} active={active} item="Services" href="#services">
+            <div className="flex flex-col space-y-3 text-sm min-w-[150px]">
+              <HoveredLink href="/web">Web Design</HoveredLink>
+              <HoveredLink href="/ai">AI Solutions</HoveredLink>
+              <HoveredLink href="/marketing">Marketing</HoveredLink>
+            </div>
+          </MenuItem>
 
-      <div className="mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <Image 
-             src="https://res.cloudinary.com/dyktjldc4/image/upload/v1765014955/fymyyilfyvvf3f1qekuf.png"
-             className='h-10 w-auto'
-             alt="newral" 
-             width={100} 
-             height={100} />
-          </Link>
+          <MenuItem setActive={setActive} active={active} item="Projects" href="#projects">
+            <div className="grid grid-cols-2 gap-8 p-2">
+              <ProductItem
+                title="Saas App"
+                description="Modern dashboard for analytics."
+                href="#"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=200"
+              />
+              <ProductItem
+                title="E-commerce"
+                description="Custom Shopify theme for brands."
+                href="#"
+                src="https://images.unsplash.com/photo-1523474253046-2cd2c788f3ff?auto=format&fit=crop&q=80&w=200"
+              />
+            </div>
+          </MenuItem>
 
-          {/* Nav Items */}
-          <div className="nav-container hidden p-1 md:flex items-center gap-1 bg-[#1A1A1A] backdrop-blur-sm rounded-full ">
-            {navItems.map((item) => (
-              <Link
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="nav-item px-6 py-4 hover:bg-[#121111] rounded-full text-sm font-sans text-foreground transition-all duration-300"
-                onMouseEnter={() => setHoveredItem(item)}
-                onMouseLeave={() => setHoveredItem(null)}
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
+          <MenuItem setActive={setActive} active={active} item="Contact" href="#contact" />
+        </nav>
 
-          {/* CTA Button */}
-            <BookCallButton />
-        </div>
+       <BookACallButton/>
       </div>
-    </nav>
-  )
+    </header>
+  );
 }

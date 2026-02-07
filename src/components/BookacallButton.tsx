@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-const GetintouchButton = () => {
+const BookACallButton = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -133,4 +133,4 @@ const GetintouchButton = () => {
   );
 };
 
-export default GetintouchButton;
+export default BookACallButton;

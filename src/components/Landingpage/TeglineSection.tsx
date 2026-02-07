@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-const text = "We Make Technology That Accelerates Product Development  &  Represents Bottom Line Measures.";
+const text = "We Build Technology That Accelerates Product Development And Drives Real Business Impact";
 
 const FinalCardExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null);

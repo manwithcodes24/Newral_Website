@@ -10,7 +10,7 @@ const reviews = [
         name: "Mohit Tyagi",
         role: "Founder, Competishun",
         feedback: "Newral created some landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround. Highly recommend their web development expertise.",
-        avatarurl: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785964/image_14_oxlnw4.png",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276684_y1tlqe.png",
         companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
     },
     {
@@ -18,9 +18,17 @@ const reviews = [
         name: "Ashton Cofer",
         role: "Co-Founder & CTO of Fizz Social | Forbes 30u30",
         feedback: "Newral has been a game-changer for us. Their scalable strong monitoring solution with streamlined DevOps pipelines let us confidently focus on growing our business. Highly recommended!",
-        avatarurl: "https://res.cloudinary.com/dyktjldc4/image/upload/e_background_removal//f_png/v1770136915/8bd40623-3461-488a-a5ef-a305fc912537_njf4jh.png",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276685_sjfhlx.png",
         companylogo: "https://media.licdn.com/dms/image/v2/C560BAQF6Xwh04dkNYg/company-logo_200_200/company-logo_200_200/0/1630655773340?e=1771459200&v=beta&t=e-vhB43_av62vilrP_nOQdrilcYuDyUnUerpUEfIsTs"
 
+    },
+    {
+        id : 3,
+        name: "Sameer Bansal ",
+        role : "Founder, Bansal Classes",
+        feedback : "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handling our operations which was great experience for our students",
+        avatarurl : "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439869/Frame_1171276686_ev67pb.png",
+        companylogo : "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png"
     }
 ];
 
@@ -130,7 +138,7 @@ const ReviewSection = () => {
             </div>
 
             {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-            <div className="absolute bottom-14 left-[-10%] w-[120%] h-16 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+            <div className="absolute bottom-2 left-[-10%] w-[120%] h-16 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
                 <div className="flex whitespace-nowrap overflow-hidden py-4">
                     <motion.div
                         animate={{ x: [0, -1000] }}

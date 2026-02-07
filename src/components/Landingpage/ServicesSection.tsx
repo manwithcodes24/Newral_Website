@@ -6,35 +6,71 @@ import { LinkPreview } from "@/components/ui/link-preview"; // Ensure path is co
 import { cn } from "@/lib/utils";
 
 const SERVICES = [
-    {
-        id: "01",
-        title: "Branding & Graphic Design",
-        description: "We design products that people love to use, combining creativity with functionality to craft experiences that are intuitive, visually stunning, and future-ready.",
-        link: "https://newral.in/about",
-        previewUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        id: "02",
-        title: "Web Devlopment",
-        description: "Building high-performance, scalable web applications using the latest technologies like Next.js, React, and Node.js with a focus on speed and SEO.",
-        link: "https://newral.in/services",
-        previewUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        id: "03",
-        title: "DevOps Development",
-        description: "Streamlining your development workflow with robust CI/CD pipelines, cloud infrastructure management, and automated scaling solutions.",
-        link: "https://newral.in/review",
-        previewUrl: "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-        id: "04",
-        title: "Code Review & Security",
-        description: "Ensuring your codebase is clean, efficient, and secure. We perform deep audits to identify vulnerabilities and optimize performance bottlenecks.",
-        link: "https://newral.in/",
-        previewUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
-    }
+  {
+    id: "01",
+    title: "Branding & Graphic Design",
+    description:
+      "We craft bold, memorable brand identities and visuals that build trust, stand out, and clearly communicate your story across every touchpoint.",
+    link: "https://newral.in/services/branding",
+    previewUrl:
+      "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "02",
+    title: "Web Development",
+    description:
+      "High-performance, SEO-friendly websites and web apps built with modern stacks like Next.js, React, and Node.js—fast, scalable, and conversion-focused.",
+    link: "https://newral.in/services/web-development",
+    previewUrl:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "03",
+    title: "App & Software Development",
+    description:
+      "From idea to launch, we build secure and scalable mobile apps and custom software tailored to your business goals and users.",
+    link: "https://newral.in/services/app-development",
+    previewUrl:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "04",
+    title: "UI/UX Design",
+    description:
+      "User-first designs that look great and feel effortless. From wireframes to high-fidelity prototypes, we design experiences people love using.",
+    link: "https://newral.in/services/ui-ux",
+    previewUrl:
+      "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "05",
+    title: "DevOps & Cloud Solutions",
+    description:
+      "We help you deploy, scale, and maintain applications with clean CI/CD pipelines, cloud infrastructure, and performance-ready systems.",
+    link: "https://newral.in/services/devops",
+    previewUrl:
+      "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "06",
+    title: "Code Review & Security",
+    description:
+      "Deep code audits to ensure your systems are secure, efficient, and production-ready—so you can scale with confidence.",
+    link: "https://newral.in/services/code-review",
+    previewUrl:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "07",
+    title: "Social Media Management",
+    description:
+      "Strategy-led content and active engagement that builds brand presence, grows community, and keeps your audience hooked.",
+    link: "https://newral.in/services/social-media",
+    previewUrl:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+  },
 ];
+
 
 export default function ServicesSection() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
