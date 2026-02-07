@@ -2,7 +2,7 @@
 
 import { Shader, ChromaFlow, Swirl } from "shaders/react"
 import { CustomCursor } from "@/components/custom-cursor"
-import { GrainOverlay } from "@/components/grainoverlay"
+import { GrainOverlay } from "@/components/grain-overlay"
 import { useRef, useEffect, useState } from "react"
 import AboutSection from "@/components/about-us/the-company"
 import HeroAboutus from "@/components/about-us/hero-section"

@@ -1,18 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import GetintouchButton from "../getintouchbutton";
+import GetInTouchButton from "@/components/get-in-touch-button";
 import BgSvg2 from "./bg-2-svg";
 import StatsGrid from "./stats-grid";
-
-// --- Supporting Component: StatsGrid (Integrated from earlier) ---
-const stats = [
-    { id: "1", num: "01", text: "Reduced CPU utilization to 4 cores from 32 cores", grid: "md:col-span-1 md:row-span-2" },
-    { id: "2", num: "02", text: "Optimized GPU usage from 3 to 1 while maintaining transcoding", grid: "md:col-span-1" },
-    { id: "3", num: "03", text: "Reduced video processing time from 6 hours to <30 mins", grid: "md:col-span-1" },
-    { id: "4", num: "04", text: "Reduced CPU utilization from 99% to 15%", grid: "md:col-span-2" },
-];
-
 
 
 // --- Types ---
@@ -79,7 +70,7 @@ export default function CardStackScroll() {
                     </p>
                 </div>
                 <div className="mb-12">
-                    <GetintouchButton />
+                    <GetInTouchButton />
                 </div>
             </div>
 

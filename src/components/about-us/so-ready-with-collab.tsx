@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import GetintouchButton from "@/components/getintouchbutton";
+import GetInTouchButton from "@/components/get-in-touch-button";
 
 export default function SOREADYWITHSECTION() {
   const scrollText = "SO Ready to collaborate with Let’s Redefine Technology Together.";
@@ -46,7 +46,7 @@ export default function SOREADYWITHSECTION() {
         {/* The Aura/Glow behind the button */}
         <div className="absolute -inset-2 bg-[#0DA2FF] rounded-full blur-2xl opacity-20 group-hover:opacity-50 transition duration-1000"></div>
         
-        <GetintouchButton/>
+        <GetInTouchButton />
       </motion.div>
 
       {/* Subtle Background Detail (Optional) */}

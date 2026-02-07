@@ -39,7 +39,7 @@ class Particle {
   }
 }
 
-const GetintouchButton = () => {
+const GetInTouchButton = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -108,4 +108,4 @@ const GetintouchButton = () => {
   );
 };
 
-export default GetintouchButton;
+export default GetInTouchButton;
