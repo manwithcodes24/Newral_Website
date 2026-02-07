@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { LinkPreview } from "@/components/ui/LinkPreview"; // Ensure path is correct
-import { cn } from "@/lib/Utils";
+import { cn } from "@/lib/utils";
 
 const SERVICES = [
   {
