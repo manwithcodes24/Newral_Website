@@ -1,7 +1,7 @@
 import { Instagram, Linkedin, Globe } from 'lucide-react'
 import Image from 'next/image'
 import { TextHoverEffect } from './ui/text-hover-effect'
-import Newralfottersvg from './Landingpage/FotterSVG'
+import Newralfottersvg from './landingpage/FotterSVG'
 
 export default function Footer() {
     return (
