@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import BgSvg from "./BgSvg";
-import BgSvgMobile from "./BgSvgMobile";
+import BgSvg from "./bg-svg";
+import BgSvgMobile from "./bg-svg-mobile";
 
 const HeroSection = () => {
     const containerRef = useRef<HTMLDivElement>(null);

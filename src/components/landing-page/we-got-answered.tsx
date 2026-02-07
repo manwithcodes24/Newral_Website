@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
-import BookCallButton from "../BookacallButton";
+import BookCallButton from "../booka-call-button";
 
 // FAQ Data with different "sizes" for the bento look
 const FAQS = [
@@ -38,7 +38,7 @@ const FAQS = [
 
 ];
 
-export default function FAQBentoSection() {
+export default function WeGotAnswered() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     // Mouse tracking logic

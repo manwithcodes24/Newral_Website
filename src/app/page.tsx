@@ -1,11 +1,11 @@
 // app/page.tsx
-import BlogSection from "@/components/Landingpage/BlogSection";
-import CardHeroSection from "@/components/Landingpage/TaglineSection";
-import HeroSection from "@/components/Landingpage/HeroSection";
-import ReviewSection from "@/components/Landingpage/Reviews";
-import CompetishunReviewSection from "@/components/Landingpage/CompetishunReviewSection";
-import ServicesSection from "@/components/Landingpage/ServicesSection";
-import FAQSection from "@/components/Landingpage/WeGotAnswered";
+import BlogSection from "@/components/landing-page/blog-section";
+import CardHeroSection from "@/components/landing-page/tagline-section";
+import HeroSection from "@/components/landing-page/hero-section";
+import ReviewSection from "@/components/landing-page/reviews";
+import CompetishunReviewSection from "@/components/landing-page/competishun-review-section";
+import ServicesSection from "@/components/landing-page/services-section";
+import WeGotAnswered from "@/components/landing-page/we-got-answered";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <CompetishunReviewSection />
       <ServicesSection />
       <BlogSection />
-      <FAQSection />
+      <WeGotAnswered />
     </main>
   );
 }

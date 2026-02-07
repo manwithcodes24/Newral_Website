@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import GetintouchButton from "@/components/GetintouchButton";
+import GetintouchButton from "@/components/getintouchbutton";
 
 export default function SOREADYWITHSECTION() {
   const scrollText = "SO Ready to collaborate with Let’s Redefine Technology Together.";

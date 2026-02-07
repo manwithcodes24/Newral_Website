@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import GetintouchButton from "../GetintouchButton";
-import BgSvg2 from "./Bg2Svg";
-import StatsGrid from "./StatsGrid";
+import GetintouchButton from "../getintouchbutton";
+import BgSvg2 from "./bg-2-svg";
+import StatsGrid from "./stats-grid";
 
 // --- Supporting Component: StatsGrid (Integrated from earlier) ---
 const stats = [

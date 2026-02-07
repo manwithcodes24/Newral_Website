@@ -1,15 +1,15 @@
 "use client"
 
 import { Shader, ChromaFlow, Swirl } from "shaders/react"
-import { CustomCursor } from "@/components/CustomCursor"
-import { GrainOverlay } from "@/components/GrainOverlay"
+import { CustomCursor } from "@/components/custom-cursor"
+import { GrainOverlay } from "@/components/grainoverlay"
 import { useRef, useEffect, useState } from "react"
-import AboutSection from "@/components/Aboutus/TheCompany"
-import HeroAboutus from "@/components/Aboutus/HeroSection"
-import ExpandableCards from "@/components/Aboutus/ExpandableCards"
-import FounderSection from "../../components/Aboutus/FounderSection"
-import TeamSection from "../../components/Aboutus/Ourteam"
-import SOREADYWITHSECTION from "../../components/Aboutus/SoReadywithCollab"
+import AboutSection from "@/components/about-us/the-company"
+import HeroAboutus from "@/components/about-us/hero-section"
+import ExpandableCards from "@/components/about-us/expandable-cards"
+import FounderSection from "../../components/about-us/founder-section"
+import TeamSection from "../../components/about-us/our-team"
+import SOREADYWITHSECTION from "../../components/about-us/so-ready-with-collab"
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)

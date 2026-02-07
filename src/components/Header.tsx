@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import BookACallButton from "./BookacallButton";
+import BookACallButton from "./booka-call-button";
 
 const transition = {
   type: "spring" as const,
