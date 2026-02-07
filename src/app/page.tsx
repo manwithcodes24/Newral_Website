@@ -6,8 +6,13 @@ import ReviewSection from "@/components/landing-page/reviews";
 import CompetishunReviewSection from "@/components/landing-page/competishun-review-section";
 import ServicesSection from "@/components/landing-page/services-section";
 import WeGotAnswered from "@/components/landing-page/we-got-answered";
+import { getAllBlogs } from "@/lib/blog";
 
-export default function Home() {
+export default async function Home() {
+
+    // This runs on the server (safe for fs/path)
+    const allPosts = await getAllBlogs();
+
   return (
     <main className="min-h-screen">
       <HeroSection />
@@ -15,7 +20,7 @@ export default function Home() {
       <ReviewSection />
       <CompetishunReviewSection />
       <ServicesSection />
-      <BlogSection />
+      <BlogSection posts={allPosts} />
       <WeGotAnswered />
     </main>
   );

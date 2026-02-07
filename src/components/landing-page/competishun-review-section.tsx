@@ -75,7 +75,7 @@ export default function CardStackScroll() {
                 </div>
             </div>
 
-            <section ref={containerRef} className="relative h-[400vh]">
+            <section ref={containerRef} className="relative h-[250vh]">
                 <div className="sticky top-14 h-screen w-full flex items-center justify-center overflow-hidden">
                     {cards.map((card, index) => (
                         <Card

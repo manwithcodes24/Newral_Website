@@ -55,7 +55,7 @@ const ReviewSection = () => {
         <section
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
-            className="relative min-h-screen bg-black text-white flex flex-col justify-center overflow-hidden font-sans py-20">
+            className="relative min-h-screen bg-black text-white flex flex-col justify-center overflow-hidden font-sans pb-20">
 
             {/* MAIN CONTENT GRID */}
             <div className=" md:mx-28  px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 items-center z-10">
@@ -138,7 +138,7 @@ const ReviewSection = () => {
             </div>
 
             {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-            <div className="absolute bottom-12 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+            <div className="absolute bottom-14 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
                 <div className="flex whitespace-nowrap overflow-hidden py-4">
                     <motion.div
                         animate={{ x: [0, -1000] }}

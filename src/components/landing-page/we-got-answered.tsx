@@ -2,6 +2,9 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
 import BookCallButton from "../booka-call-button";
+import PremiumAceternityButton from "../PremiumAceternityButton";
+import Link from "next/link";
+import { useRouter  } from "next/navigation";
 
 // FAQ Data with different "sizes" for the bento look
 const FAQS = [
@@ -40,7 +43,7 @@ const FAQS = [
 
 export default function WeGotAnswered() {
     const containerRef = useRef<HTMLDivElement>(null);
-
+    const router = useRouter ();
     // Mouse tracking logic
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -56,15 +59,18 @@ export default function WeGotAnswered() {
         mouseX.set(e.clientX - left);
         mouseY.set(e.clientY - top);
     };
-
+    const handleClick = () => {
+            window.open("https://cal.com/newralfounder", "_blank");
+    }
     return (
         <section
             ref={containerRef}
+            onClick={handleClick}
             onMouseMove={handleMouseMove}
             className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden py-24 px-6"
         >
             {/* --- LAYER 1: BLURRED BACKGROUND GRID --- */}
-            <div className="absolute inset-0 z-0 opacity-20 blur-md scale-105 pointer-events-none">
+            <div className="absolute inset-0 z-1 opacity-20 blur-md scale-105 pointer-events-none">
                 <BentoGrid />
             </div>
 
@@ -80,7 +86,7 @@ export default function WeGotAnswered() {
             </motion.div>
 
             {/* --- LAYER 3: CENTRAL CONTENT --- */}
-            <div className="relative z-30 max-w-3xl pointer-events-none text-center flex flex-col items-center">
+            <Link href="https://cal.com/newralfounder" className="relative z-50 max-w-3xl pointer-events-none text-center flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,10 +107,10 @@ export default function WeGotAnswered() {
 
                     {/* CTA Button */}
                    <div className="z-50">
-                     <BookCallButton />
+                     <PremiumAceternityButton />
                    </div>
                 </motion.div>
-            </div>
+            </Link>
         </section>
     );
 }

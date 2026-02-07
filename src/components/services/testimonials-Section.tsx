@@ -7,32 +7,29 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
     {
         id: 1,
-        text: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handle our operations, which improved the experience for our students.",
-        name: "Sameer Bansal",
-        role: "Founder, Bansal Classes",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sameer",
+        name: "Mohit Tyagi",
+        role: "Founder, Competishun",
+        feedback: "Newral created some landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround. Highly recommend their web development expertise.",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276684_y1tlqe.png",
+        companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
     },
     {
         id: 2,
-        text: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handle our operations, which improved the experience for our students.",
-        name: "Sameer Bansal",
-        role: "Founder, Bansal Classes",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+        name: "Ashton Cofer",
+        role: "Co-Founder & CTO of Fizz Social | Forbes 30u30",
+        feedback: "Newral has been a game-changer for us. Their scalable strong monitoring solution with streamlined DevOps pipelines let us confidently focus on growing our business. Highly recommended!",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276685_sjfhlx.png",
+        companylogo: "https://media.licdn.com/dms/image/v2/C560BAQF6Xwh04dkNYg/company-logo_200_200/company-logo_200_200/0/1630655773340?e=1771459200&v=beta&t=e-vhB43_av62vilrP_nOQdrilcYuDyUnUerpUEfIsTs"
+
     },
     {
         id: 3,
-        text: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handle our operations, which improved the experience for our students.",
-        name: "Sameer Bansal",
+        name: "Sameer Bansal ",
         role: "Founder, Bansal Classes",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan",
-    },
-    {
-        id: 4,
-        text: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handle our operations, which improved the experience for our students.",
-        name: "Sameer Bansal",
-        role: "Founder, Bansal Classes",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-    },
+        feedback: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handling our operations which was great experience for our students",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439869/Frame_1171276686_ev67pb.png",
+        companylogo: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png"
+    }
 ];
 
 export default function TestimonialSection() {
@@ -93,12 +90,12 @@ export default function TestimonialSection() {
                         >
                             <div className="group relative flex h-[400px] flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
                                 <p className="text-xl leading-relaxed text-white/80">
-                                    {item.text}
+                                    {item.feedback}
                                 </p>
 
                                 <div className="mt-12 flex items-center gap-4">
                                     <div className="h-12 w-12 overflow-hidden rounded-full bg-neutral-800">
-                                        <img src={item.avatar} alt={item.name} className="h-full w-full object-cover" />
+                                        <img src={item.avatarurl} alt={item.name} className="h-full w-full object-cover" />
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-white">{item.name}</h4>

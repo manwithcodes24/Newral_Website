@@ -4,71 +4,80 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { LinkPreview } from "@/components/ui/LinkPreview"; // Ensure path is correct
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { link } from "fs";
 
 const SERVICES = [
-  {
-    id: "01",
-    title: "Branding & Graphic Design",
-    description:
-      "We craft bold, memorable brand identities and visuals that build trust, stand out, and clearly communicate your story across every touchpoint.",
-    link: "https://newral.in/services/branding",
-    previewUrl:
-      "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "02",
-    title: "Web Development",
-    description:
-      "High-performance, SEO-friendly websites and web apps built with modern stacks like Next.js, React, and Node.js—fast, scalable, and conversion-focused.",
-    link: "https://newral.in/services/web-development",
-    previewUrl:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "03",
-    title: "App & Software Development",
-    description:
-      "From idea to launch, we build secure and scalable mobile apps and custom software tailored to your business goals and users.",
-    link: "https://newral.in/services/app-development",
-    previewUrl:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "04",
-    title: "UI/UX Design",
-    description:
-      "User-first designs that look great and feel effortless. From wireframes to high-fidelity prototypes, we design experiences people love using.",
-    link: "https://newral.in/services/ui-ux",
-    previewUrl:
-      "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "05",
-    title: "DevOps & Cloud Solutions",
-    description:
-      "We help you deploy, scale, and maintain applications with clean CI/CD pipelines, cloud infrastructure, and performance-ready systems.",
-    link: "https://newral.in/services/devops",
-    previewUrl:
-      "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "06",
-    title: "Code Review & Security",
-    description:
-      "Deep code audits to ensure your systems are secure, efficient, and production-ready—so you can scale with confidence.",
-    link: "https://newral.in/services/code-review",
-    previewUrl:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "07",
-    title: "Social Media Management",
-    description:
-      "Strategy-led content and active engagement that builds brand presence, grows community, and keeps your audience hooked.",
-    link: "https://newral.in/services/social-media",
-    previewUrl:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-  },
+    {
+        id: "01",
+        title: "App & Software Development",
+        description:
+            "Bring your app ideas to life with scalable and secure development. We build native and cross-platform apps and custom software tailored to your business needs.",
+        redirectlink: "/Services/service?service=app-development",
+        link: "https://newral.com/Services/service?service=app-development",
+        previewUrl:
+            "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "02",
+        title: "Web Development Services",
+        description:
+            "Build high-performance, conversion-focused websites tailored for your goals. Whether it's a simple website or a dynamic lead generation platform, we've got you covered.",
+        redirectlink: "/Services/service?service=web-development",
+        link: "https://newral.com/Services/service?service=web-development",
+        previewUrl:
+            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "03",
+        title: "Branding & Graphic Design",
+        description:
+            "Our professional branding and graphic design services help create impactful visuals that build trust, strengthen recognition, and clearly communicate your mission to the right audience.",
+        redirectlink: "/Services/service?service=branding",
+        link: "https://newral.com/Services/service?service=branding",
+        previewUrl:
+            "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "04",
+        title: "UI/UX Design Services",
+        description:
+            "Craft intuitive and visually stunning user experiences. From basic wireframes to full-fledged prototypes, we design user-first digital products that engage and convert.",
+        redirectlink: "https://newral.com/Services/service?service=ui-ux",
+        link: "https://newral.com/Services/service?service=ui-ux",
+        previewUrl:
+            "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "05",
+        title: "Social Media Management",
+        link: "https://newral.com/Services/service?service=social-media",
+        description:
+            "Boost your online presence with strategic content creation and active audience engagement. We grow your community while you focus on your business.",
+        redirectlink: "/Services/service?service=social-media",
+        previewUrl:
+            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "06",
+        title: "DevOps & Cloud Solutions",
+        description:
+            "Deploy, scale, and secure your applications effortlessly. Our DevOps solutions ensure your infrastructure is optimized for performance and growth.",
+        redirectlink: "/Services/service?service=devops",
+        link: "https://newral.com/Services/service?service=devops",
+        previewUrl:
+            "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        id: "07",
+        title: "Code Review & Security Services",
+        description:
+            "Ensure your codebase is clean, secure, and performance-optimized. We provide in-depth audits to help you scale confidently and securely.",
+        redirectlink: "/Services/service?service=code-review",
+        link: "https://newral.com/Services/service?service=code-review",
+        previewUrl:
+            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    },
 ];
 
 
@@ -76,7 +85,7 @@ export default function ServicesSection() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <section className="bg-black font-sans text-white py-24 px-6 md:px-12 lg:px-20 min-h-screen">
+        <section className="bg-black font-sans text-white py-24 px-6  min-h-screen">
             <div className="mx-auto">
                 {/* Main Heading */}
                 <motion.h2
@@ -105,17 +114,19 @@ export default function ServicesSection() {
 }
 
 interface ServiceItemProps {
-  service: (typeof SERVICES)[0];
-  isOpen: boolean;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
+    service: (typeof SERVICES)[0];
+    isOpen: boolean;
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
 }
 
 function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceItemProps) {
+    const router = useRouter();
     return (
         <motion.div
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onClick={() => router.push(service.redirectlink)}
             className={cn(
                 "relative overflow-hidden transition-all duration-500 border-b border-zinc-800 cursor-pointer",
                 isOpen ? "bg-blue-600 border-transparent" : "bg-transparent hover:bg-zinc-900/30"
@@ -139,6 +150,7 @@ function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceIte
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
+                            onClick={() => router.push(service.redirectlink)}
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 10 }}

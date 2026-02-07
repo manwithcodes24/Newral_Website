@@ -1,6 +1,7 @@
 import { Instagram, Linkedin, Globe } from 'lucide-react'
 import Image from 'next/image'
 import FooterSVG from './landing-page/footer-svg'
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -35,34 +36,34 @@ export default function Footer() {
                             <h3 className="text-white text-3xl font-medium mb-6">Navigation</h3>
                             <ul className="space-y-3">
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/" className="text-white hover:text-blue-100 transition-colors">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/Aboutus" className="text-white hover:text-blue-100 transition-colors">
                                         About
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/Products" className="text-white hover:text-blue-100 transition-colors">
                                         Products
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/Projects" className="text-white hover:text-blue-100 transition-colors">
                                         Projects
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/Clients" className="text-white hover:text-blue-100 transition-colors">
                                         Clients
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="/Blogs" className="text-white hover:text-blue-100 transition-colors">
                                         Blogs
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -72,29 +73,29 @@ export default function Footer() {
                             <h3 className="text-white text-3xl font-medium mb-6">Products</h3>
                             <ul className="space-y-3">
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="https://synappses.in/" className="text-white hover:text-blue-100 transition-colors">
                                         LMS
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="https://synappses.in/" className="text-white hover:text-blue-100 transition-colors">
                                         OMS
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="https://synappses.in/" className="text-white hover:text-blue-100 transition-colors">
                                         HRMS
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="https://synappses.in/" className="text-white hover:text-blue-100 transition-colors">
                                         Lead Management
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <Link href="https://synappses.in/" className="text-white hover:text-blue-100 transition-colors">
                                         University Management
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -105,29 +106,29 @@ export default function Footer() {
                                 <h3 className="text-white text-3xl font-medium mb-6">Services</h3>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                        <Link href="/Services/service?service=web-development" className="text-white hover:text-blue-100 transition-colors">
                                             Web Development
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                        <Link href="/Aboutus" className="text-white hover:text-blue-100 transition-colors">
                                             About
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                        <Link href="/Products" className="text-white hover:text-blue-100 transition-colors">
                                             Products
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                        <Link  href="#" className="text-white hover:text-blue-100 transition-colors">
                                             Projects
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                        <Link  href="#" className="text-white hover:text-blue-100 transition-colors">
                                             Clients
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -147,13 +148,13 @@ export default function Footer() {
                             <div className="flex justify-between items-center mt-12 ">
                                 <div className="text-white text-sm">Follow us</div>
                                 <div className="flex gap-4">
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <a href="https://instagram.com/newralofficial" className="text-white hover:text-blue-100 transition-colors">
                                         <Instagram size={24} />
                                     </a>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <a href="https://www.linkedin.com/company/newralinc" className="text-white hover:text-blue-100 transition-colors">
                                         <Linkedin size={24} />
                                     </a>
-                                    <a href="#" className="text-white hover:text-blue-100 transition-colors">
+                                    <a href="https://newral.in" className="text-white hover:text-blue-100 transition-colors">
                                         <Globe size={24} />
                                     </a>
                                 </div>
