@@ -1,6 +1,6 @@
 import { Instagram, Linkedin, Globe } from 'lucide-react'
 import Image from 'next/image'
-import FooterSVG from './landingpage/FooterSvg'
+import FooterSVG from './Landingpage/FooterSvg'
 
 export default function Footer() {
     return (
