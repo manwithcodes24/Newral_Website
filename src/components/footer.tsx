@@ -1,7 +1,7 @@
 import { Instagram, Linkedin, Globe } from 'lucide-react'
 import Image from 'next/image'
 import { TextHoverEffect } from './ui/text-hover-effect'
-import Newralfottersvg from './landingpage/FotterSVG'
+import FooterSVG from './landingpage/FooterSVG'
 
 export default function Footer() {
     return (
@@ -166,7 +166,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="">
-               <Newralfottersvg />
+               <FooterSVG />
             </div>
             
         </div>
