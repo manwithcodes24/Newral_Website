@@ -49,7 +49,7 @@ export default function TestimonialSection() {
             <div className="mx-auto ">
                 {/* Header Section */}
                 <div className="flex flex-col items-end justify-between gap-6 md:flex-row md:items-center">
-                    <div className="max-w-2xl text-left w-full">
+                    <div className=" text-center w-full">
                         <h2 className="mb-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
                             What teams say about working with us
                         </h2>
@@ -58,21 +58,7 @@ export default function TestimonialSection() {
                         </p>
                     </div>
 
-                    {/* Navigation Buttons */}
-                    <div className="flex gap-3">
-                        <button
-                            onClick={() => scroll("left")}
-                            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all hover:bg-white/10 active:scale-90"
-                        >
-                            <ChevronLeft size={24} />
-                        </button>
-                        <button
-                            onClick={() => scroll("right")}
-                            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all hover:bg-white/10 active:scale-90"
-                        >
-                            <ChevronRight size={24} />
-                        </button>
-                    </div>
+
                 </div>
 
                 {/* Carousel Container */}
@@ -105,6 +91,23 @@ export default function TestimonialSection() {
                             </div>
                         </div>
                     ))}
+                </div>
+                {/* Navigation Buttons */}
+                <div className="w-full flex justify-center gap-4">
+                    <div className="flex gap-3">
+                        <button
+                            onClick={() => scroll("left")}
+                            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all hover:bg-white/10 active:scale-90"
+                        >
+                            <ChevronLeft size={24} />
+                        </button>
+                        <button
+                            onClick={() => scroll("right")}
+                            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all hover:bg-white/10 active:scale-90"
+                        >
+                            <ChevronRight size={24} />
+                        </button>
+                    </div>
                 </div>
             </div>
 
