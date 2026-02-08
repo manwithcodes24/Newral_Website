@@ -27,7 +27,7 @@ export default function Footer() {
                             </p>
                             <div>
                                 <p className="text-white text-sm mb-2">Contact us</p>
-                                <p className="text-white text-lg font-medium">+91700422422</p>
+                                <p className="text-white text-lg font-medium">+91-9116768791</p>
                             </div>
                         </div>
 

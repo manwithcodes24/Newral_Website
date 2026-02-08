@@ -5,14 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LucideMoveLeft, LucideMoveRight, MoveLeft, MoveLeftIcon } from "lucide-react";
 
 const reviews = [
-    {
-        id: 1,
-        name: "Mohit Tyagi",
-        role: "Founder, Competishun",
-        feedback: "Newral created some landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround. Highly recommend their web development expertise.",
-        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276684_y1tlqe.png",
-        companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
-    },
+
     {
         id: 2,
         name: "Ashton Cofer",
@@ -22,6 +15,16 @@ const reviews = [
         companylogo: "https://media.licdn.com/dms/image/v2/C560BAQF6Xwh04dkNYg/company-logo_200_200/company-logo_200_200/0/1630655773340?e=1771459200&v=beta&t=e-vhB43_av62vilrP_nOQdrilcYuDyUnUerpUEfIsTs"
 
     },
+
+    {
+        id: 1,
+        name: "Mohit Tyagi",
+        role: "Founder, Competishun",
+        feedback: "Newral created some landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround. Highly recommend their web development expertise.",
+        avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276684_y1tlqe.png",
+        companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
+    },
+
     {
         id: 3,
         name: "Sameer Bansal ",
