@@ -88,7 +88,7 @@ export default function TestimonialSection() {
                             // FIXED: Better width handling for responsiveness
                             className="w-[85%] shrink-0 scroll-snap-align-start md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                         >
-                            <div className="group relative flex h-[400px] flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
+                            <div className="group relative flex h-auto flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
                                 <p className="text-xl leading-relaxed text-white/80">
                                     {item.feedback}
                                 </p>
