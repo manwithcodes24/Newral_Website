@@ -88,7 +88,7 @@ export default function TestimonialSection() {
                             // FIXED: Better width handling for responsiveness
                             className="w-[85%] shrink-0 scroll-snap-align-start md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                         >
-                            <div className="group relative flex h-auto flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
+                            <div className="group relative items-center  text-center flex h-auto flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
                                 <p className="text-xl leading-relaxed text-white/80">
                                     {item.feedback}
                                 </p>
@@ -97,7 +97,7 @@ export default function TestimonialSection() {
                                     <div className="h-12 w-12 overflow-hidden rounded-full bg-neutral-800">
                                         <img src={item.avatarurl} alt={item.name} className="h-full w-full object-cover" />
                                     </div>
-                                    <div>
+                                    <div className="flex flex-col justify-center items-center">
                                         <h4 className="font-medium text-white">{item.name}</h4>
                                         <p className="text-sm text-white/40">{item.role}</p>
                                     </div>
