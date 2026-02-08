@@ -60,7 +60,7 @@ export default function CardStackScroll() {
             <div className="flex flex-col items-center justify-center pt-20 px-4">
                 <div className="mb-8 flex flex-col gap-2 max-w-5xl  text-center">
                     <h1 className="md:text-[64px] leading-tight -space-y-4 text-4xl font-medium tracking-tight text-white">
-                        Trusted By Competishun, <br /> Edtech Startup Featured On <br />
+                        Trusted By Competishun Startup, <br /> Featured On 
                         <span className="text-[#0A8CB9]"> Shark Tank</span>
                         <span className="text-[#FAE071] ml-3">India</span>
                     </h1>
