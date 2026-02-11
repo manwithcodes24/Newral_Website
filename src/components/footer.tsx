@@ -46,18 +46,14 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/Products" className="text-white hover:text-blue-100 transition-colors">
-                                        Products
+                                    <Link href="/Services" className="text-white hover:text-blue-100 transition-colors">
+                                        Services
                                     </Link>
                                 </li>
+                                
                                 <li>
-                                    <Link href="/Projects" className="text-white hover:text-blue-100 transition-colors">
-                                        Projects
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/Clients" className="text-white hover:text-blue-100 transition-colors">
-                                        Clients
+                                    <Link href="/Contact" className="text-white hover:text-blue-100 transition-colors">
+                                        Contact Us
                                     </Link>
                                 </li>
                                 <li>
@@ -111,23 +107,23 @@ export default function Footer() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/Aboutus" className="text-white hover:text-blue-100 transition-colors">
-                                            About
+                                        <Link href="/Services/service?service=app-development" className="text-white hover:text-blue-100 transition-colors">
+                                            App Devlopment
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/Products" className="text-white hover:text-blue-100 transition-colors">
-                                            Products
+                                        <Link href="/Services/service?service=branding" className="text-white hover:text-blue-100 transition-colors">
+                                            Branding & Graphic 
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link  href="#" className="text-white hover:text-blue-100 transition-colors">
-                                            Projects
+                                        <Link  href="/Services/service?service=devops" className="text-white hover:text-blue-100 transition-colors">
+                                            Devops nd Cloud Services
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link  href="#" className="text-white hover:text-blue-100 transition-colors">
-                                            Clients
+                                        <Link  href="/Services/service?service=ui-ux" className="text-white hover:text-blue-100 transition-colors">
+                                           Ui - UX
                                         </Link>
                                     </li>
                                 </ul>

@@ -5,6 +5,7 @@ import GetInTouchButton from "@/components/get-in-touch-button";
 import BgSvg2 from "./bg-2-svg";
 import StatsGrid from "./stats-grid";
 import PremiumAceternityButton from "../PremiumAceternityButton";
+import Link from "next/link";
 
 
 // --- Types ---
@@ -70,8 +71,8 @@ export default function CardStackScroll() {
                         At Newral, we specialize in delivering cutting-edge technology solutions that drive growth, security, and scalability. Our expertise spans multiple domains, ensuring that businesses, startups, and enterprises get the best-in-class digital products tailored to their needs.
                     </p>
                 </div>
-                <div className="mb-12">
-                    <PremiumAceternityButton />
+                <div className="mb-12 px-4 py-2 border-amber-50 border-1 rounded-2xl text-white">
+                    <Link href={"/case-study/compitishun"}>See Case Study</Link>
                 </div>
             </div>
 

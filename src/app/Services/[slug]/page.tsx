@@ -16,104 +16,129 @@ const SERVICES = [
     {
         id: "01",
         slug: "app-development",
-        title: "App & Software Development",
-        description: "We start by conducting thorough research, diving into your audience’s behaviors, preferences, and pain points. We also analyze current market trends and the competitive landscape to uncover opportunities and insights that can set your product apart. This research-driven foundation ensures that the product we design aligns with the real needs of your users and positions your business for success.",
-        previewUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Speed up product development & reduce go-to-market time.",
-        subtitle: "Fintech App Ecosystem",
+        maintittle: "Human app engineering real-world performance",
+        title: "App/Software Development",
+        description: "We design and develop high-performance, scalable applications tailored to your business goals. From MVPs to enterprise-grade systems, we ensure clean architecture, long-term maintainability, and seamless performance across every platform.",
+        previewUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXIlMjBzY2llbmNlfGVufDB8fDB8fHww",
+        previewUrl2: "https://images.unsplash.com/photo-1650636353551-1275516077b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwJTIwZGV2fGVufDB8fDB8fHww",
+        mainHeading: "Turn your ideas into powerful, scalable digital products.",
+        tegLine: "Custom-built applications engineered for performance and long-term growth.",
         tags: ["Mobile App", "iOS & Android", "React Native"],
         images: [
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
-             "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1763568258415-6f6a78a4ef18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTh8fGFwcCUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1763568258177-4ea94966595a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAyfHxhcHAlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxhcHAlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D"
         ]
     },
+
     {
         id: "02",
         slug: "web-development",
+        maintittle: "Modern web platforms scalable user experiences",
         title: "Web Development Services",
-        description: "Our web development process focuses on building high-performance, conversion-optimized platforms. We leverage modern frameworks to create seamless digital experiences that scale with your traffic and business goals.",
-        previewUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Scalable web architectures for modern enterprises.",
-        subtitle: "E-Commerce SaaS Platform",
+        description: "We build fast, secure, and scalable web platforms optimized for growth. Using modern frameworks and best engineering practices, we create systems that perform reliably under real-world demands.",
+        previewUrl: "https://images.unsplash.com/photo-1617240016072-d92174e44171?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
+        previewUrl2: "https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
+        mainHeading: "High-performance web platforms built to scale.",
+        tegLine: "Modern web solutions designed for speed, stability, and growth.",
         tags: ["Next.js", "Web Design", "Full-Stack"],
         images: [
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
         ]
     },
+
     {
         id: "03",
         slug: "branding",
+        maintittle: "Strategic brand systems market leadership",
         title: "Branding & Graphic Design",
-        description: "We create visual identities that resonate. From typography to color theory, we ensure your brand tells a consistent and compelling story across every touchpoint, building immediate trust with your audience.",
-        previewUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Visual identities that define market leaders.",
-        subtitle: "Newral Brand Identity System",
-        tags: ["Branding", "Logo Design", "Visual Guidelines"],
+        description: "We craft strategic visual identities that establish credibility and differentiate your business in competitive markets. Every design system is built for consistency, clarity, and long-term recognition.",
+        previewUrl: "https://images.unsplash.com/photo-1613759612065-d5971d32ca49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyYW5kaW5nfGVufDB8fDB8fHww",
+        previewUrl2: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJyYW5kaW5nfGVufDB8fDB8fHww",
+        mainHeading: "Build a brand that inspires trust and recognition.",
+        tegLine: "Strategic branding designed for clarity, impact, and growth.",
+        tags: ["Branding", "Logo Design", "Visual Identity"],
         images: [
-            "https://images.unsplash.com/photo-1634942537034-2531766767d7?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1716471330463-f475b00f0506?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJyYW5kaW5nfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGJyYW5kaW5nfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1636247498719-a8a04ed961a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGJyYW5kaW5nfGVufDB8fDB8fHww"
         ]
     },
+
     {
         id: "04",
         slug: "ui-ux",
+        maintittle: "Human interface design meaningful interaction",
         title: "UI/UX Design Services",
-        description: "Design is more than how it looks; it's how it works. Our UI/UX team focuses on user-centric journeys that minimize friction and maximize engagement, turning complex features into intuitive interactions.",
-        previewUrl: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Crafting intuitive journeys for complex products.",
-        subtitle: "SaaS Dashboard Redesign",
+        description: "We design user-centric experiences that reduce friction and improve engagement. Every interface is crafted through research and usability insights to align business objectives with user needs.",
+        previewUrl: "https://images.unsplash.com/photo-1621111848501-8d3634f82336?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D",
+        previewUrl2: "https://images.unsplash.com/photo-1690369519543-c81a2121f740?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D",
+        mainHeading: "Design experiences that users love and trust.",
+        tegLine: "Intuitive interfaces built for clarity and conversion.",
         tags: ["UI Design", "UX Research", "Figma"],
         images: [
-            "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D"
         ]
     },
+
     {
         id: "05",
         slug: "social-media",
+        maintittle: "Digital growth strategies measurable impact",
         title: "Social Media Management",
-        description: "We grow communities, not just follower counts. Our strategic approach to social media ensures your brand stays relevant and active, driving organic traffic and building real relationships.",
-        previewUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Organic growth driven by community engagement.",
-        subtitle: "Global Tech Campaign",
+        description: "We grow digital communities through strategic content planning, engagement strategies, and performance-driven campaigns designed for sustainable growth.",
+        previewUrl: "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8fDA%3D",
+        previewUrl2: "https://images.unsplash.com/photo-1553532435-93d532a45f15?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww",
+        mainHeading: "Grow your digital presence with strategy and consistency.",
+        tegLine: "Community-driven growth backed by data and creativity.",
         tags: ["Strategy", "Content", "Growth"],
         images: [
-            "https://images.unsplash.com/photo-1611162616475-46b635cbca86?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c29jaWFsJTIwbWVkaWElMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNvY2lhbCUyMG1lZGlhJTIwbWFya2V0aW5nfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D"
         ]
     },
+
     {
         id: "06",
         slug: "devops",
+        maintittle: "Reliable cloud infrastructure scalable systems",
         title: "DevOps & Cloud Solutions",
-        description: "Automate your workflow and secure your infrastructure. Our DevOps solutions bridge the gap between development and operations, ensuring rapid deployments and high availability.",
-        previewUrl: "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Infrastructure that scales as fast as your ideas.",
-        subtitle: "AWS Cloud Migration",
+        description: "We streamline deployments, automate workflows, and secure cloud environments to ensure high availability and operational efficiency at scale.",
+        previewUrl: "https://images.unsplash.com/photo-1599949104055-2d04026aee1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRldm9wc3xlbnwwfHwwfHx8MA%3D%3D",
+        previewUrl2: "https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWQlMjBzZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D",
+        mainHeading: "Infrastructure that grows as fast as your vision.",
+        tegLine: "Cloud architecture engineered for reliability and performance.",
         tags: ["Kubernetes", "CI/CD", "Security"],
         images: [
-            "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdWQlMjBzZXJ2ZXJ8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1744868562210-fffb7fa882d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3VkJTIwc2VydmVyfGVufDB8fDB8fHww"
         ]
     },
+
     {
         id: "07",
         slug: "code-review",
+        maintittle: "Secure code audits production readiness",
         title: "Code Review & Security Services",
-        description: "Security is non-negotiable. Our deep-dive code reviews identify vulnerabilities and performance bottlenecks before they reach production, keeping your data and users safe.",
-        previewUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-        mainHeading: "Bulletproof code for high-stakes environments.",
-        subtitle: "Security Audit 2024",
+        description: "We perform in-depth code audits and security reviews to identify vulnerabilities, improve maintainability, and enhance system performance before deployment.",
+        previewUrl: "https://plus.unsplash.com/premium_photo-1683134329824-6f2d0af14ccf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZGUlMjByZXZpZXd8ZW58MHx8MHx8fDA%3D",
+        previewUrl2: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZSUyMHJldmlld3xlbnwwfHwwfHx8MA%3D%3D",
+        mainHeading: "Secure, optimized, and production-ready software.",
+        tegLine: "Expert-level audits that strengthen performance and protection.",
         tags: ["Audit", "Security", "Clean Code"],
         images: [
-            "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+            "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZSUyMHJldmlld3xlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VjdXJpdHl8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNlY3VyaXR5fGVufDB8fDB8fHww"
         ]
-    },
+    }
 ];
+
 
 function HomeContent() {
     const router = useRouter();
@@ -128,6 +153,14 @@ function HomeContent() {
 
     // Logic for the "Next Image" in the heading
     const nextService = SERVICES[(activeIndex + 1) % SERVICES.length];
+    const words = activeService.maintittle.split(" ");
+
+    // Row 1 parts
+    const firstWord = words[0] || "";
+    const nextWords = words.slice(1, 3).join(" ");
+
+    // Row 2 remaining
+    const remainingWords = words.slice(3).join(" ");
 
     const handleTabChange = (slug: string) => {
         router.push(`?service=${slug}`, { scroll: false });
@@ -158,41 +191,47 @@ function HomeContent() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white flex flex-wrap items-center justify-center gap-x-4 gap-y-2"
+                            className="text-6xl md:text-8xl lg:text-8xl font-bold tracking-tighter text-white flex flex-wrap items-center justify-center gap-x-4 gap-y-2"
                         >
-                            Human
+                            {firstWord}
+
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={`hero1-${activeService.id}`}
                                     initial={{ scale: 0.8, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.8, opacity: 0 }}
+                                    transition={{ duration: 0.4 }}
                                     src={activeService.previewUrl}
                                     className="h-16 md:h-24 lg:h-28 w-24 md:w-36 lg:w-40 object-cover rounded-2xl border border-white/10 shadow-2xl"
                                 />
                             </AnimatePresence>
-                            first design
+
+                            {nextWords}
                         </motion.h1>
 
-                        {/* Heading Row 2 */}
+
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white flex flex-wrap items-center justify-center gap-x-4 gap-y-2 -mt-4 md:-mt-8"
+                            className="text-6xl md:text-8xl lg:text-8xl font-bold tracking-tighter text-white flex flex-wrap items-center justify-center gap-x-4 gap-y-2 -mt-4 md:-mt-8"
                         >
                             <AnimatePresence mode="wait">
                                 <motion.img
-                                    key={`hero2-${nextService.id}`}
+                                    key={`hero2-${activeService.id}`}
                                     initial={{ scale: 0.8, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.8, opacity: 0 }}
-                                    src={nextService.previewUrl}
-                                    className="h-16 md:h-24 lg:h-28 w-24 md:w-36 lg:w-40 object-cover rounded-2xl border border-white/10 shadow-2xl"
+                                    transition={{ duration: 0.4 }}
+                                    src={activeService.previewUrl2}
+                                    className="h-16 md:h-24 lg:h-28 w-24 md:w-36 lg:w-40  object-cover rounded-2xl border border-white/10 shadow-2xl"
                                 />
                             </AnimatePresence>
-                            modern products
+
+                            {remainingWords}
                         </motion.h1>
+
                     </div>
 
                     {/* Shadcn Tabs */}
@@ -230,7 +269,7 @@ function HomeContent() {
                 <ProjectSection
                     data={{
                         mainHeading: activeService.mainHeading,
-                        title: activeService.subtitle,
+                        title: activeService.tegLine,
                         tags: activeService.tags,
                         images: activeService.images
                     }}
