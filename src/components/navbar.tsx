@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import this hook
 import PremiumAceternityButton from "./PremiumAceternityButton";
+import NewralLogoSvg from "./landing-page/newral-logo-svg";
 import { s } from "framer-motion/client";
 
 const SERVICES = [
@@ -78,14 +79,14 @@ const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <Link href={href}>
         <motion.div
-          className={`relative cursor-pointer px-4 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? "text-white" : "text-neutral-400 hover:text-white"
+          className={`relative cursor-pointer px-4 py-2 text-sm transition-colors duration-300 text-white ${isActive ? "font-bold" : "hover: font-medium"}
             }`}
         >
           {/* Active Background Pill */}
           {isActive && (
             <motion.div
               layoutId="active-pill"
-              className="absolute inset-0 bg-white/5 rounded-full -z-10"
+              className="absolute inset-0 bg-white/5 font-bold rounded-full -z-10"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
@@ -172,33 +173,26 @@ const HoveredLink = ({ children, href }: HoveredLinkProps) => {
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
-
   return (
     <header className="fixed top-0 w-full z-50 flex justify-center py-6 px-4 md:px-10">
       <div className="flex items-center justify-between w-full ">
 
         {/* 1. Logo Left */}
         <Link href="/" className="flex items-center shrink-0">
-          <Image
-            src="https://res.cloudinary.com/dyktjldc4/image/upload/v1765014955/fymyyilfyvvf3f1qekuf.png"
-            alt="newral"
-            width={100}
-            height={40}
-            className="h-10 w-auto object-contain"
-          />
+          <NewralLogoSvg />
         </Link>
 
         {/* 2. Central Navigation Pill */}
         <nav
           onMouseLeave={() => setActive(null)}
-          className="hidden md:flex items-center bg-[#1A1A1A]/80 border border-white/5 backdrop-blur-md px-2 py-1.5 rounded-full shadow-lg"
+          className="hidden md:flex items-center bg-[#1A1A1A]/30 border border-white/5 backdrop-blur-md px-2 py-1.5 rounded-full shadow-lg"
         >
           <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
           <MenuItem setActive={setActive} active={active} item="About us" href="/Aboutus" />
 
           <MenuItem setActive={setActive} active={active} item="Services" href="/Services">
-            <div className="flex flex-col space-y-3 text-sm min-w-[150px]">
+            <div className="flex flex-col space-y-3 text-sm min-w-37.5">
               {SERVICES.map((service) => (
                 <HoveredLink key={service.id} href={service.slug ? `/Services/service?service=${service.slug}` : "/Services"}>
                   {service.title}
@@ -231,7 +225,7 @@ export default function Navbar() {
 
         {/* 3. Action Button */}
         <div className="shrink-0">
-          <PremiumAceternityButton />
+          <PremiumAceternityButton size="sm" label="Book a call"/>
         </div>
       </div>
     </header>

@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
 
-const text = "We Build Technology That Accelerates Product Development And Drives Real Business Impact";
+const text = "We build technology that accelerates product development and drives real business impact";
 
 const FinalCardExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,7 +83,7 @@ const FinalCardExperience = () => {
             className="w-full text-center z-20"
           >
             {/* 2. TEXT SCALING: Responsive text for different monitor sizes */}
-            <p className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tighter">
+            <p className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[40px] sm:text-[64px] md:text-[56px] lg:text-[72px] xl:text-display font-bold tracking-tighter leading-[1.2]">
               {words.map((word, i) => {
                 const start = 0.1 + (i / words.length) * 0.8;
                 const end = start + (1 / words.length) * 0.8;

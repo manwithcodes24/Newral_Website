@@ -91,9 +91,9 @@ export default function ServicesSection() {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="text-5xl md:text-7xl font-medium mb-20 tracking-tighter leading-[1.1] max-w-6xl"
+                    className="text-4xl md:text-6xl font-bold mb-20 tracking-tighter leading-[1.1] max-w-6xl"
                 >
-                    Speed up product development & reduce go-to-market time.
+                    Speed up product development <br /> & reduce go-to-market time.
                 </motion.h2>
 
                 {/* Accordion List */}
@@ -132,44 +132,44 @@ function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceIte
                 isOpen ? "bg-blue-600 border-transparent" : "bg-transparent hover:bg-zinc-900/30"
             )}
         >
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 px-4 md:px-8 relative z-10">
+            <LinkPreview url={service.link} className="block w-full">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 relative z-10">
 
-                {/* Title & Link Preview Trigger */}
-                <div className="flex items-center gap-6">
-                    <LinkPreview url={service.link} className="inline-block">
+                    {/* Title */}
+                    <div className="flex items-center gap-6">
                         <h3 className={cn(
                             "text-2xl md:text-4xl font-medium tracking-tight transition-colors duration-300",
-                            isOpen ? "text-white" : "text-zinc-300"
+                            isOpen ? "text-white md:px-8" : "text-zinc-300"
                         )}>
                             {service.title}
                         </h3>
-                    </LinkPreview>
-                </div>
+                    </div>
 
-                {/* Content visible only when open */}
-                <AnimatePresence>
-                    {isOpen && (
-                        <motion.div
-                            onClick={() => router.push(service.redirectlink)}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
-                            className="mt-4 md:mt-0 md:max-w-3xl justify-between flex w-full items-center gap-6"
-                        >
-                            <p className="text-white/90 text-sm md:text-base leading-relaxed font-light">
-                                {service.description}
-                            </p>
+                    {/* Content visible only when open */}
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.div
+                                onClick={() => router.push(service.redirectlink)}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 10 }}
+                                className="mt-4 md:mt-0 md:max-w-3xl justify-between flex w-full items-center gap-6"
+                            >
+                                <p className="text-white/90 text-sm md:text-base leading-relaxed font-light">
+                                    {service.description}
+                                </p>
 
-                            <div className="flex-shrink-0 flex items-start justify-between gap-4 group/btn">
-                                <span className="text-xs font-medium tracking-widest uppercase">Projects</span>
-                                <div className="">
-                                    <ArrowUpRight size={18} />
+                                <div className="flex-shrink-0 flex items-start justify-between gap-4 group/btn">
+                                    <span className="text-xs font-medium tracking-widest uppercase">Projects</span>
+                                    <div>
+                                        <ArrowUpRight size={18} />
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </LinkPreview>
 
             {/* Background visual element (optional - for the image overlay look) */}
             <AnimatePresence>

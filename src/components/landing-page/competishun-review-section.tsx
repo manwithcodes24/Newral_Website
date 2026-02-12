@@ -60,19 +60,19 @@ export default function CardStackScroll() {
         <div className="bg-black">
             <div className="flex flex-col items-center justify-center pt-20 px-4">
                 <div className="mb-8 flex flex-col gap-2 max-w-5xl  text-center">
-                    <h1 className="md:text-[64px] leading-tight -space-y-4 text-4xl font-medium tracking-tight text-white">
+                    <h1 className="md:text-[64px] leading-tight -space-y-4 text-4xl font-bold tracking-tight text-white">
                         Trusted By Competishun Startup, <br /> Featured On 
                         <span className="text-[#0A8CB9]"> Shark Tank</span>
                         <span className="text-[#FAE071] ml-3">India</span>
                     </h1>
                 </div>
-                <div className="flex flex-col gap-2 max-w-2xl text-center">
-                    <p className="text-white text-lg leading-normal font-medium mb-8">
+                <div className="flex flex-col gap-2 max-w-xl text-center">
+                    <p className="text-white text-[18px] leading-tight font-bold mb-8">
                         At Newral, we specialize in delivering cutting-edge technology solutions that drive growth, security, and scalability. Our expertise spans multiple domains, ensuring that businesses, startups, and enterprises get the best-in-class digital products tailored to their needs.
                     </p>
                 </div>
-                <div className="mb-12 px-4 py-2 border-amber-50 border-1 rounded-2xl text-white">
-                    <Link href={"/case-study/compitishun"}>See Case Study</Link>
+                <div className="mb-12">
+                    <PremiumAceternityButton size="md" label="Get in touch" />
                 </div>
             </div>
 

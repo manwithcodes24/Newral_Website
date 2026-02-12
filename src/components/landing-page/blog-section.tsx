@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import PremiumAceternityButton from "../PremiumAceternityButton";
 
 interface BlogSectionProps {
     posts: any[];
@@ -34,8 +35,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
                         transition={{ delay: 0.1 }}
                         className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
                     >
-                        Stay updated with the latest trends in SaaS UX, development, and 
-                        digital product engineering.
+                        Newral is a technology agency that partners with ambitious startups to design and engineer scalable digital products. We work closely with founding teams to translate 
                     </motion.p>
                 </div>
 
@@ -78,13 +78,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
                 {/* Centered Button */}
                 <div className="flex justify-center">
                     <Link href="/blogs">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="relative px-10 py-4 bg-blue-600 rounded-full text-white font-semibold text-sm transition-all shadow-[0_0_40px_-5px_rgba(37,99,235,0.6)] hover:shadow-[0_0_50px_-5px_rgba(37,99,235,0.8)]"
-                        >
-                            Read all blogs
-                        </motion.button>
+                        <PremiumAceternityButton size="sm" label="Read all blogs" />
                     </Link>
                 </div>
             </div>

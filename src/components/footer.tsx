@@ -1,11 +1,62 @@
-import { Instagram, Linkedin, Globe } from 'lucide-react'
-import Image from 'next/image'
-import FooterSVG from './landing-page/footer-svg'
-import Link from 'next/link'
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Instagram, Linkedin, Globe } from "lucide-react";
+import Image from "next/image";
+import FooterSVG from "./landing-page/footer-svg";
+import Link from "next/link";
 
 export default function Footer() {
+    const footerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!footerRef.current) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const ctx = gsap.context(() => {
+            let isAnimating = false;
+
+            ScrollTrigger.create({
+                trigger: footerRef.current,
+                start: "top bottom",
+                end: "bottom bottom",
+                onUpdate: (self) => {
+                    if (self.direction !== 1) return; // only when scrolling down
+                    const velocity = self.getVelocity();
+                    if (velocity < 300) return; // ignore slow scrolls
+                    if (isAnimating) return;
+
+                    isAnimating = true;
+                    gsap.killTweensOf(footerRef.current);
+                    gsap.fromTo(
+                        footerRef.current,
+                        { y: 24 },
+                        {
+                            y: 0,
+                            duration: 1.1,
+                            ease: "elastic.out(1, 0.45)",
+                            clearProps: "transform",
+                            onComplete: () => {
+                                isAnimating = false;
+                            },
+                        },
+                    );
+                },
+            });
+        }, footerRef);
+
+        return () => {
+            ctx.revert();
+        };
+    }, []);
+
+
+
     return (
-        <div className="relative font-sans w-full bg-blue-600  overflow-hidden">
+        <div ref={footerRef} className="relative font-sans w-full bg-blue-600 overflow-hidden">
             {/* Footer content */}
             <div className="relative z-10 px-8 lg:px-20 py-16">
                 <div className=" mx-auto">
