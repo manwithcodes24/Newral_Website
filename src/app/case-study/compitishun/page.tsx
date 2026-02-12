@@ -326,7 +326,7 @@ export default function CompetishunCaseStudy() {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-16 relative z-10"
           >
-            “Newral is handling complete tech with topmost efficiency... they helped us completely transform our platform’s performance and scalability. Execution was exceptional.”
+            “Newral is handling complete tech with top most efficiency, they helped us completely transform our platform’s performance and scalability. From major cost optimization to faster video delivery and a smoother user experience, their execution was exceptional. The platform is now more stable, efficient, and growth-ready.”
           </motion.h2>
 
           <div className="flex flex-col items-center">
