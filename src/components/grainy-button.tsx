@@ -1,9 +1,11 @@
-"use client";
+import { useEffect, useRef } from "react";
+import type { ReactNode } from "react";
 
-import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+interface GradientButtonProps {
+  children: ReactNode;
+  onClick?: () => void;
+}
 
-// Configuration for the "Snow/Sparkle" effect
 class Particle {
   x: number;
   y: number;
@@ -16,10 +18,8 @@ class Particle {
   constructor(width: number, height: number) {
     this.x = Math.random() * width;
     this.y = Math.random() * height;
-    // Slow, drifting movement
     this.vx = (Math.random() - 0.5) * 0.3;
     this.vy = (Math.random() - 0.5) * 0.3;
-    // Tiny particles like the image
     this.radius = Math.random() * 1.2 + 0.5;
     this.opacity = Math.random();
     this.flickerSpeed = Math.random() * 0.02 + 0.01;
@@ -29,7 +29,6 @@ class Particle {
     this.x += this.vx;
     this.y += this.vy;
 
-    // Pulse opacity for the "sparkle" look
     this.opacity += this.flickerSpeed;
     if (this.opacity > 1 || this.opacity < 0.2) this.flickerSpeed *= -1;
 
@@ -40,7 +39,6 @@ class Particle {
   }
 
   draw(ctx: CanvasRenderingContext2D) {
-    // Pure white particles to match your image
     ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -48,15 +46,7 @@ class Particle {
   }
 }
 
-interface ButtonProps {
-  text?: string;
-  href?: string;
-}
-
-const GrainyButton = ({ 
-  text = "Book a call", 
-  href = "https://cal.com/newralfounder" 
-}: ButtonProps) => {
+export default function GradientButton({ children, onClick }: GradientButtonProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -65,7 +55,7 @@ const GrainyButton = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationId: number;
+    let animationId = 0;
     let particles: Particle[] = [];
 
     const resize = () => {
@@ -74,8 +64,6 @@ const GrainyButton = ({
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      
-      // More particles for a denser texture
       particles = Array.from({ length: 80 }, () => new Particle(rect.width, rect.height));
     };
 
@@ -86,55 +74,33 @@ const GrainyButton = ({
         p.update(rect.width, rect.height);
         p.draw(ctx);
       }
-      animationId = requestAnimationFrame(animate);
+      animationId = window.requestAnimationFrame(animate);
     };
 
     resize();
     animate();
     window.addEventListener("resize", resize);
     return () => {
-      cancelAnimationFrame(animationId);
+      window.cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
   }, []);
 
   return (
-    <motion.a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.03, y: -2 }}
-      whileTap={{ scale: 0.97 }}
-      className={`
-        relative inline-flex items-center justify-center 
-        px-8 py-3 overflow-hidden rounded-full 
-        /* Match the specific blue gradient from image */
-        bg-linear-to-b from-[#3EB1FF] to-[#1370F5]
-        text-white font-normal text-sm tracking-tight
-        /* THE MAGIC: Inner rim and blue depth shadow */
-        shadow-[
-          0_20px_40px_rgba(19,112,245,0.3),
-          inset_0_0_0_1px_rgba(255,255,255,0.4),
-          inset_0_0_20px_rgba(0,40,255,0.4)
-        ]
-        transition-shadow duration-300
-        hover:shadow-[0_25px_50px_rgba(19,112,245,0.5),inset_0_0_0_1px_rgba(255,255,255,0.6)]
-      `}
+    <button 
+      onClick={onClick}
+      type="button"
+      className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden rounded-full bg-gradient-to-b from-[#3EB1FF] to-[#1370F5] text-white text-sm font-normal tracking-tight cursor-pointer shadow-[0_20px_40px_rgba(19,112,245,0.3),inset_0_0_0_1px_rgba(255,255,255,0.4),inset_0_0_20px_rgba(0,40,255,0.4)] transition-[transform,box-shadow] duration-300 hover:shadow-[0_25px_50px_rgba(19,112,245,0.5),inset_0_0_0_1px_rgba(255,255,255,0.6)] hover:-translate-y-0.5 hover:scale-[1.03] active:scale-[0.97]"
     >
-      {/* Canvas for the white sparkling texture */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none mix-blend-overlay opacity-80"
+        className="absolute inset-0 size-full pointer-events-none mix-blend-overlay opacity-80"
       />
-      
-      {/* Radial highlight to make the center look 3D */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] pointer-events-none" />
-
-      <span className="relative z-10 drop-shadow-md">
-        {text}
-      </span>
-    </motion.a>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)]"
+      />
+      <span className="relative z-10 drop-shadow-md">{children}</span>
+    </button>
   );
-};
-
-export default GrainyButton;
+}

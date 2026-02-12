@@ -150,3 +150,53 @@ body {
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
+
+@utility text-display {
+  font-size: 96px;
+  line-height: 1.2;
+}
+
+@utility text-h1 {
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+@utility text-h2 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+@utility text-h3 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+@utility text-h4 {
+  font-size: 24px;
+  line-height: normal;
+}
+
+@utility text-description {
+  font-size: 18px;
+  line-height: normal;
+}
+
+@utility text-body {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@utility text-nav-heading {
+  font-size: 14px;
+  line-height: normal;
+}
+
+@utility text-button {
+  font-size: 16px;
+  line-height: normal;
+}
+
+@utility text-button-secondary {
+  font-size: 12px;
+  line-height: normal;
+}

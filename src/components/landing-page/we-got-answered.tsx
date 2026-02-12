@@ -92,14 +92,14 @@ export default function WeGotAnswered() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-5xl md:text-8xl font-sans font-medium text-white mb-2 tracking-tighter">
+                    <h2 className="text-5xl md:text-6xl font-sans font-bold text-white mb-2 tracking-tighter">
                         Got question?
                     </h2>
-                    <h3 className="text-5xl md:text-8xl font-sans font-medium text-white mb-8 tracking-tighter">
+                    <h3 className="text-5xl md:text-6xl font-sans font-bold text-white mb-6 tracking-tighter">
                         We got answered.
                     </h3>
 
-                    <p className="text-white pointer-events-none text-lg font-sans md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-white pointer-events-none text-lg font-sans md:text-md mb-12 max-w-2xl mx-auto leading-tight">
                         <span className="text-blue-600 font-medium">Newral</span> is a technology agency that partners with ambitious startups
                         to design and engineer scalable digital products. We work closely
                         with founding teams to translate ideas into reliable, production-ready software.
@@ -107,7 +107,7 @@ export default function WeGotAnswered() {
 
                     {/* CTA Button */}
                    <div className="z-50">
-                     <PremiumAceternityButton />
+                     <PremiumAceternityButton size="md" label="Book a call with us"/>
                    </div>
                 </motion.div>
             </Link>

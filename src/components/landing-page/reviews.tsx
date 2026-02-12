@@ -61,10 +61,10 @@ const ReviewSection = () => {
             className="relative min-h-screen bg-black text-white flex flex-col justify-center overflow-hidden font-sans pb-20">
 
             {/* MAIN CONTENT GRID */}
-            <div className=" md:mx-28  px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 items-center z-10">
+            <div className=" md:mx-28  px-6 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr]  items-center z-10">
 
                 {/* LEFT SECTION */}
-                <div className="flex flex-col space-y-8">
+                <div className="flex flex-col space-y-6">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={`logo-${current.id}`}
@@ -73,7 +73,7 @@ const ReviewSection = () => {
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.4 }}
                         >
-                            <img src={current.companylogo} alt="logo" className="h-10 w-auto rounded-md object-contain" />
+                            <img src={current.companylogo} alt="logo" className="h-14 w-auto rounded-md object-contain" />
                         </motion.div>
                     </AnimatePresence>
 
@@ -83,7 +83,7 @@ const ReviewSection = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
-                            className="text-2xl md:text-4xl  leading-tight"
+                            className="text-2xl md:text-3xl font-medium mb-20"
                         >
                             {current.feedback}
                         </motion.p>
@@ -97,13 +97,13 @@ const ReviewSection = () => {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                             >
-                                <h4 className="text-xl font-bold">{current.name}</h4>
-                                <p className="text-gray-400 font-medium">{current.role}</p>
+                                <h4 className="text-2xl font-bold">{current.name}</h4>
+                                <p className="text-gray-400 text-xl font-medium">{current.role}</p>
                             </motion.div>
                         </AnimatePresence>
 
                         {/* NAVIGATION ARROWS */}
-                        <div className="flex  pt-4">
+                        <div className="flex  pt-20">
                             <button
                                 onClick={prevReview}
                                 className="w-12 h-12 rounded-full  flex items-center justify-center hover:bg-white hover:text-black transition-all group"
@@ -128,12 +128,12 @@ const ReviewSection = () => {
                             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
                             exit={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                            className=" overflow-hidden   shadow-2xl"
+                            className=" overflow-hidden  shadow-2xl"
                         >
                             <img
                                 src={current.avatarurl}
                                 alt={current.name}
-                                className="w-auto h-auto rounded-2xl object-cover"
+                                className="w-full h-full rounded-2xl object-cover md:pt-30 "
                             />
                         </motion.div>
                     </AnimatePresence>
@@ -141,7 +141,7 @@ const ReviewSection = () => {
             </div>
 
             {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-            <div className="absolute bottom-14 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-[10deg] md:-rotate-[3deg] lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+            <div className="absolute bottom-14 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-10 md:-rotate-3 lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
                 <div className="flex whitespace-nowrap overflow-hidden py-4">
                     <motion.div
                         animate={{ x: [0, -1000] }}
@@ -149,8 +149,13 @@ const ReviewSection = () => {
                         className="flex items-center gap-20 pr-20"
                     >
                         {[...Array(6)].map((_, i) => (
-                            <span key={i} className="text-white text-3xl md:text-2xl  uppercase italic tracking-tighter">
-                                {current.feedback} • {current.name} - {current.role.split(',')[1] || current.name}
+                            <span key={i} className="text-white text-3xl md:text-2xl tracking-tighter">
+                                {current.feedback}
+                                <span className="inline-flex items-center gap-20 px-3">
+                                    <span className="text-white/80">- {current.name} {current.role.split(",")[1] || " "}</span>
+                                    <span className="text-[2em] leading-none">•</span>
+                                </span>
+                                
                             </span>
                         ))}
                     </motion.div>

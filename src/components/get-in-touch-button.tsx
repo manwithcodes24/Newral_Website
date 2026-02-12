@@ -2,45 +2,34 @@ import { NoiseBackground } from "@/components/ui/noise-background"; // Adjust pa
 
 export default function PremiumAceternityButton() {
   return (
-    <div className="flex justify-center ">
+    <div className="flex justify-center">
       <NoiseBackground
-        // 1. Dynamic Blue Gradients for the moving bubbles
         gradientColors={[
-          "rgb(62, 177, 255)", // Light Blue (#3EB1FF)
-          "rgb(19, 112, 245)", // Deep Blue (#1370F5)
-          "rgb(0, 40, 255)",   // Electric Blue
+          "rgba(255,255,255,0.8)",
+          "rgba(200,235,255,0.5)",
+          "rgba(120,200,255,0.25)",
         ]}
-        noiseIntensity={0.3}
-        speed={0.05} // Slower speed for a premium "liquid" feel
+        noiseIntensity={0.35}
+        speed={0.02}
         containerClassName={`
-          w-fit p-1 rounded-full mx-auto
-          /* The Blue Base Gradient */
-          bg-linear-to-b from-[#3EB1FF] to-[#1370F5]
-          
-          /* THE MAGIC: Your specific shadow & rim logic */
-          shadow-[
-            0_20px_40px_rgba(19,112,245,0.3),            /* Outer Glow */
-            inset_0_0_0_1.5px_rgba(255,255,255,0.4),    /* White Inner Border */
-            inset_0_0_20px_rgba(0,40,255,0.3)           /* Inner Blue Depth */
-          ]
-          
-          /* Smooth interactions */
-          transition-all duration-300 hover:scale-105 active:scale-95
-          hover:shadow-[0_25px_50px_rgba(19,112,245,0.5),inset_0_0_0_1.5px_rgba(255,255,255,0.6)]
+          w-fit mx-auto rounded-full p-[2px]
+          bg-transparent
+          shadow-[0_30px_70px_rgba(37,115,255,0.35),0_6px_30px_rgba(30,85,200,0.45)]
         `}
       >
-        <button className={`
-          relative h-full w-full cursor-pointer rounded-full 
-          px-6 py-2 
-          text-white font-medium text-sm tracking-tight
-          /* Keep background transparent to see Aceternity gradients */
-          bg-transparent 
-          flex items-center gap-2
-        `}>
-          <span className="drop-shadow-md">Book a call</span>
-          <span className="opacity group-hover:translate-x-1 transition-transform">
-            &rarr;
-          </span>
+        <button
+          className="
+            rounded-full
+            px-12 py-5
+            text-white text-2xl tracking-tight
+            bg-linear-to-b from-[#3EB1FF] to-[#1370F5]
+            shadow-[inset_0_0_0_1px_rgba(200,235,255,0.8),inset_0_-6px_16px_rgba(0,30,120,0.25)]
+            drop-shadow-[0_10px_30px_rgba(80,160,255,0.55)]
+            transition-transform duration-300
+            hover:scale-[1.02] active:scale-[0.98]
+          "
+        >
+          <span className="drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">Book a call</span>
         </button>
       </NoiseBackground>
     </div>
