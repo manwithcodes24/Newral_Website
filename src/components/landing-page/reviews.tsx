@@ -10,7 +10,7 @@ const reviews = [
         id: 2,
         name: "Ashton Cofer",
         role: "Co-Founder & CTO of Fizz Social | Forbes 30u30",
-        feedback: "Newral has been a game-changer for us. Their scalable strong monitoring solution with streamlined DevOps pipelines let us confidently focus on growing our business. Highly recommended!",
+        feedback: "Newral has been a valuable partner in our growth journey. Their scalable monitoring solutions and efficient DevOps workflows brought stability and clarity to our operations. We highly recommend their services.",
         avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276685_sjfhlx.png",
         companylogo: "https://media.licdn.com/dms/image/v2/C560BAQF6Xwh04dkNYg/company-logo_200_200/company-logo_200_200/0/1630655773340?e=1771459200&v=beta&t=e-vhB43_av62vilrP_nOQdrilcYuDyUnUerpUEfIsTs"
 
@@ -20,7 +20,7 @@ const reviews = [
         id: 1,
         name: "Mohit Tyagi",
         role: "Founder, Competishun",
-        feedback: "Newral created some landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround. Highly recommend their web development expertise.",
+        feedback: "Newral is handling complete tech with top most efficiency, they helped us completely transform our platform’s performance and scalability. From major cost optimization to faster video delivery and a smoother user experience, their execution was exceptional. The platform is now more stable, efficient, and growth-ready.",
         avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276684_y1tlqe.png",
         companylogo: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769785961/Frame_1171276569_xkt1ci.png",
     },
@@ -29,7 +29,7 @@ const reviews = [
         id: 3,
         name: "Sameer Bansal ",
         role: "Founder, Bansal Classes",
-        feedback: "Newral played a pivotal role in upgrading our tech infrastructure at Bansal Classes. Their expertise in software development helped handling our operations which was great experience for our students",
+        feedback: "Newral helped us upgrade our technology at Bansal Classes with ease. Their strong software development support improved our operational efficiency and enhanced the overall student experience.",
         avatarurl: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439869/Frame_1171276686_ev67pb.png",
         companylogo: "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770440498/Untitled_pemkwn.png"
     }

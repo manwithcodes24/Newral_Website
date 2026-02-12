@@ -5,6 +5,7 @@ import GetInTouchButton from "@/components/get-in-touch-button";
 import BgSvg2 from "./bg-2-svg";
 import StatsGrid from "./stats-grid";
 import PremiumAceternityButton from "../PremiumAceternityButton";
+import Link from "next/link";
 
 
 // --- Types ---
@@ -34,7 +35,7 @@ const cards: CardData[] = [
         id: 1,
         type: "testimonial",
         bg: "#0066FF",
-        quote: "Newral created some Landing pages for Competishun. They captured our vision perfectly, delivering a great design with a quick turnaround.",
+        quote: "Newral is handling complete tech with top most efficiency, they helped us completely transform our platform’s performance and scalability. From major cost optimization to faster video delivery and a smoother user experience, their execution was exceptional. The platform is now more stable, efficient, and growth-ready.",
         author: "Mohit Tyagi",
         role: "Founder, Competishun",
         avatar: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770375801/Ellipse_5_pj9nqq.png",
