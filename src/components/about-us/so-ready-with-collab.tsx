@@ -3,104 +3,129 @@ import React, { useRef, useMemo } from "react";
 import {
   motion,
   useScroll,
-  useTransform,
   useSpring,
-  useAnimationFrame,
-  useMotionValue,
+  useTransform,
 } from "motion/react";
+import PremiumAceternityButton from "../PremiumAceternityButton";
 
-const TEXT = "SO Ready to collaborate with Let’s Redefine Technology Together.";
+const TEXT =
+  "Let’s redefine technology together?";
 
-export default function GSAPHorizontalSection() {
+export default function ScrollDrivenHorizontalText() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // 1. Track Scroll Progress (The "Pin" duration)
+
+  /* ---------------- SCROLL PROGRESS ---------------- */
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start 80%", "end 20%"],
   });
 
-  // 2. The "Scrub" effect (Smoothness)
+  // Smooth scrub (feels premium)
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100, // Lower = Slower/Heavier feel
+    stiffness: 80,
     damping: 20,
-    restDelta: 0.001,
   });
 
-  // 3. Autoplay logic
-  const autoXNum = useMotionValue(0);
-  const autoplaySpeed = -2.3; // Very slow drift to the left
-
-  useAnimationFrame(() => {
-    autoXNum.set(autoXNum.get() + autoplaySpeed);
-  });
-
-  // 4. Horizontal Movement
-  // Move from right side (100vw) to off-screen left (-100%)
-  const scrollX = useTransform(smoothProgress, [0, 1], ["0vw", "-150vw"]);
-  
-  // Combine Scroll + Autoplay
-  const autoX = useTransform(autoXNum, (value) => `${value}px`);
-  const x = useTransform([scrollX, autoX], ([latestScroll, latestAuto]) => {
-    return `calc(${latestScroll} + ${latestAuto})`;
-  });
-
-  const words = useMemo(() => TEXT.split(" "), []);
+  /* ---------------- HORIZONTAL SCRUB ---------------- */
+  /**
+   * Scroll down  → moves left
+   * Scroll up    → moves right
+   */
+  const x = useTransform(
+    smoothProgress,
+    [0, 1],
+    ["80vw", "-200vw"]
+  );
 
   return (
-    <section 
-      ref={containerRef} 
-      className="relative h-[400vh] bg-black" // height = scroll speed (800vh is even slower)
+    <section
+      ref={containerRef}
+      className="relative h-[300vh] bg-black"
     >
-      {/* Sticky Pinning */}
+      {/* Sticky pin */}
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        
-        {/* Edge Fades */}
+
+        {/* Edge fades */}
         <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-        <motion.div 
-          style={{ x }} 
-          className="flex whitespace-nowrap pl-[60vw]" // Start at the right edge
+        {/* Scroll-driven text */}
+        <motion.div
+          style={{ x }}
+          className="whitespace-nowrap"
         >
-          <h3 className="flex gap-6 text-[clamp(2rem,8vw,10rem)] font-bold text-white uppercase leading-[1.1] tracking-tighter">
-            {words.map((word, wordIdx) => (
-              <span key={wordIdx} className="flex">
-                {word.split("").map((char, charIdx) => (
-                  <Character 
-                    key={charIdx} 
-                    char={char} 
-                    progress={smoothProgress} 
-                    // This index determines when the letter "drops"
-                    index={wordIdx * 4 + charIdx} 
-                    totalCharacters={TEXT.length}
-                  />
-                ))}
-                <span className="inline-block w-[2vw]">&nbsp;</span>
-              </span>
-            ))}
-          </h3>
+          <ScrollText progress={smoothProgress} />
         </motion.div>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <PremiumAceternityButton size="md" label="Get in touch"/>
+          </div>
       </div>
     </section>
   );
 }
 
-function Character({ char, progress, index, totalCharacters }: { char: string, progress: any, index: number, totalCharacters: number }) {
-  
-  // We calculate a range for each character. 
-  // As the whole text moves, letters trigger in sequence.
-  const start = index / (totalCharacters * 1.5); 
-  const end = start + 0.1; // Animation duration for one letter
+/* ---------------- TEXT BLOCK ---------------- */
 
-  // Physics: Random starting positions (GSAP SplitText style)
-  const randomY = useMemo(() => (index % 2 === 0 ? 1 : -1) * (150 + (index % 10) * 20), [index]);
-  const randomRotate = useMemo(() => (index % 2 === 0 ? 1 : -1) * (20 + (index % 5) * 5), [index]);
+function ScrollText({ progress }: { progress: any }) {
+  const words = useMemo(() => TEXT.split(" "), []);
 
-  // Map the smooth scroll progress to character movement
-  const y = useTransform(progress, [start, end], [randomY, 0], { clamp: true });
-  const rotate = useTransform(progress, [start, end], [randomRotate, 0], { clamp: true });
-  const opacity = useTransform(progress, [start, end], [0, 1], { clamp: true });
+  return (
+    <h3 className="flex gap-6 text-[clamp(2rem,8vw,10rem)] font-bold tracking-tighter leading-[1.1] text-white">
+      {words.map((word, wordIdx) => (
+        <span key={wordIdx} className="flex">
+          {word.split("").map((char, charIdx) => (
+            <Character
+              key={charIdx}
+              char={char}
+              progress={progress}
+              index={wordIdx * 4 + charIdx}
+              totalCharacters={TEXT.length}
+            />
+          ))}
+          <span className="inline-block w-[2vw]" />
+        </span>
+      ))}
+    </h3>
+  );
+}
+
+/* ---------------- CHARACTER ANIMATION ---------------- */
+
+function Character({
+  char,
+  progress,
+  index,
+  totalCharacters,
+}: {
+  char: string;
+  progress: any;
+  index: number;
+  totalCharacters: number;
+}) {
+  const start = index / (totalCharacters * 1.4);
+  const end = start + 0.12;
+
+  const randomY = useMemo(
+    () => (index % 2 === 0 ? 1 : -1) * (120 + (index % 8) * 16),
+    [index]
+  );
+
+  const randomRotate = useMemo(
+    () => (index % 2 === 0 ? 1 : -1) * (16 + (index % 5) * 4),
+    [index]
+  );
+
+  const y = useTransform(progress, [start, end], [randomY, 0], {
+    clamp: true,
+  });
+
+  const rotate = useTransform(progress, [start, end], [randomRotate, 0], {
+    clamp: true,
+  });
+
+  const opacity = useTransform(progress, [start, end], [0, 1], {
+    clamp: true,
+  });
 
   return (
     <motion.span

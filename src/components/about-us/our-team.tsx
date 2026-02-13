@@ -56,9 +56,9 @@ const row1 = [...teamMembers, ...teamMembers];
 const row2 = [...teamMembers, ...teamMembers];
 
 const TeamCard = ({ member }: { member: (typeof teamMembers)[0] }) => (
-  <div className="flex bg-black overflow-hidden w-[700px] md:w-[950px] shrink-0">
+  <div className="flex bg-black overflow-hidden gap-6 w-175 md:w-142 h-60.25 shrink-0">
     {/* Left Side: Pure Image (No overlays or patterns) */}
-    <div className="w-1/3 aspect-square  md:aspect-auto md:h-[400px]">
+    <div className="w-1/3 aspect-square  md:aspect-auto md:h-60.25">
       <img
         src={member.image}
         alt={member.name}
@@ -67,8 +67,8 @@ const TeamCard = ({ member }: { member: (typeof teamMembers)[0] }) => (
     </div>
 
     {/* Right Side: Text Content */}
-    <div className="w-1/2 p-6 md:p-10 flex flex-col justify-between h-full gap-6 bg-black">
-      <p className="text-white text-base md:text-xl font-light leading-relaxed">
+    <div className="w-1/2 py-4 flex flex-col justify-between h-full gap-8 bg-black">
+      <p className="text-white text-base md:text-lg font-medium leading-tight">
         {member.quote}
       </p>
 
@@ -76,8 +76,9 @@ const TeamCard = ({ member }: { member: (typeof teamMembers)[0] }) => (
         <h4 className="text-white text-lg font-medium tracking-tight">
           {member.name}
         </h4>
-        <p className="text-neutral-500 text-sm">
-          {member.role} — <span className="opacity-70">{member.pronouns}</span>
+        <p className="text-neutral-500 text-xs font-bold uppercase">
+          {member.role}
+           {/* — <span className="opacity-80 italic">{member.pronouns}</span> */}
         </p>
       </div>
     </div>
@@ -89,13 +90,13 @@ export default function TeamMarquee() {
     <section className="bg-black py-32 overflow-hidden relative group">
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 mb-42 md:px-12">
-        <h2 className="text-white text-4xl text-center md:text-8xl font-bold tracking-tighter">
+        <h2 className="text-white text-4xl text-center md:text-6xl font-bold tracking-tighter">
           Meet our world class <br />
           design & engineering team
         </h2>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-30">
         {/* ROW 1: Moves Left */}
         <div className="flex">
           <motion.div
@@ -105,7 +106,7 @@ export default function TeamMarquee() {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="flex gap-8 shrink-0 px-4"
+            className="flex gap-40 shrink-0 px-4"
           >
             {row1.map((member, i) => (
               <TeamCard key={`row1-${i}`} member={member} />

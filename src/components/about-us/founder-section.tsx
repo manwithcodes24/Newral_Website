@@ -5,30 +5,50 @@ import Image from "next/image";
 
 export default function FounderSection() {
     return (
-        <section className="py-20 px-6 md:px-10 bg-transparent">
+        <section className="py-20 px-2 md:px-4 bg-transparent">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="mx-4 md:mx-12 relative overflow-hidden rounded-[2.5rem] bg-[#0A0A0A] border border-white/5"
+                className="relative overflow-hidden rounded-3xl bg-[#0A0A0A] border border-white/5"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[570px]">
+
 
                     {/* Left Side: Image with Gradient Mask */}
-                    <div className="relative h-[400px] lg:h-full overflow-hidden">
-                        <img
-                            src="https://res.cloudinary.com/dyktjldc4/image/upload/v1770379590/image_7_uzb9nx.png"
-                            alt="Yash Rajan Shukla"
-                            className="absolute inset-0 w-full h-full object-cover object-top"
-                        />
-                        {/* The Fade Effect: Transitions image to black */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0A0A0A] hidden lg:block" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent lg:hidden" />
+                    <div
+                    className="
+                        relative w-full overflow-hidden
+                        h-[260px]
+                        sm:h-[320px]
+                        md:h-[420px]
+                        lg:h-full
+                    "
+                    >
+                    <img
+                        src="https://res.cloudinary.com/dyktjldc4/image/upload/v1770379590/image_7_uzb9nx.png"
+                        alt="Yash Rajan Shukla"
+                        className="
+                        w-full h-full
+                        object-cover
+                        object-center
+                        lg:object-top
+                        "
+                    />
+
+                    {/* Desktop gradient (side fade) */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0A0A0A] hidden lg:block" />
+
+                    {/* Mobile gradient (bottom fade) */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent lg:hidden" />
                     </div>
 
+
+
+
                     {/* Right Side: Content */}
-                    <div className="relative p-8 md:p-14 lg:p-20 flex flex-col justify-center z-10">
+                    <div className="relative px-6 py-6 md:px-8 md:py-6 lg:px-10 lg:py-10 flex flex-col lg:h-full">
 
                         {/* Subtle background watermark (The "N" feel) */}
                         <div className="absolute bottom-0 right-0 pointer-events-none select-none">
@@ -38,22 +58,38 @@ export default function FounderSection() {
                         </div>
 
                         <motion.div
+                            className="flex flex-col h-full"
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <p className="text-neutral-300 text-lg md:text-xl leading-relaxed font-light mb-12">
+                            <p
+                            className="
+                                font-medium
+                                text-base
+                                leading-relaxed
+                                sm:text-lg
+                                sm:leading-relaxed
+                                lg:text-2xl
+                                lg:leading-tight
+                                lg:overflow-y-auto
+                                lg:flex-1
+                                pr-2
+                                text-neutral-300
+                            "
+                            >
+
                               As the visionary founder of Newral, Yash Rajan Shukla has a profound passion for technology and innovation. He has vast experience and expertise in cybersecurity, full-stack development, strategic problem-solving, and has been able to create impactful technology.
 <br />Yash’s hands-on leadership style and client-centric philosophy are at the heart of Newral’s success story. His dedication to excellence is evident in the quality of every solution that we deliver, which is designed with the intent of empowering businesses and enterprises at large. He is a mentor and technology strategist who encourages the team to push boundaries, envision possibilities, and create products that change industries.
 
                             </p>
 
                             <div className="mt-auto">
-                                <h4 className="text-white text-xl font-semibold">
+                                <h4 className="text-white text-lg font-medium">
                                     Yash Rajan Shukla
                                 </h4>
-                                <p className="text-neutral-500 text-sm mt-1">
+                                <p className="text-neutral-300 text-sm mt-1">
                                     Founder, Newral
                                 </p>
                             </div>

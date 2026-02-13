@@ -12,10 +12,9 @@ export default function HeroAboutus() {
     <div className="relative z-10 flex h-full items-center px-6 md:px-12">
       <div className="flex flex-col items-center justify-center w-full text-center">
 
-        <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl text-center font-light leading-[1.1] tracking-tight text-white duration-1000 md:text-7xl lg:text-8xl">
+        <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl text-center font-bold leading-[1.1] tracking-tight text-white duration-1000 md:text-7xl lg:text-8xl">
           <span className="text-balance">
-           Shaping the future of Technology By   <br /> 
-           Scalable & Innovative Solutions
+           Shaping the future of Technology
           </span>
         </h1>
         {/*

@@ -11,31 +11,36 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-    {
-        id: "1",
-        number: "01",
-        text: "Reduced CPU utilization to 4 cores from 32 cores",
-        className: "min-h-[240px] sm:min-h-[280px] md:min-h-[400px] md:col-span-1 md:row-span-2",
-    },
-    {
-        id: "2",
-        number: "02",
-        text: "Optimized GPU usage from 3 GPUs to 1 GPU while maintaining flawless video transcoding",
-        className: "min-h-[200px] sm:min-h-[230px] md:min-h-[240px] md:col-span-1 md:row-span-1",
-    },
-    {
-        id: "3",
-        number: "03",
-        text: "Reduced video processing time from 6 hours to under 30 minutes",
-        className: "min-h-[200px] sm:min-h-[230px] md:min-h-[240px] md:col-span-1 md:row-span-1",
-    },
-    {
-        id: "4",
-        number: "04",
-        text: "Reduced CPU utilization from 99% to 15%",
-        className: "min-h-[200px] sm:min-h-[230px] md:min-h-[240px] md:col-span-2 md:row-span-1",
-    },
+  {
+    id: "1",
+    number: "01",
+    text: "Reduced CPU utilization to 4 cores from 32 cores",
+    className:
+      "min-h-[120px] sm:min-h-[220px] md:min-h-[400px] md:col-span-1 md:row-span-2",
+  },
+  {
+    id: "2",
+    number: "02",
+    text: "Optimized GPU usage from 3 GPUs to 1 GPU while maintaining flawless video transcoding",
+    className:
+      "min-h-[120px] sm:min-h-[200px] md:min-h-[240px] md:col-span-1 md:row-span-1",
+  },
+  {
+    id: "3",
+    number: "03",
+    text: "Reduced video processing time from 6 hours to under 30 minutes",
+    className:
+      "min-h-[120px] sm:min-h-[200px] md:min-h-[240px] md:col-span-1 md:row-span-1",
+  },
+  {
+    id: "4",
+    number: "04",
+    text: "Reduced CPU utilization from 99% to 15%",
+    className:
+      "min-h-[120px] sm:min-h-[200px] md:min-h-[240px] md:col-span-2 md:row-span-1",
+  },
 ];
+
 
 const StatsGrid = () => {
     // Animation variants for Framer Motion
@@ -71,23 +76,27 @@ const StatsGrid = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="relative h-full z-10 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5"
+                className="relative h-full z-10 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-2 md:gap-5"
+
             >
                 {stats.map((stat) => (
                     <motion.div
-                        key={stat.id}
-                        variants={itemVariants}
                         className={`
-              ${stat.className}
-              bg-[#0066FF] text-white p-8 rounded-[20px] 
-              flex flex-col justify-between
-              hover:bg-[#0052cc] transition-colors duration-300
-              shadow-lg
-            `}
+                        ${stat.className}
+                        bg-[#0066FF] text-white 
+                        p-4 sm:p-6 md:p-8 
+                        rounded-3xl md:rounded-4xl
+                        flex flex-col justify-between
+                        hover:bg-[#0052cc] transition-colors duration-300
+                        shadow-lg
+                        `}
                     >
-                        <span className="text-2xl sm:text-3xl font-medium opacity-90">{stat.number}</span>
-                        <p className="text-base sm:text-lg md:text-2xl font-normal leading-tight mt-6 sm:mt-0 md:mt-0">
-                            {stat.text}
+                        <span className="text-xl sm:text-2xl md:text-3xl font-medium opacity-90">
+                        {stat.number}
+                        </span>
+
+                        <p className="text-sm sm:text-base md:text-2xl font-normal leading-snug mt-4 sm:mt-0">
+                        {stat.text}
                         </p>
                     </motion.div>
                 ))}

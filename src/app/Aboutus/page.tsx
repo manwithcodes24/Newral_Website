@@ -10,6 +10,7 @@ import ExpandableCards from "@/components/about-us/expandable-cards"
 import FounderSection from "../../components/about-us/founder-section"
 import TeamSection from "../../components/about-us/our-team"
 import SOREADYWITHSECTION from "../../components/about-us/so-ready-with-collab"
+import CurvedImageScroll from "@/components/about-us/CurvedImageScroll"
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -82,6 +83,7 @@ export default function Home() {
         <HeroAboutus />
         
       </section>
+      <CurvedImageScroll/>
       <AboutSection />
       <ExpandableCards />
       <FounderSection />
