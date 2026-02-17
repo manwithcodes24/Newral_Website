@@ -32,10 +32,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Newral - Cutting-Edge Tech Solutions for Scalable Growth",
+export const metadata = {
+  metadataBase: new URL("https://newral.in"),
+  title: {
+    default: "Newral - Cutting-Edge Tech Solutions for Scalable Growth",
+    template: "%s | Newral"
+  },
   description: "Newral specializes in full-stack development, AI, cybersecurity & DevOps. We build scalable, secure, and high-impact digital solutions.",
+  openGraph: {
+    title: "Newral - Cutting-Edge Tech Solutions for Scalable Growth",
+    description: "Newral specializes in full-stack development, AI, cybersecurity & DevOps. We build scalable, secure, and high-impact digital solutions.",
+    url: "https://newral.in",
+    siteName: "Newral",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dyktjldc4/image/upload/v1771327086/Screenshot_20260217-164603_vqpgcu.png",
+        width: 1200,
+        height: 630,
+      }
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
+
 
 export default function RootLayout({
   children,

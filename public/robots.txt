@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://newral.in
+
+# Sitemaps
+Sitemap: https://newral.in/sitemap.xml
