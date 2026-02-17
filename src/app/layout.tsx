@@ -69,7 +69,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head>
         <link rel="shortcut icon" href="https://res.cloudinary.com/dyktjldc4/image/upload/v1771327086/Screenshot_20260217-164603_vqpgcu.png" type="image/x-icon" />
-
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </head>
       <body
         className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
