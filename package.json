@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap && node scripts/indexnow.js"
   },
   "dependencies": {
     "@motionone/utils": "^10.18.0",

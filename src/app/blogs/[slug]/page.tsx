@@ -9,6 +9,31 @@ import Link from "next/link";
 type Props = {
   params: Promise<{ slug: string }>;
 };
+export async function generateMetadata({ params }: Props) {
+  const { slug } =  await params;
+
+  const blogDir = path.join(process.cwd(), "blogs");
+  const files = fs.readdirSync(blogDir);
+  const fileName = files.find(f =>
+    f.toLowerCase().replace(/\.mdx$|\.md$/, "") === slug.toLowerCase()
+  );
+
+  if (!fileName) return {};
+
+  const filePath = path.join(blogDir, fileName);
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const { data } = matter(fileContent);
+
+  return {
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      images: [data.thumbnail],
+    },
+  };
+}
 
 const slugify = (text: string) => 
     text.toLowerCase()
