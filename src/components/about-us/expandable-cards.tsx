@@ -39,7 +39,7 @@ export default function ExpandableCards() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <section className="bg-black py-20">
+        <section className="bg-black text-white py-20">
 
             <div className=" px-4 md:px-10">
                 <motion.div
@@ -49,7 +49,7 @@ export default function ExpandableCards() {
                     viewport={{ once: true }}
                     className="lg:col-span-6"
                 >
-                    <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold leading-[1.2] tracking-tight">
+                    <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold text-white leading-[1.2] tracking-tight">
                         Diverse perspectives,<br />
                         World-class work
                     </h2>
