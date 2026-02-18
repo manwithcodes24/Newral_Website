@@ -46,7 +46,7 @@ const ContactPage = () => {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
 
             {/* Main Container - max-w-7xl ensures consistency on 21" monitors */}
-            <div className=" mx-auto px-8 py-20 lg:py-32 relative z-10">
+            <div className=" mx-auto px-6 py-4 lg:py-20 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-20 lg:gap-32">
 
                     {/* LEFT COLUMN */}
@@ -55,7 +55,7 @@ const ContactPage = () => {
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="text-7xl md:text-8xl lg:text-[120px] font-bold tracking-tighter leading-none mb-8"
+                                className="text-7xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mb-6"
                             >
                                 Let’s Talk
                             </motion.h1>
@@ -63,7 +63,7 @@ const ContactPage = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
-                                className="text-gray-400 text-lg md:text-xl max-w-md leading-relaxed"
+                                className=" text-lg md:text-lg text-white max-w-sm leading-tight"
                             >
                                 Not sure where to start? Tell us about your product, your timeline,
                                 how you heard about us, and where you’re located.
@@ -72,12 +72,12 @@ const ContactPage = () => {
 
                         <div className="mt-20 space-y-10">
                             <div>
-                                <h4 className="text-gray-300 font-semibold text-lg mb-2">Opening Hours</h4>
-                                <p className="text-gray-500">Mon to Sat : 10.00am - 7:00pm</p>
+                                <h4 className="text-gray-300 font-semibold text-lg">Opening Hours</h4>
+                                <p className="text-gray-200">Mon to Sat : 10.00am - 7:00pm</p>
                             </div>
                             <div>
-                                <h4 className="text-gray-300 font-semibold text-lg mb-2">Office Address</h4>
-                                <p className="text-gray-500 leading-relaxed max-w-xs">
+                                <h4 className="text-gray-300 font-semibold text-lg">Office Address</h4>
+                                <p className="text-gray-200 leading-relaxed max-w-xs">
                                     412, 4th Floor, Tower-B, i-thum Building, Sector 62, Noida, India
                                 </p>
                             </div>
@@ -91,7 +91,7 @@ const ContactPage = () => {
                         className="flex flex-col relative"
                     >
                         <form onSubmit={handleSubmit} className="space-y-12">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 {/* Name */}
                                 <div className="group relative">
                                     <label className="block text-sm text-gray-400 mb-2">Name*</label>
@@ -100,7 +100,7 @@ const ContactPage = () => {
                                         name="name"
                                         type="text"
                                         placeholder="Enter your name"
-                                        className="w-full bg-transparent border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all placeholder:text-gray-700 text-lg"
+                                        className="w-full bg-transparent border-b border-gray-800 outline-none focus:border-blue-600 transition-all placeholder:text-gray-400 text-sm"
                                     />
                                 </div>
                                 {/* Email */}
@@ -111,7 +111,7 @@ const ContactPage = () => {
                                         name="email"
                                         type="email"
                                         placeholder="Enter your e-mail"
-                                        className="w-full bg-transparent border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all placeholder:text-gray-700 text-lg"
+                                        className="w-full bg-transparent border-b border-gray-800 outline-none focus:border-blue-600 transition-all placeholder:text-gray-400 text-sm"
                                     />
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ const ContactPage = () => {
                                         name="source"
                                         type="text"
                                         placeholder="Google, LinkedIn, etc."
-                                        className="w-full bg-transparent border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all placeholder:text-gray-700 text-lg"
+                                        className="w-full bg-transparent border-b border-gray-800 outline-none focus:border-blue-600 transition-all placeholder:text-gray-400 text-sm"
                                     />
                                 </div>
                                 {/* Stage Selection */}
@@ -133,7 +133,7 @@ const ContactPage = () => {
                                     <div className="relative">
                                         <select
                                             name="stage"
-                                            className="w-full bg-black border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all text-gray-400 appearance-none text-lg"
+                                            className="w-full bg-black border-b border-gray-800 outline-none focus:border-blue-600 transition-all text-gray-400 appearance-none text-sm"
                                         >
                                             <option value="">Select Stage</option>
                                             <option value="early">Early Stage</option>
@@ -151,14 +151,14 @@ const ContactPage = () => {
                                 <textarea
                                     required
                                     name="message"
-                                    rows={4}
+                                    rows={8}
                                     placeholder="Write your message"
-                                    className="w-full bg-transparent border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all placeholder:text-gray-700 text-lg resize-none"
+                                    className="w-full bg-transparent border-b border-gray-800 py-3 outline-none focus:border-blue-600 transition-all placeholder:text-gray-400 text-sm resize-none"
                                 />
                             </div>
 
                             {/* Footer Area with Submit and Success Message */}
-                            <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
                                 <AnimatePresence mode="wait">
                                     {status === "success" && (
@@ -177,8 +177,8 @@ const ContactPage = () => {
                                     disabled={status === "sending"}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    type="submit"
-                                    className={`
+                                    type="submit" 
+                                    className={`md:ml-auto
                                         bg-[#0066FF] text-white font-bold py-4 px-16 rounded-full text-lg shadow-lg transition-all
                                         ${status === "sending" ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700 shadow-blue-600/20"}
                                     `}
