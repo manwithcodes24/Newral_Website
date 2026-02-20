@@ -36,7 +36,11 @@ export default function HeroServices() {
 
         {/* CTA Button */}
         <div className="animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-200">
-         <PremiumAceternityButton/>
+          <PremiumAceternityButton
+            href="https://cal.com/newralfounder"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </div>
 
  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050505] to-transparent z-20" />

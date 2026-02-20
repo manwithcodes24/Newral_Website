@@ -94,7 +94,7 @@ export default function CompetishunHero() {
             </h1>
 
             {/* Sub-description */}
-            <p className="max-w-xl mx-auto text-zinc-400 text-sm md:text-lg font-medium leading-relaxed opacity-90 px-4">
+            <p className="max-w-xl mx-auto text-sm md:text-lg font-medium leading-relaxed opacity-90 px-4">
               Reducing operational overhead by 88% while building a zero-lag 
               infrastructure for India's premier EdTech platform.
             </p>

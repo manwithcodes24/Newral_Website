@@ -159,7 +159,7 @@ function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceIte
                                     {service.description}
                                 </p>
 
-                                <div className="flex-shrink-0 flex items-start justify-between gap-4 group/btn">
+                                <div className="shrink-0 flex items-start justify-between gap-4 group/btn">
                                     <span className="text-xs font-medium tracking-widest uppercase">Projects</span>
                                     <div>
                                         <ArrowUpRight size={18} />

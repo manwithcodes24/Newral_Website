@@ -225,7 +225,13 @@ export default function Navbar() {
 
         {/* 3. Action Button */}
         <div className="shrink-0">
-          <PremiumAceternityButton size="sm" label="Book a call"/>
+          <PremiumAceternityButton
+            size="sm"
+            label="Book a call"
+            href="https://cal.com/newralfounder"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </div>
       </div>
     </header>

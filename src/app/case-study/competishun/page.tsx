@@ -342,13 +342,16 @@ export default function CompetishunCaseStudy() {
           </div>
         </div>
 
-        <motion.button
+        <motion.a
+          href="https://cal.com/newralfounder"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
           className="mt-24 px-12 py-6 bg-blue-600 rounded-full font-black text-xl tracking-tighter shadow-[0_0_40px_rgba(59,130,246,0.4)] flex items-center gap-4 group"
         >
           START YOUR OPTIMIZATION
           <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-        </motion.button>
+        </motion.a>
       </section>
 
       <footer className="py-12 border-t border-white/10 text-center">

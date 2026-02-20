@@ -72,7 +72,7 @@ export default function CardStackScroll() {
                     </p>
                 </div>
                 <div className="mb-12 px-4 py-2 border-amber-50 border-1 rounded-2xl text-white">
-                    <Link href={"/case-study/compitishun"}>See Case Study</Link>
+                    <Link href={"/case-study/competishun"}>See Case Study</Link>
                 </div>
             </div>
 

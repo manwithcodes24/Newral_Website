@@ -86,7 +86,7 @@ export default function WeGotAnswered() {
             </motion.div>
 
             {/* --- LAYER 3: CENTRAL CONTENT --- */}
-            <Link href="https://cal.com/newralfounder" className="relative z-50 max-w-3xl pointer-events-none text-center flex flex-col items-center">
+            <div className="relative z-50 max-w-3xl text-center flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -107,10 +107,16 @@ export default function WeGotAnswered() {
 
                     {/* CTA Button */}
                    <div className="z-50">
-                     <PremiumAceternityButton size="md" label="Book a call with us"/>
+                     <PremiumAceternityButton
+                       size="md"
+                       label="Book a call with us"
+                       href="https://cal.com/newralfounder"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                     />
                    </div>
                 </motion.div>
-            </Link>
+            </div>
         </section>
     );
 }
