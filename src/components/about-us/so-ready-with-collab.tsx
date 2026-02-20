@@ -57,8 +57,14 @@ export default function ScrollDrivenHorizontalText() {
           <ScrollText progress={smoothProgress} />
         </motion.div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
-          <PremiumAceternityButton size="md" label="Get in touch"/>
-          </div>
+          <PremiumAceternityButton
+            size="md"
+            label="Get in touch"
+            href="https://cal.com/newralfounder"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </div>
       </div>
     </section>
   );
