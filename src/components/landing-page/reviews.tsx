@@ -161,7 +161,7 @@ const ReviewSection = () => {
       </div>
 
       {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-      <div className="absolute bottom-32 left-[-10%] w-[120%] h-14 bg-[#0066FF]  flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+      <div className="absolute bottom-6 left-[-10%] w-[120%] h-14 bg-[#0066FF]  flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
         <div className="flex whitespace-nowrap overflow-hidden py-4">
           <motion.div
             animate={{ x: [0, -1000] }}
