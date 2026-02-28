@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import localFont from 'next/font/local';
 import { Analytics } from "@vercel/analytics/next"
+import UIWrapper from "@/components/ui-wrapper";
 
 const satoshi = localFont({
   src: [
@@ -80,9 +81,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <UIWrapper>
+            {children}
+          </UIWrapper>
           <Analytics />
         </ThemeProvider>
       </body>
