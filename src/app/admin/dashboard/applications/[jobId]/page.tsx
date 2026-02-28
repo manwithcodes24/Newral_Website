@@ -62,7 +62,7 @@ export default function JobSpecificApplications() {
 
   return (
     <div className="min-h-screen  bg-black text-white p-6 md:p-12 font-sans">
-      <div className="max-w-5xl mt-36 mx-auto">
+      <div className="max-w-5xl mx-auto">
         
         {/* Navigation & Header */}
         <button onClick={() => router.push("/admin/dashboard/jobs")} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-10 group">
