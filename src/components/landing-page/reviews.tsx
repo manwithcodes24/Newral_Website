@@ -8,6 +8,7 @@ import {
   MoveLeft,
   MoveLeftIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -17,7 +18,7 @@ const reviews = [
     feedback:
       "Newral has been a valuable partner in our growth journey. Their scalable monitoring solutions and efficient DevOps workflows brought stability and clarity to our operations. We highly recommend their services.",
     avatarurl:
-      "https://res.cloudinary.com/djwzwq4cu/image/upload/v1770439870/Frame_1171276685_sjfhlx.png",
+      "https://res.cloudinary.com/djwzwq4cu/image/upload/v1772276964/Frame_1171276687_kwlek1.png",
     companylogo:
       "https://res.cloudinary.com/dyktjldc4/image/upload/v1771585846/image_31_mugdyt.svg",
   },
@@ -147,10 +148,12 @@ const ReviewSection = () => {
               exit={{ opacity: 0, scale: 0.8, rotate: -5 }}
               className=" overflow-hidden  shadow-2xl"
             >
-              <img
+              <Image
+                height={5000}
+                width={5000}
                 src={current.avatarurl}
                 alt={current.name}
-                className="w-full h-full rounded-2xl object-cover md:pt-30 "
+                className="w-full h-full  object-cover md:pt-30"
               />
             </motion.div>
           </AnimatePresence>
@@ -158,7 +161,7 @@ const ReviewSection = () => {
       </div>
 
       {/* BOTTOM TILTED BLUE LINE MARQUEE */}
-      <div className="absolute bottom-14 left-[-10%] w-[120%] h-14 bg-[#0066FF] -rotate-10 md:-rotate-3 lg:-rotate-[3deg] flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
+      <div className="absolute bottom-32 left-[-10%] w-[120%] h-14 bg-[#0066FF]  flex items-center shadow-[0_0_50px_rgba(0,102,255,0.5)] z-12">
         <div className="flex whitespace-nowrap overflow-hidden py-4">
           <motion.div
             animate={{ x: [0, -1000] }}

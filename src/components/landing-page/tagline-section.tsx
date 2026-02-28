@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
 
 const text = "We build technology that accelerates product development and drives real business impact";
@@ -8,107 +8,67 @@ const text = "We build technology that accelerates product development and drive
 const FinalCardExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const words = text.split(" ");
-  const [isAutoScrolling, setIsAutoScrolling] = useState(false);
 
+  // Reduced height from 300vh to 140vh for a tighter, faster feel
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 70,
-    damping: 20,
+    stiffness: 100,
+    damping: 30,
     restDelta: 0.001,
   });
 
-  // --- AUTO SCROLL LOGIC ---
-  useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
-    let animationFrameId: number;
-
-    const startAutoScroll = () => {
-      if (!containerRef.current) return;
-
-      const rect = containerRef.current.getBoundingClientRect();
-      const containerBottom = window.scrollY + rect.bottom;
-      const currentScroll = window.scrollY;
-
-      // Only scroll if we haven't reached the bottom of this component
-      if (currentScroll < containerBottom - window.innerHeight) {
-        window.scrollBy({ top: 1.5, behavior: "auto" }); // Adjust speed here (1.5 is slow/smooth)
-        animationFrameId = requestAnimationFrame(startAutoScroll);
-      }
-    };
-
-    const resetTimer = () => {
-      cancelAnimationFrame(animationFrameId);
-      clearTimeout(scrollTimeout);
-      // Wait 2 seconds of inactivity before starting auto-scroll
-      scrollTimeout = setTimeout(startAutoScroll, 2000);
-    };
-
-    // Listen for any user interaction
-    window.addEventListener("scroll", resetTimer);
-    window.addEventListener("wheel", resetTimer);
-    window.addEventListener("touchstart", resetTimer);
-    window.addEventListener("mousemove", resetTimer);
-
-    resetTimer(); // Start timer on mount
-
-    return () => {
-      window.removeEventListener("scroll", resetTimer);
-      window.removeEventListener("wheel", resetTimer);
-      window.removeEventListener("touchstart", resetTimer);
-      window.removeEventListener("mousemove", resetTimer);
-      clearTimeout(scrollTimeout);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-
-  // --- ANIMATIONS ---
-  const textOpacity = useTransform(smoothProgress, [0, 0.1], [0, 1]);
-  const textY = useTransform(smoothProgress, [0, 0.3], [50, 0]);
-
   return (
-    <div ref={containerRef} className="relative h-[300vh] bg-black pt-12 font-sans overflow-clip">
+    // Reduced height makes the animation trigger faster
+    <div ref={containerRef} className="relative h-[140vh] bg-black font-sans">
       {/* STICKY VIEWPORT */}
-      <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-6">
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="flex flex-wrap justify-center gap-x-[0.25em] gap-y-2 text-[42px] sm:text-[68px] md:text-[72px] lg:text-[92px] font-bold tracking-tighter leading-[1.1] text-center">
+            {words.map((word, i) => {
+              // Adjusting the range so the animation feels more sequential and snappy
+              const start = i / words.length;
+              const end = start + 1 / words.length;
 
-        {/* 1. WRAPPER: Consistency for 16" and 21" screens */}
-        <div className="flex flex-col h-screen justify-center items-center w-full max-w-7xl mx-auto">
-
-          {/* TEXT SECTION */}
-          <motion.div
-            style={{ opacity: textOpacity, y: textY }}
-            className="w-full text-center z-20"
-          >
-            {/* 2. TEXT SCALING: Responsive text for different monitor sizes */}
-            <p className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[40px] sm:text-[64px] md:text-[56px] lg:text-[72px] xl:text-display font-bold tracking-tighter leading-[1.2]">
-              {words.map((word, i) => {
-                const start = 0.1 + (i / words.length) * 0.8;
-                const end = start + (1 / words.length) * 0.8;
-
-                return (
-                  <Word key={i} progress={smoothProgress} range={[start, end]}>
-                    {word}
-                  </Word>
-                );
-              })}
-            </p>
-          </motion.div>
+              return (
+                <Word key={i} progress={smoothProgress} range={[start, end]}>
+                  {word}
+                </Word>
+              );
+            })}
+          </p>
         </div>
-
       </div>
     </div>
   );
 };
 
-const Word = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
-  // We use a dark grey to white transition
-  const color = useTransform(progress, range, ["#1A1A1A", "#FFFFFF"]);
+const Word = ({
+  children,
+  progress,
+  range
+}: {
+  children: string,
+  progress: MotionValue<number>,
+  range: [number, number]
+}) => {
+  // Color transition: Dark gray to White
+  const color = useTransform(progress, range, ["#222222", "#ffffff"]);
+
+  // Subtle lift effect: Move word up slightly as it activates
+  const y = useTransform(progress, range, [5, 0]);
+
+  // Subtle scale effect: Pop the word slightly
+  const scale = useTransform(progress, range, [0.95, 1]);
 
   return (
-    <motion.span style={{ color }} className="relative inline-block">
+    <motion.span
+      style={{ color, y, scale }}
+      className="relative inline-block"
+    >
       {children}
     </motion.span>
   );

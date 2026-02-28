@@ -33,6 +33,7 @@
     "recharts": "^3.7.0",
     "remark-gfm": "^4.0.1",
     "shaders": "^2.2.48",
+    "swiper": "^12.1.2",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
