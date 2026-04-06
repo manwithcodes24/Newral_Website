@@ -74,7 +74,7 @@ export default function Footer() {
                                 />
                             </div>
                             <p className="text-white text-sm leading-relaxed mb-8">
-                                412, 4th Floor, Tower-B, i-thum Building, Sector 62 (Near Electronic City Metro Station), Noida, Uttar Pradesh, India
+                                 Tower-B, i-thum Building, Sector 62 (Near Electronic City Metro Station), Noida, Uttar Pradesh, India
                             </p>
                             <div>
                                 <p className="text-white text-sm mb-2">Contact us</p>

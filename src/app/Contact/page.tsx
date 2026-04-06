@@ -78,7 +78,7 @@ const ContactPage = () => {
                             <div>
                                 <h4 className="text-gray-300 font-semibold text-lg">Office Address</h4>
                                 <p className="text-gray-200 leading-relaxed max-w-xs">
-                                    412, 4th Floor, Tower-B, i-thum Building, Sector 62, Noida, India
+                                     Tower-B, i-thum Building, Sector 62, Noida, India
                                 </p>
                             </div>
                         </div>
