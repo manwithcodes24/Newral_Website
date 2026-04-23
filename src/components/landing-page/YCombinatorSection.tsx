@@ -45,7 +45,7 @@ export default function VibeconSection() {
     return (
         <ReactLenis root>
             <section className="relative bg-[#FDFCF8] overflow-hidden">
-                
+
                 {/* Image Modal */}
                 <AnimatePresence>
                     {selectedImg && (
@@ -65,7 +65,7 @@ export default function VibeconSection() {
                                 className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
                                 onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image itself
                             />
-                            <button 
+                            <button
                                 className="absolute top-8 right-8 text-white text-4xl font-light hover:rotate-90 transition-transform"
                                 onClick={() => setSelectedImg(null)}
                             >
@@ -134,7 +134,10 @@ export default function VibeconSection() {
                 {/* CTA BOTTOM */}
                 <div className="pb-40 text-center relative z-10">
                     <button className="px-12 py-5 bg-black text-white font-bold rounded-full hover:bg-[#FF6600] transition-all hover:scale-105 shadow-2xl">
-                        Apply to Build with Us
+                        <a href="https://cal.com/newralfounder">
+
+                            Apply to Build with Us
+                        </a>
                     </button>
                 </div>
             </section>
@@ -180,7 +183,7 @@ const StickyCard = ({ card, onImageClick }: { card: any, onImageClick: (src: str
                 <h2 className="text-3xl md:text-5xl font-serif text-gray-900 leading-[1.1]">{card.title}</h2>
                 <p className="text-gray-500 text-lg md:text-xl leading-relaxed">{card.description}</p>
             </div>
-            <div 
+            <div
                 className="w-full md:w-1/2 h-full overflow-hidden bg-[#000] cursor-zoom-in"
                 onClick={() => onImageClick(card.img)}
             >
