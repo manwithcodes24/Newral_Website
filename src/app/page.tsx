@@ -7,6 +7,7 @@ import CompetishunReviewSection from "@/components/landing-page/competishun-revi
 import ServicesSection from "@/components/landing-page/services-section";
 import WeGotAnswered from "@/components/landing-page/we-got-answered";
 import { getAllBlogs } from "@/lib/blog";
+import YCAchievementSection from "@/components/landing-page/YCombinatorSection";
 
 export default async function Home() {
 
@@ -18,6 +19,7 @@ export default async function Home() {
       <HeroSection />
       <CardHeroSection />
       <ReviewSection />
+      <YCAchievementSection/>
       <CompetishunReviewSection />
       <ServicesSection />
       <BlogSection posts={allPosts} />

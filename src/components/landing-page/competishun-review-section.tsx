@@ -1,32 +1,18 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
 import BgSvg2 from "./bg-2-svg";
 import StatsGrid from "./stats-grid";
 import Link from "next/link";
 
-// --- Types ---
-type CardType = "testimonial" | "stats" | "image";
-
-interface CardData {
-  id: number;
-  type: CardType;
-  bg: string;
-  quote?: string;
-  author?: string;
-  role?: string;
-  avatar?: string;
-  image?: string;
-}
-
-const cards: CardData[] = [
+const cards = [
   {
     id: 1,
     type: "image",
     bg: "#111",
     image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1769791807/9W6d74zIQjmmrhiQrJlFg5EACE4_zq7hzz.avif",
   },
-   {
+  {
     id: 4,
     type: "image",
     bg: "#111",
@@ -57,8 +43,7 @@ export default function CardStackScroll() {
   });
 
   return (
-    <div className="bg-black">
-      {/* HEADER SECTION */}
+    <div className="bg-black pt-32">
       <div className="flex flex-col items-center justify-center pt-20 px-4">
         <div className="mb-8 flex flex-col gap-2 max-w-5xl text-center">
           <h1 className="md:text-[64px] leading-tight text-4xl font-bold tracking-tight text-white">
@@ -77,76 +62,49 @@ export default function CardStackScroll() {
         </div>
       </div>
 
-      {/* STICKY CARDS SECTION */}
-      {/* Height is calculated by (number of cards * 100vh) */}
-      <section ref={containerRef} className="relative h-[400vh]">
+      <section ref={containerRef} className="relative h-[450vh]">
         {cards.map((card, index) => {
-          // This calculation makes earlier cards shrink more as new ones come in
-          const targetScale = 1 - (cards.length - index) * 0.05;
-          
+          const isLast = index === cards.length - 1;
+          const targetScale = isLast ? 1 : 1 - (cards.length - index) * 0.05;
+
           return (
             <Card
               key={card.id}
               card={card}
               index={index}
               progress={scrollYProgress}
-              // The range determines when each card starts animating
-              range={[index * 0.25, 1]} 
+              // range ends at 0.9 so the last card stays still for the last 10% of scroll
+              range={[index * 0.22, 0.9]}
               targetScale={targetScale}
             />
           );
         })}
       </section>
-
-      {/* Spacer for bottom */}
-      <div className="h-[20vh]" />
+      <div className="h-[10vh]" />
     </div>
   );
 }
 
-const Card = ({ 
-  card, 
-  index, 
-  progress, 
-  range, 
-  targetScale 
-}: {
-  card: CardData;
-  index: number;
-  progress: MotionValue<number>;
-  range: [number, number];
-  targetScale: number;
-}) => {
-  // Use the range to scale the card down as we scroll deeper
+const Card = ({ card, index, progress, range, targetScale }: any) => {
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+    <div className="sticky top-0 h-screen w-full flex items-center justify-center px-4">
       <motion.div
         style={{
           scale,
           backgroundColor: card.bg,
-          // This gives each card a slightly lower starting point in the stack
-          top: `calc(10% + ${index * 25}px)`, 
+          top: `calc(5% + ${index * 25}px)`,
         }}
-        className="relative h-[70vh] w-[92vw] md:w-[85vw] max-w-7xl rounded-[32px] md:rounded-[48px] shadow-2xl border border-white/10 overflow-hidden origin-top"
+        className="relative h-[60vh] md:h-[75vh] w-full max-w-6xl rounded-[32px] md:rounded-[48px] shadow-2xl border border-white/10 overflow-hidden origin-top"
       >
-        {/* Card Content Logic */}
         {card.type === "testimonial" && (
           <div className="relative w-full h-full flex flex-col items-center justify-center p-8 md:p-20 text-center">
-            <div className="absolute inset-0 z-0 opacity-50">
-              <BgSvg2 />
-            </div>
+            <div className="absolute inset-0 z-0 opacity-50"><BgSvg2 /></div>
             <div className="relative z-10 flex flex-col items-center">
-              <p className="text-white text-xl md:text-3xl lg:text-4xl max-w-4xl font-medium leading-tight mb-10">
-                "{card.quote}"
-              </p>
+              <p className="text-white text-xl md:text-3xl lg:text-4xl max-w-4xl font-medium leading-tight mb-10">"{card.quote}"</p>
               <div className="flex items-center gap-4">
-                <img 
-                  src={card.avatar} 
-                  alt={card.author} 
-                  className="w-14 h-14 rounded-full border-2 border-white/20 object-cover" 
-                />
+                <img src={card.avatar} className="w-14 h-14 rounded-full border-2 border-white/20 object-cover" alt="" />
                 <div className="text-left">
                   <p className="font-bold text-lg text-white">{card.author}</p>
                   <p className="text-white/60 text-sm">{card.role}</p>
@@ -156,19 +114,13 @@ const Card = ({
           </div>
         )}
 
-        {card.type === "stats" && (
-           <div className="w-full h-full overflow-y-auto">
-              <StatsGrid />
-           </div>
-        )}
+        {card.type === "stats" && <div className="w-full h-full overflow-hidden"><StatsGrid /></div>}
 
         {card.type === "image" && (
-          <div className="w-full h-full">
-            <img
-              src={card.image}
-              alt="Project Display"
-              className="w-full h-full object-contains"
-            />
+          <div className="relative w-full h-full flex items-center justify-center bg-black">
+            {/* BG Blur to fill space on mobile */}
+            <img src={card.image} className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-30" alt="" />
+            <img src={card.image} className="relative z-10 w-full h-full object-contain" alt="" />
           </div>
         )}
       </motion.div>
