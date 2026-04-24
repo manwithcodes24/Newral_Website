@@ -8,76 +8,78 @@ import { useRouter } from "next/navigation";
 import { link } from "fs";
 
 const SERVICES = [
-    {
-        id: "01",
-        title: "App & Software Development",
-        description:
-            "Bring your app ideas to life with scalable and secure development. We build native and cross-platform apps and custom software tailored to your business needs.",
-        redirectlink: "/Services/service?service=app-development",
-        link: "https://newral.in/Services/service?service=app-development",
-        previewUrl:
-            "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "02",
-        title: "Web Development Services",
-        description:
-            "Build high-performance, conversion-focused websites tailored for your goals. Whether it's a simple website or a dynamic lead generation platform, we've got you covered.",
-        redirectlink: "/Services/service?service=web-development",
-        link: "https://newral.in/Services/service?service=web-development",
-        previewUrl:
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "03",
-        title: "Branding & Graphic Design",
-        description:
-            "Our professional branding and graphic design services help create impactful visuals that build trust, strengthen recognition, and clearly communicate your mission to the right audience.",
-        redirectlink: "/Services/service?service=branding",
-        link: "https://newral.in/Services/service?service=branding",
-        previewUrl:
-            "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "04",
-        title: "UI/UX Design Services",
-        description:
-            "Craft intuitive and visually stunning user experiences. From basic wireframes to full-fledged prototypes, we design user-first digital products that engage and convert.",
-        redirectlink: "/Services/service?service=ui-ux",
-        link: "https://newral.in/Services/service?service=ui-ux",
-        previewUrl:
-            "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "05",
-        title: "Social Media Management",
-        link: "https://newral.in/Services/service?service=social-media",
-        description:
-            "Boost your online presence with strategic content creation and active audience engagement. We grow your community while you focus on your business.",
-        redirectlink: "/Services/service?service=social-media",
-        previewUrl:
-            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "06",
-        title: "DevOps & Cloud Solutions",
-        description:
-            "Deploy, scale, and secure your applications effortlessly. Our DevOps solutions ensure your infrastructure is optimized for performance and growth.",
-        redirectlink: "/Services/service?service=devops",
-        link: "https://newral.in/Services/service?service=devops",
-        previewUrl:
-            "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-        id: "07",
-        title: "Code Review & Security Services",
-        description:
-            "Ensure your codebase is clean, secure, and performance-optimized. We provide in-depth audits to help you scale confidently and securely.",
-        redirectlink: "/Services/service?service=code-review",
-        link: "https://newral.in/Services/service?service=code-review",
-        previewUrl:
-            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-    },
+  {
+    id: "01",
+    title: "Product Development",
+    description:
+      "We design and build scalable products from the ground up — engineered for real users, real load, and long-term growth. From MVP to production, every system is built to perform.",
+    redirectlink: "/Services/service?service=app-development",
+    link: "https://newral.in/Services/service?service=app-development",
+    previewUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "02",
+    title: "Web Platforms",
+    description:
+      "High-performance web platforms built for speed, scalability, and reliability. Designed to handle traffic, convert users, and grow with your product.",
+    redirectlink: "/Services/service?service=web-development",
+    link: "https://newral.in/Services/service?service=web-development",
+    previewUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "03",
+    title: "Branding & Design",
+    description:
+      "Strategic brand systems and design that build trust, communicate clearly, and stand out in competitive markets.",
+    redirectlink: "/Services/service?service=branding",
+    link: "https://newral.in/Services/service?service=branding",
+    previewUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "04",
+    title: "UI/UX Design",
+    description:
+      "User-first product experiences designed to reduce friction, improve engagement, and drive real conversion.",
+    redirectlink: "/Services/service?service=ui-ux",
+    link: "https://newral.in/Services/service?service=ui-ux",
+    previewUrl: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "05",
+    title: "Growth & Content",
+    description:
+      "Content and growth systems built to attract, engage, and retain your audience — focused on consistency and measurable impact.",
+    redirectlink: "/Services/service?service=social-media",
+    link: "https://newral.in/Services/service?service=social-media",
+    previewUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "06",
+    title: "DevOps & Infrastructure",
+    description:
+      "Cloud infrastructure and deployment systems designed for performance, stability, and seamless scaling under real-world demand.",
+    redirectlink: "/Services/service?service=devops",
+    link: "https://newral.in/Services/service?service=devops",
+    previewUrl: "https://images.unsplash.com/photo-1667372333374-9d4458352920?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "07",
+    title: "Code Audit & Optimization",
+    description:
+      "Deep audits to improve performance, eliminate bottlenecks, and make your system secure, efficient, and ready to scale.",
+    redirectlink: "/Services/service?service=code-review",
+    link: "https://newral.in/Services/service?service=code-review",
+    previewUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "08",
+    title: "Retainer & Ongoing Support",
+    description:
+      "A long-term engineering partner to continuously improve, maintain, and scale your product. From bug fixes to new features, we work as an extension of your team.",
+    redirectlink: "/Services/service?service=retainer",
+    link: "https://newral.in/Services/service?service=retainer",
+    previewUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+  },
 ];
 
 
@@ -93,7 +95,7 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="text-5xl md:text-7xl text-center font-medium mb-20 tracking-tighter leading-[1.1] "
                 >
-                 What we build and maintain and scale
+               Products, Systems & Infrastructure — Built to Scale
                 </motion.h2>
 
                 {/* Accordion List */}
@@ -160,7 +162,7 @@ function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceIte
                                 </p>
 
                                 <div className="shrink-0 flex items-start justify-between gap-4 group/btn">
-                                    <span className="text-xs font-medium tracking-widest uppercase">Projects</span>
+                                    <span className="text-xs font-medium tracking-widest uppercase">Learn More</span>
                                     <div>
                                         <ArrowUpRight size={18} />
                                     </div>

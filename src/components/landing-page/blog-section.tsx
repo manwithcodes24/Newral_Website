@@ -16,7 +16,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
     return (
         <section className="bg-black text-white py-24 px-6 md:px-12 lg:px-20 font-sans">
             <div className=" mx-auto"> {/* Monitor Consistency Wrapper */}
-                
+
                 {/* Header Section */}
                 <div className="max-w-4xl mx-auto text-center mb-16">
                     <motion.h2
@@ -26,7 +26,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter"
                     >
-                        Blogs
+                        What We Learn While Building Real Products
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
                         transition={{ delay: 0.1 }}
                         className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
                     >
-                        Newral is a technology agency that partners with ambitious startups to design and engineer scalable digital products. We work closely with founding teams to translate 
+                        Insights, strategies, and lessons from building scalable products — shared by the team behind real-world systems.
                     </motion.p>
                 </div>
 
@@ -53,11 +53,11 @@ export default function BlogSection({ posts }: BlogSectionProps) {
                             <Link href={`/blogs/${post.slug}`}>
                                 {/* Dark Card Thumbnail */}
                                 <div className="relative mb-6 bg-zinc-900/50 rounded-[2rem] border border-white/10 overflow-hidden aspect-video">
-                                    <img 
-                                        src={post.thumbnail} 
-                                        alt={post.title} 
-                                        loading="lazy" 
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                                    <img
+                                        src={post.thumbnail}
+                                        alt={post.title}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                     {/* Subtle Overlay */}
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />

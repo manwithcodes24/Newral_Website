@@ -3,30 +3,29 @@
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Cpu, Zap, Clock, Gauge } from "lucide-react";
-
 const stats = [
   {
     id: "1",
     number: "01",
-    text: "Reduced CPU utilization to 4 cores from 32 cores",
+    text: "8x More Efficient Infrastructure (32 → 4 cores)",
     className: "md:col-span-1 md:row-span-2 min-h-[250px]",
   },
   {
     id: "2",
     number: "02",
-    text: "Optimized GPU usage: 3 GPUs to 1 GPU",
+    text: "66% Reduction in GPU Costs (3 → 1 GPU)",
     className: "md:col-span-1 md:row-span-1 min-h-[180px]",
   },
   {
     id: "3",
     number: "03",
-    text: "6 hours to under 30 minutes",
+    text: "12x Faster Processing (6h → 30min)",
     className: "md:col-span-1 md:row-span-1 min-h-[180px]",
   },
   {
     id: "4",
     number: "04",
-    text: "CPU utilization from 99% to 15%",
+    text: "Massive Load Optimization (99% → 15%)",
     className: "md:col-span-2 md:row-span-1 min-h-[180px]",
   },
 ];

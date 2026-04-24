@@ -54,7 +54,7 @@ export default function CardStackScroll() {
         </div>
         <div className="flex flex-col gap-2 max-w-xl text-center">
           <p className="text-white/80 text-[18px] leading-relaxed mb-8">
-            At Newral, we specialize in delivering cutting-edge technology solutions that drive growth, security, and scalability.
+           We redesigned the entire system architecture, optimized infrastructure costs, and built a high-performance pipeline that scales with demand.
           </p>
         </div>
         <div className="px-6 py-2 border border-white/20 rounded-2xl hover:text-white hover:bg-black bg-white text-black transition-colors cursor-pointer">
@@ -102,7 +102,7 @@ const Card = ({ card, index, progress, range, targetScale }: any) => {
           <div className="relative w-full h-full flex flex-col items-center justify-center p-8 md:p-20 text-center">
             <div className="absolute inset-0 z-0 opacity-50"><BgSvg2 /></div>
             <div className="relative z-10 flex flex-col items-center">
-              <p className="text-white text-xl md:text-3xl lg:text-4xl max-w-4xl font-medium leading-tight mb-10">"{card.quote}"</p>
+              <p className="text-white text-xl md:text-3xl lg:text-4xl max-w-5xl font-medium leading-tight mb-10">{card.quote}</p>
               <div className="flex items-center gap-4">
                 <img src={card.avatar} className="w-14 h-14 rounded-full border-2 border-white/20 object-cover" alt="" />
                 <div className="text-left">

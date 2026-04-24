@@ -12,7 +12,7 @@ const SERVICES = [
         id: "01",
         title: "App & Software Development",
         description:
-            "Bring your app ideas to life with scalable and secure development. We build native and cross-platform apps and custom software tailored to your business needs.",
+            "Build scalable, high-performance applications — from MVP to production-ready systems designed for real-world usage.",
         redirectlink: "/Services/service?service=app-development",
         link: "https://newral.in/Services/service?service=app-development",
         previewUrl:
@@ -20,9 +20,9 @@ const SERVICES = [
     },
     {
         id: "02",
-        title: "Web Development Services",
+        title: "Web Development",
         description:
-            "Build high-performance, conversion-focused websites tailored for your goals. Whether it's a simple website or a dynamic lead generation platform, we've got you covered.",
+            "High-performance websites and platforms built to convert, scale, and handle real traffic without breaking.",
         redirectlink: "/Services/service?service=web-development",
         link: "https://newral.in/Services/service?service=web-development",
         previewUrl:
@@ -30,9 +30,9 @@ const SERVICES = [
     },
     {
         id: "03",
-        title: "Branding & Graphic Design",
+        title: "Branding & Design",
         description:
-            "Our professional branding and graphic design services help create impactful visuals that build trust, strengthen recognition, and clearly communicate your mission to the right audience.",
+            "Strategic brand identities and design systems that build trust, stand out, and communicate your product clearly.",
         redirectlink: "/Services/service?service=branding",
         link: "https://newral.in/Services/service?service=branding",
         previewUrl:
@@ -40,9 +40,9 @@ const SERVICES = [
     },
     {
         id: "04",
-        title: "UI/UX Design Services",
+        title: "UI/UX Design",
         description:
-            "Craft intuitive and visually stunning user experiences. From basic wireframes to full-fledged prototypes, we design user-first digital products that engage and convert.",
+            "User-first experiences designed to improve engagement, retention, and conversion across your product.",
         redirectlink: "/Services/service?service=ui-ux",
         link: "https://newral.in/Services/service?service=ui-ux",
         previewUrl:
@@ -50,19 +50,19 @@ const SERVICES = [
     },
     {
         id: "05",
-        title: "Social Media Management",
-        link: "https://newral.in/Services/service?service=social-media",
+        title: "Social Media & Growth",
         description:
-            "Boost your online presence with strategic content creation and active audience engagement. We grow your community while you focus on your business.",
+            "Content and growth strategies that build your audience, strengthen your brand, and drive consistent engagement.",
         redirectlink: "/Services/service?service=social-media",
+        link: "https://newral.in/Services/service?service=social-media",
         previewUrl:
             "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: "06",
-        title: "DevOps & Cloud Solutions",
+        title: "DevOps & Cloud",
         description:
-            "Deploy, scale, and secure your applications effortlessly. Our DevOps solutions ensure your infrastructure is optimized for performance and growth.",
+            "Optimize infrastructure, automate deployments, and ensure your systems scale efficiently under real-world load.",
         redirectlink: "/Services/service?service=devops",
         link: "https://newral.in/Services/service?service=devops",
         previewUrl:
@@ -70,16 +70,15 @@ const SERVICES = [
     },
     {
         id: "07",
-        title: "Code Review & Security Services",
+        title: "Code Review & Security",
         description:
-            "Ensure your codebase is clean, secure, and performance-optimized. We provide in-depth audits to help you scale confidently and securely.",
+            "Deep code audits to improve performance, eliminate bottlenecks, and secure your product for long-term scale.",
         redirectlink: "/Services/service?service=code-review",
         link: "https://newral.in/Services/service?service=code-review",
         previewUrl:
             "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     },
 ];
-
 
 export default function ServicesSection() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -93,7 +92,7 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="text-4xl md:text-6xl font-bold mb-20 tracking-tighter leading-[1.1] max-w-6xl"
                 >
-                    Speed up product development <br /> & reduce go-to-market time.
+                    We Build, Scale & Optimize  <br /> Products That Actually Perform
                 </motion.h2>
 
                 {/* Accordion List */}
@@ -160,7 +159,7 @@ function ServiceItem({ service, isOpen, onMouseEnter, onMouseLeave }: ServiceIte
                                 </p>
 
                                 <div className="flex-shrink-0 flex items-start justify-between gap-4 group/btn">
-                                    <span className="text-xs font-medium tracking-widest uppercase">Projects</span>
+                                    <span className="text-xs font-medium tracking-widest uppercase">  Learn More</span>
                                     <div>
                                         <ArrowUpRight size={18} />
                                     </div>

@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import ReactLenis from "lenis/react";
-import PINTERESTGRID from "./PINTERESTGRIDYC";
 
 // --- Achievement Data ---
 const ACHIEVEMENT_CARDS = [
@@ -38,9 +37,10 @@ const MEMORY_IMAGES = [
     { id: 12, src: "https://res.cloudinary.com/dmpsz3ohd/image/upload/v1776939533/gzqjrzgeagotgbwypz5i.jpg" },
     { id: 13, src: "https://res.cloudinary.com/dmpsz3ohd/image/upload/v1776939598/gfo0tiegfqsgfsouoxgn.jpg" },
     { id: 16, src: "https://res.cloudinary.com/dmpsz3ohd/image/upload/v1776939624/ipeyruuklz6k7hsjnmbk.jpg" },
+    { id : 17 , src : "https://res.cloudinary.com/dmpsz3ohd/image/upload/v1777045330/fhos5henjfra7cjlx32g.jpg"}
 ];
 
-export default function VibeconSection() {
+export default function PINTERESTGRID() {
     const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
     return (
@@ -76,34 +76,46 @@ export default function VibeconSection() {
                     )}
                 </AnimatePresence>
 
-                {/* 1. TOP HEADER */}
-                <div className="relative pt-32 pb-20 px-4 text-center z-10">
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="text-[#FF6600] font-bold text-sm tracking-[0.2em] uppercase mb-4"
-                    >
-                        Among India’s Top Builders
-                    </motion.p>
-                    <motion.h1
-                        initial={{ opacity: 0, filter: "blur(8px)" }}
-                        whileInView={{ opacity: 1, filter: "blur(0px)" }}
-                        className="text-[40px] md:text-[68px] font-serif tracking-tight text-gray-900 leading-none mb-6"
-                    >
-                        Recognized by <span className="text-[#FF6600]">Y Combinator</span>
-                    </motion.h1>
-                    <motion.p className="text-gray-500 max-w-xl mx-auto text-lg">
-                        From winning national-level hackathons to being recognized by top global ecosystems, we build with speed, precision, and real-world impact.
-                    </motion.p>
+
+              
+
+                {/* 3. PINTEREST MEMORIES GRID */}
+                <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 border-t border-gray-100">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-4 tracking-tight">Inside the Build Journey</h2>
+                        <p className="text-[#FF6600] font-bold tracking-widest uppercase text-sm">Behind the scenes of how we think, build, and compete.</p>
+                    </div>
+
+                    <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                        {MEMORY_IMAGES.map((img, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.05 }}
+                                onClick={() => setSelectedImg(img.src)}
+                                className="relative break-inside-avoid rounded-3xl overflow-hidden shadow-xl border-4 border-white group bg-white cursor-zoom-in"
+                            >
+                                <img
+                                    src={img.src}
+                                    alt="Event Moment"
+                                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* 2. CENTER STACKING CAROUSEL */}
-                <div className="relative flex flex-col items-center gap-[10vh] px-4 pb-[20vh]">
-                    {ACHIEVEMENT_CARDS.map((card) => (
-                        <StickyCard key={card.id} card={card} onImageClick={setSelectedImg} />
-                    ))}
+                {/* CTA BOTTOM */}
+                <div className="pb-40 text-center relative z-10">
+                    <button className="px-12 py-5 bg-black text-white font-bold rounded-full hover:bg-[#FF6600] transition-all hover:scale-105 shadow-2xl">
+                        <a href="https://cal.com/newralfounder">
+
+                            Work With a Team That Ships & Wins
+                        </a>
+                    </button>
                 </div>
-               
             </section>
         </ReactLenis>
     );

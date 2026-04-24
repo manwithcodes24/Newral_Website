@@ -80,9 +80,13 @@ export default function FounderSection() {
                             "
                             >
 
-                              As the visionary founder of Newral, Yash Rajan Shukla has a profound passion for technology and innovation. He has vast experience and expertise in cybersecurity, full-stack development, strategic problem-solving, and has been able to create impactful technology.
-<br />Yash’s hands-on leadership style and client-centric philosophy are at the heart of Newral’s success story. His dedication to excellence is evident in the quality of every solution that we deliver, which is designed with the intent of empowering businesses and enterprises at large. He is a mentor and technology strategist who encourages the team to push boundaries, envision possibilities, and create products that change industries.
+                            Yash Rajan Shukla built Newral with a clear focus — solving the real problems that break products at scale.
 
+With hands-on experience across full-stack engineering, system architecture, and performance optimization, he has worked on building and scaling platforms used by thousands of users in real-world environments.
+
+His approach is simple: build systems that are efficient, scalable, and reliable from day one — not just functional at launch. This mindset drives how Newral engineers products today.
+
+At the core, he focuses on execution over hype — helping startups avoid costly mistakes, optimize performance, and build technology that actually works when it matters.
                             </p>
 
                             <div className="mt-auto">
@@ -90,7 +94,7 @@ export default function FounderSection() {
                                     Yash Rajan Shukla
                                 </h4>
                                 <p className="text-neutral-300 text-sm mt-1">
-                                    Founder, Newral
+                                   Founder & Ceo, Newral
                                 </p>
                             </div>
                         </motion.div>

@@ -73,9 +73,9 @@ export default function TestimonialSection() {
                         <div
                             key={item.id}
                             // FIXED: Better width handling for responsiveness
-                            className="w-[85%] shrink-0 scroll-snap-align-start md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                            className="w-[85%]  shrink-0 scroll-snap-align-start md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                         >
-                            <div className="group relative items-center  text-center flex h-auto flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
+                            <div className="group h-full relative items-center  text-center flex  flex-col justify-between rounded-[2rem] border border-white/5 bg-[#0A0A0A] p-8 transition-all hover:border-blue-500/50">
                                 <p className="text-xl leading-relaxed text-white/80">
                                     {item.feedback}
                                 </p>
@@ -93,7 +93,7 @@ export default function TestimonialSection() {
                         </div>
                     ))}
                 </div>
-                {/* Navigation Buttons */}
+                {/* Navigation Buttons
                 <div className="w-full flex justify-center gap-4">
                     <div className="flex gap-3">
                         <button
@@ -109,7 +109,7 @@ export default function TestimonialSection() {
                             <ChevronRight size={24} />
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* FIXED CSS: Match class name and added standard CSS hide */}

@@ -16,125 +16,132 @@ const SERVICES = [
     {
         id: "01",
         slug: "app-development",
-        maintittle: "Human app engineering real-world performance",
+        maintittle: "Build apps that scale perform reliably",
         title: "App/Software Development",
-        description: "We design and develop high-performance, scalable applications tailored to your business goals. From MVPs to enterprise-grade systems, we ensure clean architecture, long-term maintainability, and seamless performance across every platform.",
-        previewUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXIlMjBzY2llbmNlfGVufDB8fDB8fHww",
-        previewUrl2: "https://images.unsplash.com/photo-1650636353551-1275516077b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwJTIwZGV2fGVufDB8fDB8fHww",
-        mainHeading: "Turn your ideas into powerful, scalable digital products.",
-        tegLine: "Custom-built applications engineered for performance and long-term growth.",
-        tags: ["Mobile App", "iOS & Android", "React Native"],
+        description:
+            "We build high-performance applications designed for real-world usage — not just demos. From MVP to production, every system is engineered for scalability, reliability, and long-term maintainability.",
+        previewUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1650636353551-1275516077b6?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Build applications that scale from day one.",
+        tegLine: "Engineered for performance, stability, and long-term growth.",
+        tags: ["Mobile Apps", "Full-Stack", "Scalable Systems"],
         images: [
-            "https://images.unsplash.com/photo-1763568258415-6f6a78a4ef18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTh8fGFwcCUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1763568258177-4ea94966595a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAyfHxhcHAlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D",
-            "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxhcHAlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D"
+            "https://images.unsplash.com/photo-1763568258415-6f6a78a4ef18?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1763568258177-4ea94966595a?w=500&auto=format&fit=crop&q=60",
+            "https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "02",
         slug: "web-development",
-        maintittle: "Modern web platforms scalable user experiences",
-        title: "Web Development Services",
-        description: "We build fast, secure, and scalable web platforms optimized for growth. Using modern frameworks and best engineering practices, we create systems that perform reliably under real-world demands.",
-        previewUrl: "https://images.unsplash.com/photo-1617240016072-d92174e44171?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
-        previewUrl2: "https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
-        mainHeading: "High-performance web platforms built to scale.",
-        tegLine: "Modern web solutions designed for speed, stability, and growth.",
-        tags: ["Next.js", "Web Design", "Full-Stack"],
+        maintittle: "High performance web platforms built scale",
+        title: "Web Development",
+        description:
+            "We build fast, scalable web platforms that handle real traffic and real users. Designed for performance, optimized for growth, and built to stay reliable under load.",
+        previewUrl: "https://images.unsplash.com/photo-1617240016072-d92174e44171?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Web platforms built for speed and scale.",
+        tegLine: "Optimized for performance, conversion, and reliability.",
+        tags: ["Next.js", "Full-Stack", "High Performance"],
         images: [
-            "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
+            "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "03",
         slug: "branding",
-        maintittle: "Strategic brand systems market leadership",
-        title: "Branding & Graphic Design",
-        description: "We craft strategic visual identities that establish credibility and differentiate your business in competitive markets. Every design system is built for consistency, clarity, and long-term recognition.",
-        previewUrl: "https://images.unsplash.com/photo-1613759612065-d5971d32ca49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyYW5kaW5nfGVufDB8fDB8fHww",
-        previewUrl2: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJyYW5kaW5nfGVufDB8fDB8fHww",
-        mainHeading: "Build a brand that inspires trust and recognition.",
-        tegLine: "Strategic branding designed for clarity, impact, and growth.",
-        tags: ["Branding", "Logo Design", "Visual Identity"],
+        maintittle: "Brand systems that build trust authority",
+        title: "Branding & Design",
+        description:
+            "We design brand systems that communicate clearly, build trust, and stand out in competitive markets. Every visual element is built for consistency, clarity, and long-term recognition.",
+        previewUrl: "https://images.unsplash.com/photo-1613759612065-d5971d32ca49?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Build a brand that people trust and remember.",
+        tegLine: "Strategic design that strengthens identity and positioning.",
+        tags: ["Branding", "Identity", "Design Systems"],
         images: [
-            "https://images.unsplash.com/photo-1716471330463-f475b00f0506?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJyYW5kaW5nfGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGJyYW5kaW5nfGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1636247498719-a8a04ed961a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGJyYW5kaW5nfGVufDB8fDB8fHww"
+            "https://images.unsplash.com/photo-1716471330463-f475b00f0506?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1636247498719-a8a04ed961a4?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "04",
         slug: "ui-ux",
-        maintittle: "Human interface design meaningful interaction",
-        title: "UI/UX Design Services",
-        description: "We design user-centric experiences that reduce friction and improve engagement. Every interface is crafted through research and usability insights to align business objectives with user needs.",
-        previewUrl: "https://images.unsplash.com/photo-1621111848501-8d3634f82336?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D",
-        previewUrl2: "https://images.unsplash.com/photo-1690369519543-c81a2121f740?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D",
-        mainHeading: "Design experiences that users love and trust.",
-        tegLine: "Intuitive interfaces built for clarity and conversion.",
-        tags: ["UI Design", "UX Research", "Figma"],
+        maintittle: "Design experiences users trust engage convert",
+        title: "UI/UX Design",
+        description:
+            "We design user experiences that reduce friction, improve engagement, and drive real results. Every interface is built with clarity, usability, and conversion in mind.",
+        previewUrl: "https://images.unsplash.com/photo-1621111848501-8d3634f82336?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1690369519543-c81a2121f740?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Design products users actually enjoy using.",
+        tegLine: "Built for usability, engagement, and conversion.",
+        tags: ["UI Design", "UX Research", "Product Design"],
         images: [
-            "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D",
-            "https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHVpJTIwdXh8ZW58MHx8MHx8fDA%3D"
+            "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "05",
         slug: "social-media",
-        maintittle: "Digital growth strategies measurable impact",
-        title: "Social Media Management",
-        description: "We grow digital communities through strategic content planning, engagement strategies, and performance-driven campaigns designed for sustainable growth.",
-        previewUrl: "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8fDA%3D",
-        previewUrl2: "https://images.unsplash.com/photo-1553532435-93d532a45f15?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww",
-        mainHeading: "Grow your digital presence with strategy and consistency.",
-        tegLine: "Community-driven growth backed by data and creativity.",
-        tags: ["Strategy", "Content", "Growth"],
+        maintittle: "Growth systems content strategy real engagement",
+        title: "Social Media & Growth",
+        description:
+            "We build content and growth systems that drive consistent engagement and real audience growth. Focused on strategy, execution, and measurable results.",
+        previewUrl: "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1553532435-93d532a45f15?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Grow your brand with strategy, not guesswork.",
+        tegLine: "Content and growth built for consistency and impact.",
+        tags: ["Growth", "Content", "Strategy"],
         images: [
-            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c29jaWFsJTIwbWVkaWElMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNvY2lhbCUyMG1lZGlhJTIwbWFya2V0aW5nfGVufDB8fDB8fHww",
-            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "06",
         slug: "devops",
-        maintittle: "Reliable cloud infrastructure scalable systems",
-        title: "DevOps & Cloud Solutions",
-        description: "We streamline deployments, automate workflows, and secure cloud environments to ensure high availability and operational efficiency at scale.",
-        previewUrl: "https://images.unsplash.com/photo-1599949104055-2d04026aee1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRldm9wc3xlbnwwfHwwfHx8MA%3D%3D",
-        previewUrl2: "https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWQlMjBzZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D",
-        mainHeading: "Infrastructure that grows as fast as your vision.",
-        tegLine: "Cloud architecture engineered for reliability and performance.",
-        tags: ["Kubernetes", "CI/CD", "Security"],
+        maintittle: "Infrastructure that scales handles real demand",
+        title: "DevOps & Cloud",
+        description:
+            "We design and manage infrastructure that scales efficiently under real-world demand. From CI/CD to cloud architecture, everything is built for reliability and performance.",
+        previewUrl: "https://images.unsplash.com/photo-1599949104055-2d04026aee1e?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Infrastructure built for scale and reliability.",
+        tegLine: "Optimized systems that perform under pressure.",
+        tags: ["Cloud", "CI/CD", "Scalability"],
         images: [
-            "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdWQlMjBzZXJ2ZXJ8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1744868562210-fffb7fa882d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3VkJTIwc2VydmVyfGVufDB8fDB8fHww"
+            "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1744868562210-fffb7fa882d9?w=500&auto=format&fit=crop&q=60"
         ]
     },
 
     {
         id: "07",
         slug: "code-review",
-        maintittle: "Secure code audits production readiness",
-        title: "Code Review & Security Services",
-        description: "We perform in-depth code audits and security reviews to identify vulnerabilities, improve maintainability, and enhance system performance before deployment.",
-        previewUrl: "https://plus.unsplash.com/premium_photo-1683134329824-6f2d0af14ccf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZGUlMjByZXZpZXd8ZW58MHx8MHx8fDA%3D",
-        previewUrl2: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZSUyMHJldmlld3xlbnwwfHwwfHx8MA%3D%3D",
-        mainHeading: "Secure, optimized, and production-ready software.",
-        tegLine: "Expert-level audits that strengthen performance and protection.",
-        tags: ["Audit", "Security", "Clean Code"],
+        maintittle: "Audit optimize secure production ready systems",
+        title: "Code Review & Security",
+        description:
+            "We audit and optimize your codebase to improve performance, eliminate bottlenecks, and secure your system before it scales.",
+        previewUrl: "https://plus.unsplash.com/premium_photo-1683134329824-6f2d0af14ccf?w=500&auto=format&fit=crop&q=60",
+        previewUrl2: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60",
+        mainHeading: "Make your system secure, clean, and scalable.",
+        tegLine: "Deep audits that improve performance and reliability.",
+        tags: ["Security", "Audit", "Optimization"],
         images: [
-            "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZSUyMHJldmlld3xlbnwwfHwwfHx8MA%3D%3D",
-            "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VjdXJpdHl8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNlY3VyaXR5fGVufDB8fDB8fHww"
+            "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=500&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60"
         ]
     }
 ];
@@ -265,15 +272,6 @@ function HomeContent() {
                 {/* Dynamically updates text based on URL */}
                 <ServiceDescription text={activeService.description} />
 
-                {/* Dynamically updates images and project info based on URL */}
-                <ProjectSection
-                    data={{
-                        mainHeading: activeService.mainHeading,
-                        title: activeService.tegLine,
-                        tags: activeService.tags,
-                        images: activeService.images
-                    }}
-                />
             </div>
         </main>
     )

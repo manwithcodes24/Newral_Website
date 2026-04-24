@@ -93,23 +93,21 @@ export default function WeGotAnswered() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-5xl md:text-6xl font-sans font-bold text-white mb-2 tracking-tighter">
-                        Got question?
+                       Still Have Questions?
                     </h2>
                     <h3 className="text-5xl md:text-6xl font-sans font-bold text-white mb-6 tracking-tighter">
-                        We got answered.
+                    We’ve Got You Covered.
                     </h3>
 
                     <p className="text-white pointer-events-none text-lg font-sans md:text-md mb-12 max-w-2xl mx-auto leading-tight">
-                        <span className="text-blue-600 font-medium">Newral</span> is a technology agency that partners with ambitious startups
-                        to design and engineer scalable digital products. We work closely
-                        with founding teams to translate ideas into reliable, production-ready software.
+                       At <span className="text-blue-600 font-medium">Newral</span> We believe in clarity, transparency, and building long-term partnerships — here’s how we work.
                     </p>
 
                     {/* CTA Button */}
                    <div className="z-50">
                      <PremiumAceternityButton
                        size="md"
-                       label="Book a call with us"
+                       label="Start Your Project"
                        href="https://cal.com/newralfounder"
                        target="_blank"
                        rel="noopener noreferrer"

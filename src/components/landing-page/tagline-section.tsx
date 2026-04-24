@@ -9,7 +9,7 @@ import {
   MotionValue,
 } from "framer-motion";
 
-const text = "Crafting Scalable & Innovative Digital Solutions. At Newral, we blend innovation, strategy, As one of India's top tech agencies, we specialize in building scalable, secure, and high-impact digital solutions.";
+const text = "We build products that scale. Faster launches. Lower costs. Better performance. Built for startups that move fast and think bigger.";
 
 const FinalSmoothNarrative = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,8 +30,8 @@ const FinalSmoothNarrative = () => {
     <div ref={containerRef} className="relative h-[170vh] bg-black font-sans">
       {/* STICKY VIEWPORT */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="flex flex-wrap justify-center gap-x-[0.35em] gap-y-2 text-center">
+        <div className="max-w-6xl mx-auto">
+          <p className="flex flex-wrap justify-center gap-x-[1.0em] gap-y-2 text-center">
             {words.map((word, i) => {
               /* 
                  FIX: We distribute the starts between 0 and 0.8 

@@ -44,12 +44,12 @@ const HeroSection = () => {
                 {/* 2. SMOOTH MARQUEE LAYER */}
                 <div className="relative z-10 w-full flex flex-col  pointer-events-none md:-space-y-20 ">
                     <MarqueeText
-                        text="INNOVATION EXCELLENCE CREATIVITY FUTURE"
+                        text="We help startups launch faster and scale smarter"
                         color="text-white"
                         speed="40s"
                     />
                     <MarqueeText
-                        text="DIGITAL SOLUTIONS MODERN DESIGN TECHNOLOGY"
+                        text="Build & Scale Your Product — Faster, Smarter, Leaner"
                         color="text-blue-600"
                         speed="35s"
                         reverse

@@ -44,20 +44,20 @@ const StatCard = ({ value, label, isActive, onMouseEnter }: { value: string; lab
 
 const ImpactSection = () => {
   // Set the first or second card as active by default if you want
-  const [activeIndex, setActiveIndex] = useState(1); 
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
     <section className="bg-black text-white py-24 px-3 min-h-screen flex flex-col justify-center">
       {/* Container to maintain consistency between 16" and 21" screens */}
-      <div className="mx-auto w-full">
-        
+      <div className="mx-auto  w-full">
+
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
             Impact we created so far
           </h2>
           <p className="text-white text-lg md:text-xl font-normal leading-relaxed">
-         Newral is a technology agency that partners with ambitious startups to design and engineer scalable digital products. We work closely with founding teams to translate ideas into reliable, production-ready software.
+            Newral is a technology agency that partners with ambitious startups to design and engineer scalable digital products. We work closely with founding teams to translate ideas into reliable, production-ready software.
           </p>
         </div>
 

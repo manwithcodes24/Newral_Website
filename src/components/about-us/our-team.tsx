@@ -6,47 +6,37 @@ const teamMembers = [
   {
     name: "Bharat Goel",
     role: "Chief Product Manager",
-    pronouns: "he/him",
     quote:
-      "Calm, strategic, and always product-first. Bharat brings over 5 years of experience turning complex client needs into clear, scalable product direction.",
-    image:
-      "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395326/Screenshot_2026-02-06_at_21-56-51_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_imix05.png",
+      "Turns complex ideas into clear product direction. Focused on building scalable systems that align with real user needs.",
+    image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395326/Screenshot_2026-02-06_at_21-56-51_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_imix05.png",
   },
   {
     name: "Aditya Rajan Shukla",
     role: "Research & Sales Head",
-    pronouns: "he/him",
     quote:
-      "The bridge between insight and impact. Aditya leads research and sales with a sharp understanding of market trends and growth strategy.",
-    image:
-      "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395325/Screenshot_2026-02-06_at_21-57-00_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_vw71tu.png",
+      "Drives strategy through data and market insight. Connects product vision with real growth opportunities.",
+    image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395325/Screenshot_2026-02-06_at_21-57-00_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_vw71tu.png",
   },
   {
     name: "Ram Bhardwaj",
     role: "Tech Lead",
-    pronouns: "he/him",
     quote:
-      "Part-time dancer, full-time problem solver. Ram builds scalable systems, manages complex project flows, and brings God–level discipline to every build.",
-    image:
-      "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-09_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_gjralv.png",
+      "Builds scalable systems and manages complex architectures with precision, ensuring reliability under real-world load.",
+    image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-09_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_gjralv.png",
   },
   {
     name: "Bhanu Pratap Singh",
     role: "Tech Lead",
-    pronouns: "he/him",
     quote:
-      "Young, sharp, and effortlessly reliable. Bhanu works across multiple teams, supports fast execution, and keeps the energy high while shipping real results.",
-    image:
-      "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-17_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_vejsm1.png",
+      "Focused on execution and performance. Works across teams to ship fast, reliable, and scalable systems.",
+    image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-17_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_vejsm1.png",
   },
   {
     name: "Sahil Jeet Singh Kalsi",
     role: "Software Development Engineer",
-    pronouns: "he/him",
     quote:
-      "Code, headphones on. Sahil brings chill Punjabi vibes, clean engineering, and a deep focus on building smooth, reliable software.",
-    image:
-      "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-22_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_pcsutb.png",
+      "Builds clean, efficient, and reliable code with a strong focus on performance and long-term maintainability.",
+    image: "https://res.cloudinary.com/dyktjldc4/image/upload/v1770395324/Screenshot_2026-02-06_at_21-57-22_Newral_-_Cutting-Edge_Tech_Solutions_for_Scalable_Growth_pcsutb.png",
   },
 ];
 
@@ -91,8 +81,8 @@ export default function TeamMarquee() {
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 mb-42 md:px-12">
         <h2 className="text-white text-4xl text-center md:text-6xl font-bold tracking-tighter">
-          Meet our world class <br />
-          design & engineering team
+          The People Behind  <br />
+        The Systems
         </h2>
       </div>
 

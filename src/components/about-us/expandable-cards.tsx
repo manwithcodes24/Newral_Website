@@ -1,36 +1,32 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+
+
 const cardData = [
   {
     id: "01",
     title: "Our Vision",
     description:
-      "We aim to be a global leader in digital innovation, turning bold ideas into meaningful products. By challenging the boundaries of AI, cybersecurity, and scalable technology, we build solutions that truly matter.",
+      "To build products that don’t just launch — but scale, perform, and succeed in real-world environments.",
   },
   {
     id: "02",
     title: "Our Mission",
     description:
-      "Our mission at Newral is to build future-ready digital solutions that not only exhibit innovation, security, and performance attributes, but do so in a sustainable manner with AI-powered technology, automation, and partnerships",
+      "To help startups build faster, reduce costs, and engineer systems that are reliable, scalable, and built for growth from day one.",
   },
-//   {
-//     id: "00",
-//     title: "Our History",
-//     description:
-//       "Newral was founded to close the gap between cutting-edge technology and practical business challenges. From a small team of passionate developers to a global tech agency that offers impactful solutions in artificial intelligence, cybersecurity, software as a service, and digital products, we have grown significantly.",
-//   },
   {
     id: "03",
     title: "Our Ethics",
     description:
-      "Our ethical stance underpins our commitment to trust, partnerships, and excellence in everything we do. Our focus is on transparency, fairness, and quality to create lasting impact."
+      "We value transparency, ownership, and long-term thinking — building trust through execution, not just promises.",
   },
   {
     id: "04",
     title: "Our Approach",
     description:
-      "We believe in clarity over complexity. By understanding problems deeply and executing with precision, we deliver scalable, reliable solutions that support long-term growth.",
+      "We focus on clarity over complexity — understanding problems deeply and delivering solutions that actually work at scale.",
   },
 ];
 
@@ -50,8 +46,7 @@ export default function ExpandableCards() {
                     className="lg:col-span-6"
                 >
                     <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold text-white leading-[1.2] tracking-tight">
-                        Diverse perspectives,<br />
-                        World-class work
+                     Built on Clarity, <br /> Execution, and Scale
                     </h2>
                 </motion.div>
             </div>
@@ -97,7 +92,7 @@ export default function ExpandableCards() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 10 }}
                                         transition={{ duration: 0.3, delay: 0.1 }}
-                                        className="text-neutral-400 text-sm md:text-base max-w-[300px] leading-relaxed"
+                                        className="text-white/70 text-sm md:text-base max-w-[300px] leading-relaxed"
                                     >
                                         {card.description}
                                     </motion.p>

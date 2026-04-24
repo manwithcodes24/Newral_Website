@@ -11,6 +11,8 @@ import FounderSection from "../../components/about-us/founder-section"
 import TeamSection from "../../components/about-us/our-team"
 import SOREADYWITHSECTION from "../../components/about-us/so-ready-with-collab"
 import CurvedImageScroll from "@/components/about-us/CurvedImageScroll"
+import YCAchievementSection from "@/components/landing-page/YCombinatorSection";
+import PINTERESTGRID from "@/components/landing-page/PINTERESTGRIDYC"
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -85,6 +87,8 @@ export default function Home() {
       </section>
       <CurvedImageScroll/>
       <AboutSection />
+      <YCAchievementSection/>
+      <PINTERESTGRID/>
       <ExpandableCards />
       <FounderSection />
       <TeamSection />

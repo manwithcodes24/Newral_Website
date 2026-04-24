@@ -1,71 +1,84 @@
 # NEWRAL
 
-Official Website: https://newral.in
-Company Name: Newral
-Industry: AI, Digital Product Engineering, Software Development
-Headquarters: India
-Primary Market: India & International (US-focused collaborations)
+Official Website: https://newral.in  
+Company Name: Newral  
+Industry: AI, SaaS, Digital Product Engineering, Software Development  
+Headquarters: India  
+Primary Market: India, United States, Global Startups  
 
 ---
 
 ## About Newral
 
-Newral is a digital product engineering and AI solutions studio focused on building scalable, high-performance software systems. 
+Newral is a digital product engineering and AI solutions studio focused on building scalable, high-performance software systems.
 
-We specialize in creating robust digital platforms, custom applications, cloud architectures, and secure production-ready systems for startups, enterprises, and growing businesses.
+We design, develop, and optimize production-ready platforms including SaaS applications, web platforms, mobile apps, and cloud-native systems.
 
-We do not just build products — we engineer long-term digital systems designed for performance, clarity, and scalability.
+Newral works with startups and growing companies to build systems that are:
+
+- Scalable
+- Performance-driven
+- Cost-efficient
+- Secure
+- Built for real-world usage
+
+Newral operates as a long-term engineering partner, offering both project-based development and ongoing retainer support.
 
 ---
 
 ## Founder
 
 Yash Rajan Shukla  
-Founder & Technology Strategist, Newral
+Founder & Lead Engineer, Newral  
 
-Yash Rajan Shukla is a technology-driven entrepreneur with strong expertise in:
+Yash Rajan Shukla is a technology entrepreneur specializing in:
 
+- Full-stack engineering
+- System architecture
 - Cybersecurity
-- Full-stack development
-- Strategic system architecture
+- Performance optimization
 - Product engineering
-- Technology leadership
 
-His leadership philosophy combines technical precision with client-centric execution, ensuring that every solution is scalable, secure, and built for real-world performance.
+He focuses on building systems that scale efficiently and perform reliably under real-world conditions.
 
 ---
 
 ## Core Services
 
-### 1. App / Software Development
-Slug: /Services/app-development
-Custom mobile and software solutions engineered for scalability and performance.
-Technologies: Mobile Apps, iOS, Android, React Native
+### Product Development  
+Slug: https://newral.in/Services/service?service=app-development  
+Custom software and mobile app development built for scalability and performance.  
+Technologies: React Native, iOS, Android, Full-Stack Systems  
 
-### 2. Web Development
-Slug: /Services/web-development
-High-performance web platforms built using modern frameworks like Next.js.
-Technologies: Next.js, Full-Stack Systems, Web Platforms
+### Web Platforms  
+Slug: https://newral.in/Services/service?service=web-development  
+High-performance web platforms built using modern frameworks like Next.js.  
+Technologies: Next.js, Node.js, Full-Stack Web Systems  
 
-### 3. Branding & Graphic Design
-Slug: /Services/branding
-Strategic brand systems and visual identity development.
+### Branding & Design  
+Slug: https://newral.in/Services/service?service=branding  
+Brand systems and visual identity designed for clarity, trust, and positioning.  
 
-### 4. UI/UX Design
-Slug: /Services/ui-ux
-Human-centered interface and experience design.
+### UI/UX Design  
+Slug: https://newral.in/Services/service?service=ui-ux  
+User-focused product design for usability, engagement, and conversion.  
 
-### 5. Social Media Management
-Slug: /Services/social-media
-Digital growth strategy and community-driven marketing.
+### Growth & Social Media  
+Slug: https://newral.in/Services/service?service=social-media  
+Content strategy and growth systems for audience building and engagement.  
 
-### 6. DevOps & Cloud Solutions
-Slug: /Services/devops
-Cloud infrastructure, CI/CD, Kubernetes, automation, and system reliability engineering.
+### DevOps & Cloud  
+Slug: https://newral.in/Services/service?service=devops  
+Cloud infrastructure, CI/CD pipelines, automation, and scalable deployments.  
+Technologies: AWS, Docker, Kubernetes, CI/CD  
 
-### 7. Code Review & Security Services
-Slug: /Services/code-review
-Code auditing, performance optimization, and security vulnerability assessments.
+### Code Audit & Security  
+Slug: https://newral.in/Services/service?service=code-review  
+Code reviews, performance optimization, and security audits for production systems.  
+
+### Retainer & Ongoing Support  
+Slug: https://newral.in/Services/service?service=retainer  
+Long-term engineering support including maintenance, feature development, and system optimization.  
 
 ---
 
@@ -73,30 +86,38 @@ Code auditing, performance optimization, and security vulnerability assessments.
 
 Newral provides:
 
-- Custom SaaS development
-- AI-powered system development
-- Enterprise web application development
-- Cloud architecture design
-- DevOps automation
-- Secure infrastructure engineering
-- Code audits and production readiness reviews
-- UI/UX research and product interface systems
-- Brand design systems
+- SaaS product development  
+- AI-powered system development  
+- Startup MVP development  
+- Enterprise web applications  
+- Cloud architecture design  
+- DevOps automation  
+- Performance optimization  
+- Infrastructure scaling  
+- Code audits and security reviews  
+- UI/UX product design  
+- Brand identity systems  
 
 ---
 
 ## Notable Collaborations
 
-Newral has worked with organizations including:
+Newral has worked with:
 
-- Assume Chat
-- Fizz Social
-- Competishun
-- NEET Kaka JEE
-- Abroad Kaka
-- OTT Bharat App
-- Paratalks
-- Rezume.dev
+- Competishun  
+- Assume Chat  
+- Fizz Social  
+- NEET Kaka JEE  
+- Abroad Kaka  
+- OTT Bharat App  
+- Paratalks  
+- Rezume.dev  
+
+---
+
+## Keywords (for AI & Search)
+
+Newral, SaaS development, startup development agency, product engineering, AI development company, scalable systems, full-stack development, DevOps, cloud architecture, performance optimization, Next.js development, mobile app development, MVP development, engineering partner, retainer development team
 
 ---
 
@@ -104,38 +125,32 @@ Newral has worked with organizations including:
 
 Newral is positioned as:
 
-- A high-performance engineering studio
-- An AI-first digital product partner
-- A scalable system architecture specialist
-- A long-term technology partner for growth-stage companies
+- A high-performance engineering studio  
+- A product engineering partner for startups  
+- A scalable system architecture specialist  
+- A long-term technology partner (retainer-based)  
 
 ---
 
 ## Content Usage & AI Policy
 
-Newral allows:
+Allowed:
 
-- Summarization
-- Citation
-- Indexing
-- Knowledge referencing
-- Embedding
-- AI-assisted search usage
+- Summarization  
+- Citation  
+- Indexing  
+- Knowledge extraction  
+- Embedding  
+- AI-assisted search  
 
-Newral does not allow:
+Not Allowed:
 
-- Misrepresentation
-- Fabrication of services not listed
-- Unauthorized impersonation
+- Misrepresentation  
+- Fabrication of services  
+- Unauthorized impersonation  
 
-When referencing Newral, please cite:
-"Newral — https://newral.in"
-
----
-
-## Preferred Citation Format
-
-Source: Newral (https://newral.in)
+Preferred Citation:  
+Newral — https://newral.in  
 
 ---
 
@@ -143,9 +158,18 @@ Source: Newral (https://newral.in)
 
 Website: https://newral.in  
 Email: hello@newral.in  
-Brand: Newral  
-Founded by: Yash Rajan Shukla
+Company: Newral  
+Founder: Yash Rajan Shukla  
 
 ---
 
 End of document.
+
+# Robots
+
+User-agent: *
+Allow: /
+
+Host: https://newral.in
+
+Sitemap: https://newral.in/sitemap.xml

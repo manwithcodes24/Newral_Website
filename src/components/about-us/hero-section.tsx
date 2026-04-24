@@ -12,37 +12,20 @@ export default function HeroAboutus() {
     <div className="relative z-10 flex h-full items-center px-6 md:px-12">
       <div className="flex flex-col items-center justify-center w-full text-center">
 
-        <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl text-center font-bold leading-[1.1] tracking-tight text-white duration-1000 md:text-7xl lg:text-8xl">
+        <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl text-center font-bold leading-[1.1] tracking-tight text-white duration-1000 md:text-7xl lg:text-7xl">
           <span className="text-balance">
-           Shaping the future of Technology
+           We Build Products That Scale in the Real World
           </span>
         </h1>
-        {/*
+       
             
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-white/70 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Transforming digital spaces with dynamic shader effects and real-time visual experiences that captivate
-                and inspire.
+              We design, build, and optimize high-performance systems that handle real users, real scale, and real-world complexity.
               </span>
             </p>
-            <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
-              <MagneticButton
-                size="lg"
-                variant="primary"
-                className="bg-white text-black hover:bg-white/90"
-                onClick={() => window.open("https://v0.app/templates/R3n0gnvYFbO", "_blank")}
-              >
-                Open in v0
-              </MagneticButton>
-              <MagneticButton
-                size="lg"
-                variant="secondary"
-                className="border-white/20 bg-white/5 text-white hover:bg-white/10"
-              >
-                View Demo
-              </MagneticButton>
-            </div>
-            */}
+           
+          
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in duration-1000 delay-500">
