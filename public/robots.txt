@@ -1,17 +1,9 @@
+# *
 User-agent: *
-
-Allow: /llm.txt
 Allow: /
 
-
-# Optional: block internal or sensitive paths
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /_next/
-
-# Sitemap
-Sitemap: https://newral.in/sitemap.xml
-
-# Host (main domain)
+# Host
 Host: https://newral.in
+
+# Sitemaps
+Sitemap: https://newral.in/sitemap.xml
