@@ -16,9 +16,9 @@ export default function UIWrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Navbar />
+     
       {children}
-      <Footer />
+    
     </>
   );
 }

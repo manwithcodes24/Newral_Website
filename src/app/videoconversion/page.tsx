@@ -64,7 +64,7 @@ export default function VideoTranslatorPrototype() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white mt-24 p-6 md:p-12 font-sans">
+    <div className="min-h-screen bg-black text-white pt-24 p-6 md:p-12 font-sans">
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}

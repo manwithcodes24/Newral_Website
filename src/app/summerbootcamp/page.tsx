@@ -93,6 +93,11 @@ const HeroSection = () => {
                   <Calendar size={16} className="text-blue-500" />
                   <span>Starting 1 June 2026</span>
                 </div>
+                 <div className="flex items-center gap-3">
+                  <Calendar size={16} className="text-blue-500" />
+                  <span>1-Week free trial</span>
+                </div>
+                 
                 <div className="flex items-center gap-3">
                   <MapPin size={16} className="text-blue-500" />
                   <span>Noida Sector 62 (i-Thum Tower B)</span>
