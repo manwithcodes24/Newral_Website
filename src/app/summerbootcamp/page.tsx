@@ -6,7 +6,8 @@ import {
   Monitor, Cpu, Globe, ArrowUpRight,
   CheckCircle2, MapPin, Zap, Terminal,
   Minus, Plus, Database, Code2, Server,
-  Calendar
+  Calendar,
+  CalendarClock
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -94,7 +95,7 @@ const HeroSection = () => {
                   <span>Starting 1 June 2026</span>
                 </div>
                  <div className="flex items-center gap-3">
-                  <Calendar size={16} className="text-blue-500" />
+                  <CalendarClock size={16} className="text-blue-500" />
                   <span>1-Week free trial</span>
                 </div>
                  
