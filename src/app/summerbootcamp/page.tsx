@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Monitor, Cpu, Globe, ArrowUpRight,
   CheckCircle2, MapPin, Zap, Terminal,
-  Minus, Plus, Database, Code2, Server
+  Minus, Plus, Database, Code2, Server,
+  Calendar
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -77,11 +78,10 @@ const HeroSection = () => {
             <Reveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] uppercase tracking-widest mb-6 text-blue-400 font-mono">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                Summer 2025 • Training & Placement Assistance
+                Summer 2026 • Training & Placement Assistance
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tighter leading-[0.85] mb-8">
-                Build Systems. <br />
-                <span className="text-white/20 italic font-serif">Not just tutorials.</span>
+              <h1 className="text-6xl md:text-6xl font-bold text-white tracking-tighter leading-[0.85] mb-8">
+                Summer Bootcamp Training. And Placement Assitance Program
               </h1>
               <p className="text-lg text-white/50 max-w-lg mb-8 leading-relaxed">
                 A 3-month intensive bootcamp by <span className="text-white font-bold">NEWRAL</span>. 
@@ -90,12 +90,16 @@ const HeroSection = () => {
               
               <div className="flex flex-col gap-4 text-white/40 font-mono text-sm">
                 <div className="flex items-center gap-3">
+                  <Calendar size={16} className="text-blue-500" />
+                  <span>Starting 1 June 2026</span>
+                </div>
+                <div className="flex items-center gap-3">
                   <MapPin size={16} className="text-blue-500" />
                   <span>Noida Sector 62 (i-Thum Tower B)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Zap size={16} className="text-blue-500" />
-                  <span>100% Internship Opportunity (Offline Batch)</span>
+                  <span>Certificate + 100% Internship Guaranted (Offline Batch)</span>
                 </div>
               </div>
             </Reveal>
