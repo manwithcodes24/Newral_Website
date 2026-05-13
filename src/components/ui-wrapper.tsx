@@ -9,16 +9,16 @@ export default function UIWrapper({ children }: { children: React.ReactNode }) {
   
   // Define routes where you DON'T want the header and footer
   const isAdminRoute = pathname.startsWith("/admin");
-
-  if (isAdminRoute) {
+  const EdtechformRoute = pathname.includes("bootcamp");
+  if (isAdminRoute || EdtechformRoute) {
     return <>{children}</>;
   }
 
   return (
     <>
-     
+      <Navbar />
       {children}
-    
+      <Footer />
     </>
   );
 }
