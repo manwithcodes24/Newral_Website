@@ -1,0 +1,162 @@
+.section {
+  position: relative;
+  height: 330vh; /* Scroll space for desktop */
+  background: #F6F6F6;
+  overflow: visible;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none; /* Let scroll/clicks pass through to body */
+}
+
+.textWrap {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  position: absolute;
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.img {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  pointer-events: auto;
+}
+
+.img1 {
+  top: 20vh;
+  left: 6vw;
+  width: 25vw;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.img2 {
+  top: 70vh;
+  right: 6vw;
+  width: 30vw;
+  max-width: 360px;
+  z-index: 6;
+}
+
+.img3 {
+  top: 130vh;
+  left: 8vw;
+  width: 28vw;
+  max-width: 320px;
+  z-index: 2;
+}
+
+.img4 {
+  top: 190vh;
+  right: 8vw;
+  width: 32vw;
+  max-width: 380px;
+  z-index: 6;
+}
+
+.img5 {
+  top: 250vh;
+  left: 10vw;
+  width: 35vw;
+  max-width: 450px;
+  z-index: 4;
+}
+
+@media (max-width: 900px) {
+  .section {
+    height: 330vh;
+    overflow: clip;
+  }
+
+  .stickyContainer {
+    height: 100vh;
+  }
+
+  .textWrap {
+    max-width: 100%;
+    padding: 0 20px;
+    height: auto;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: clamp(32px, 9vw, 48px) !important;
+    text-align: center;
+  }
+
+  /* Top-left — visible as section enters */
+  .img1 {
+    top: 10vh;
+    left: 5vw;
+    width: 45vw;
+    max-width: 200px;
+    z-index: 2;
+  }
+
+  /* Right side — aligned with text */
+  .img2 {
+    top: 40vh;
+    right: 5vw;
+    width: 45vw;
+    max-width: 220px;
+    z-index: 6;
+  }
+
+  /* Bottom-left — comes in below text */
+  .img3 {
+    top: 80vh;
+    left: 8vw;
+    width: 45vw;
+    max-width: 200px;
+    z-index: 2;
+  }
+
+  /* Bottom-right — further down */
+  .img4 {
+    top: 120vh;
+    right: 8vw;
+    width: 45vw;
+    max-width: 220px;
+    z-index: 6;
+  }
+
+  /* Bottom center - last image */
+  .img5 {
+    top: 240vh;
+    left: 5vw;
+    width: 60vw;
+    max-width: 260px;
+    z-index: 4;
+  }
+}

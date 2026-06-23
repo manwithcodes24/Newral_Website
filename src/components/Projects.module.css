@@ -1,0 +1,33 @@
+.section { padding: 80px 0; overflow: hidden; }
+.inner { display: flex; flex-direction: column; gap: 40px; align-items: center; }
+.trackWrap { width: 100%; overflow: hidden; }
+.track { display: flex; gap: clamp(18px, 2.8vw, 40px); width: max-content; padding-left: var(--pad); animation: drift 36s linear infinite; }
+.track:hover { animation-play-state: paused; }
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.slide { position: relative; width: clamp(281px, 44.4vw, 639px); aspect-ratio: 639/416; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+.slide > img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.viewProject {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  background: #fff; backdrop-filter: blur(40px); border-radius: 500px;
+  padding: clamp(8px, 1.1vw, 16px); display: flex; align-items: center; gap: 8px;
+  opacity: 0; transition: opacity .35s ease; cursor: pointer;
+}
+.slide:hover .viewProject, .first .viewProject { opacity: 1; }
+.viewProject img { width: clamp(10px, 1.25vw, 18px); height: clamp(10px, 1.25vw, 18px); }
+.viewProject span { font-size: clamp(9px, 1.1vw, 16px); letter-spacing: -.02em; color: #000; white-space: nowrap; }
+
+.info { margin-top: 16px; display: none; }
+.pTitle { font-size: 24px; font-weight: 500; letter-spacing: -0.04em; margin-bottom: 4px; }
+.pTag { font-size: 16px; color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .slide { 
+    aspect-ratio: auto; 
+    overflow: visible; 
+    display: flex; 
+    flex-direction: column; 
+    width: clamp(393px, 62vw, 895px);
+  }
+  .slide > img { aspect-ratio: 639/416; }
+  .viewProject { display: none; }
+}

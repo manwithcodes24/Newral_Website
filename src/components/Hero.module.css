@@ -1,0 +1,169 @@
+.hero {
+  position: relative;
+  background: #fff;
+  min-height: 882px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  padding-top: 186px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6.6vw, 96px);
+  width: 100%;
+}
+
+.title { display: flex; flex-direction: column; gap: 8px; }
+
+.line1 { display: flex; gap: clamp(16px, 2.6vw, 37px); align-items: flex-start; }
+.line2 { display: flex; gap: 16px; align-items: center; }
+
+.display {
+  font-family: var(--aeonik);
+  font-weight: 500;
+  font-size: var(--h-display);
+  letter-spacing: -.04em;
+  color: #000;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--h-display);
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.blue { color: #176FF3; }
+
+/* ---- staggered load fade-in ---- */
+.hf1, .hf2, .hf3, .hf4, .hf5 {
+  opacity: 0;
+  filter: blur(10px);
+  animation: heroIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hf1 { animation-delay: .15s; }
+.hf2 { animation-delay: .30s; }
+.hf3 { animation-delay: .45s; }
+.hf4 { animation-delay: .60s; }
+.hf5 { animation-delay: .75s; }
+@keyframes heroIn {
+  0% { opacity: 0; filter: blur(10px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+/* ---- Flip card stack ---- */
+.cardStack {
+  position: relative;
+  width: clamp(184px, 15.8vw, 228px);
+  aspect-ratio: 228 / 139;
+  flex-shrink: 0;
+}
+
+.cBack {
+  position: absolute;
+  left: 0;
+  top: 7.7%;
+  width: 92.5%;
+  height: 92%;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.1);
+  object-fit: cover;
+}
+
+.flipBox {
+  position: relative;
+  /* overflow removed so cards can fly in from outside */
+  border-radius: 8px;
+}
+.flipBox img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 35px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.flipBox img:global(.active) { opacity: 1; }
+.flipOut { z-index: 1; animation: flipOut .7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.flipIn  { z-index: 2; animation: flipIn  .7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@keyframes flipOut { 
+  0% { transform: scale(1) translateY(0); opacity: 1; filter: brightness(1); } 
+  100% { transform: scale(0.95) translateY(0); opacity: 0; filter: brightness(0.6); } 
+}
+@keyframes flipIn  { 
+  0% { transform: translateY(-150%) rotate(-15deg); opacity: 0; } 
+  100% { transform: translateY(0) rotate(0); opacity: 1; } 
+}
+
+.stackFlip {
+  position: absolute;
+  left: 4.7%;
+  top: 0;
+  width: 92.6%;
+  height: 93%;
+  border-radius: 8px;
+  transform: rotate(2.76deg);
+}
+
+.inlineFlip {
+  width: clamp(160px, 17.8vw, 256px);
+  /* no forced aspect-ratio — let the image/gif use its natural dimensions */
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.ctaRow { display: flex; gap: clamp(16px, 1.7vw, 24px); align-items: center; }
+.sub {
+  width: min(533px, 100%);
+  font-size: var(--body-lg);
+  letter-spacing: -.02em;
+  color: var(--text-primary);
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 100vh; align-items: center; justify-content: center; }
+  .content { padding-top: 60px; padding-bottom: 0; gap: 0; justify-content: center; }
+  .title { margin-top: 0; }
+  .line1 { flex-direction: column-reverse; gap: 24px; align-items: flex-start; }
+  .cardStack { width: 200px; margin: 0; z-index: 10; }
+  .display, .serif { white-space: normal; font-size: 42px; line-height: 1.1; }
+  .line2 { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0; align-items: baseline; }
+  .inlineFlip { display: none; }
+  .bottom { margin-top: 24px; flex-direction: column-reverse; gap: 32px; }
+  .sub { font-size: 16px; color: var(--text-secondary); width: 100%; text-align: left; line-height: 1.4; }
+  .ctaRow { width: 100%; justify-content: flex-start; flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .ctaRow > button { flex: none; height: 48px; font-size: 15px; gap: 8px; }
+  .ctaRow > button:first-child { padding: 0 4px 0 16px; }
+  .ctaRow > button:first-child .arrow-circle { width: 40px; height: 40px; }
+  .ctaRow > button:last-child { padding: 0 16px; border-radius: 500px; }
+}

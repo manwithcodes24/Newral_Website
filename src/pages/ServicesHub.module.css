@@ -1,0 +1,480 @@
+.hero {
+  position: relative;
+  background: #fff;
+  min-height: 820px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGridBg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(var(--border-strong) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-top: clamp(140px, 15vw, 180px);
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--aeonik);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0077FF;
+}
+
+.h1 {
+  margin-top: 24px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.display {
+  font-family: var(--aeonik);
+  font-weight: 500;
+  font-size: var(--h-display);
+  letter-spacing: -.04em;
+  color: #000;
+  line-height: 1.05;
+  display: block;
+}
+
+.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--h-display);
+  line-height: 1.05;
+  display: block;
+}
+
+.blue {
+  color: #176FF3;
+}
+
+.intro {
+  margin-top: 24px;
+  font-size: var(--body-lg);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaRow {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== Bento Grid Sections ==================== */
+
+.bentoSection {
+  padding: 80px 0;
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.sectionTitle {
+  font-family: var(--aeonik);
+  font-size: clamp(36px, 4.5vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.sectionDesc {
+  font-size: var(--body-md);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* 3-Column Bento Layout */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(316px, auto) minmax(204px, auto);
+  gap: 24px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Specific Card Layout Positioning for Bento */
+.card1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.card2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.card3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.card4 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+/* Card General Styling */
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.01),
+    0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardVisualImg {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardVisualImg {
+  transform: scale(1.04);
+}
+
+.tallCard {
+  height: 100%;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardMeta {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0077FF;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-family: var(--aeonik);
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  font-size: var(--body-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Bullet list for sub-services we are giving */
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.bulletDot {
+  width: 5px;
+  height: 5px;
+  background: #0077FF;
+  border-radius: 50%;
+}
+
+/* Card Visual Mockups */
+.cardVisual {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cardVisualInner {
+  width: 90%;
+  height: 90%;
+}
+
+/* Mini Code Visual */
+.codeVisual {
+  font-family: monospace;
+  font-size: 10px;
+  color: #0F172A;
+  padding: 12px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Mini Phone Visual */
+.phoneVisual {
+  width: 80px;
+  height: 130px;
+  border: 2px solid var(--border-strong);
+  border-radius: 14px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.phoneHeader {
+  width: 32px;
+  height: 6px;
+  background: var(--border-default);
+  border-radius: 100px;
+  margin: 0 auto 6px;
+}
+
+.phoneItem {
+  height: 16px;
+  background: #F1F5F9;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.phoneItemActive {
+  background: #0077FF;
+}
+
+/* Mini Nodes / DevOps Visual */
+.nodesVisual {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.node {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--border-default);
+  position: relative;
+}
+
+.nodeActive {
+  background: #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.nodeAccent {
+  background: #0077FF;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.4);
+}
+
+/* Mini Palette Visual */
+.paletteVisual {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.paletteCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Mini Wireframe Visual */
+.wireframeVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.wireframeRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.wireframeBox {
+  flex: 1;
+  height: 14px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 3px;
+}
+
+/* Mini Component / Buttons Visual */
+.buttonsVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.miniBtn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid var(--border-default);
+}
+
+.miniBtnPrimary {
+  background: #0F172A;
+  color: #fff;
+  border-color: #0F172A;
+}
+
+/* Bottom CTA wrapper matching Figma layout */
+.bottomCtaWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ==================== Responsiveness ==================== */
+
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  
+  .card1, .card2, .card3, .card4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+  .tallCard {
+    min-height: 380px;
+  }
+  
+  .cardVisual {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .card1, .card2, .card3, .card4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+  .tallCard, .smallCard {
+    min-height: auto;
+    height: auto;
+  }
+  
+  .cardVisual {
+    height: 130px;
+    margin-bottom: 16px;
+  }
+  
+  .card {
+    padding: 24px;
+  }
+}

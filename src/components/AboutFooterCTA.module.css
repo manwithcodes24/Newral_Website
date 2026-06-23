@@ -1,0 +1,120 @@
+.section {
+  position: relative;
+  height: 220vh; /* Scroll space for desktop split reveal */
+  background: #F6F6F6;
+  overflow: visible;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2; /* Sits behind image split container but is clickable after split */
+  pointer-events: auto;
+}
+
+.heading {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0 0 40px 0;
+}
+
+.btnRow {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background: #1B2B5E;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Image Split Container */
+.imageContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 1200px);
+  aspect-ratio: 2 / 1;
+  z-index: 10;
+  pointer-events: none; /* Let scroll/clicks pass through to content wrap */
+}
+
+.leftHalf, .rightHalf {
+  position: absolute;
+  top: 0;
+  width: 50.2%; /* Overlap slightly by 0.2% to prevent subpixel hairline gap in center */
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.leftHalf {
+  left: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.leftHalf img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rightHalf {
+  right: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.rightHalf img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .section {
+    height: 180vh;
+  }
+
+  .heading {
+    font-size: clamp(28px, 8vw, 42px);
+    margin-bottom: 28px;
+  }
+
+  .contentWrap {
+    z-index: 2;
+    padding: 0 24px;
+  }
+
+  .imageContainer {
+    width: 92vw;
+    aspect-ratio: 4 / 3;
+  }
+}

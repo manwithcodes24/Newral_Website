@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#EBF3FF"/>
+  <!-- Main slide -->
+  <rect x="120" y="60" width="560" height="340" rx="20" fill="#0F172A"/>
+  <!-- Slide header -->
+  <rect x="150" y="90" width="200" height="18" rx="5" fill="white" opacity="0.7"/>
+  <rect x="150" y="116" width="140" height="10" rx="4" fill="white" opacity="0.3"/>
+  <!-- Bar chart inside slide -->
+  <rect x="150" y="280" width="48" height="80" rx="4" fill="#0077FF" opacity="0.9"/>
+  <rect x="215" y="240" width="48" height="120" rx="4" fill="#0077FF" opacity="0.7"/>
+  <rect x="280" y="200" width="48" height="160" rx="4" fill="#0077FF"/>
+  <rect x="345" y="220" width="48" height="140" rx="4" fill="#0077FF" opacity="0.8"/>
+  <rect x="410" y="180" width="48" height="180" rx="4" fill="#3B82F6"/>
+  <rect x="475" y="160" width="48" height="200" rx="4" fill="#60A5FA"/>
+  <!-- Right panel of slide -->
+  <rect x="550" y="160" width="110" height="16" rx="4" fill="white" opacity="0.4"/>
+  <rect x="550" y="185" width="90" height="10" rx="3" fill="white" opacity="0.25"/>
+  <rect x="550" y="205" width="100" height="10" rx="3" fill="white" opacity="0.2"/>
+  <!-- Shadow slides in background -->
+  <rect x="140" y="420" width="540" height="14" rx="4" fill="#0F172A" opacity="0.12"/>
+  <!-- Small slide thumbnail -->
+  <rect x="720" y="100" width="130" height="82" rx="10" fill="white" opacity="0.9"/>
+  <rect x="734" y="115" width="60" height="8" rx="3" fill="#0077FF" opacity="0.5"/>
+  <rect x="734" y="130" width="44" height="6" rx="2" fill="#0F172A" opacity="0.2"/>
+  <rect x="734" y="143" width="50" height="6" rx="2" fill="#0F172A" opacity="0.15"/>
+  <rect x="720" y="200" width="130" height="82" rx="10" fill="white" opacity="0.6"/>
+  <rect x="720" y="300" width="130" height="82" rx="10" fill="white" opacity="0.35"/>
+</svg>

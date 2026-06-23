@@ -1,0 +1,40 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0F172A"/>
+  <!-- Shield shape -->
+  <path d="M450,60 L650,140 L650,280 Q650,390 450,450 Q250,390 250,280 L250,140 Z" fill="#1D4ED8" opacity="0.2"/>
+  <path d="M450,90 L620,158 L620,280 Q620,370 450,420 Q280,370 280,280 L280,158 Z" fill="#1D4ED8" opacity="0.15"/>
+  <path d="M450,120 L590,178 L590,278 Q590,350 450,394 Q310,350 310,278 L310,178 Z" fill="#1D4ED8" opacity="0.2"/>
+  <!-- Checkmark in shield -->
+  <circle cx="450" cy="265" r="70" fill="#1D4ED8" opacity="0.3"/>
+  <polyline points="418,265 440,288 484,242" stroke="#60A5FA" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Security items floating around -->
+  <!-- IAM -->
+  <rect x="80" y="140" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="96" y="162" font-family="system-ui,monospace" font-size="10" fill="#A78BFA" opacity="0.8">IAM Policy</text>
+  <circle cx="188" cy="166" r="6" fill="#10B981"/>
+  <!-- Encryption -->
+  <rect x="80" y="210" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="96" y="232" font-family="system-ui,monospace" font-size="10" fill="#60A5FA" opacity="0.8">AES-256</text>
+  <circle cx="188" cy="236" r="6" fill="#10B981"/>
+  <!-- Vault -->
+  <rect x="80" y="280" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="96" y="302" font-family="system-ui,monospace" font-size="10" fill="#F59E0B" opacity="0.8">Vault Secrets</text>
+  <circle cx="188" cy="306" r="6" fill="#10B981"/>
+  <!-- Right side items -->
+  <rect x="690" y="140" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="706" y="162" font-family="system-ui,monospace" font-size="10" fill="#60A5FA" opacity="0.8">SOC 2</text>
+  <circle cx="798" cy="166" r="6" fill="#10B981"/>
+  <rect x="690" y="210" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="706" y="232" font-family="system-ui,monospace" font-size="10" fill="#60A5FA" opacity="0.8">ISO 27001</text>
+  <circle cx="798" cy="236" r="6" fill="#10B981"/>
+  <rect x="690" y="280" width="130" height="50" rx="10" fill="#1E293B"/>
+  <text x="706" y="302" font-family="system-ui,monospace" font-size="10" fill="#60A5FA" opacity="0.8">GDPR</text>
+  <circle cx="798" cy="306" r="6" fill="#10B981"/>
+  <!-- Connection lines -->
+  <line x1="210" y1="165" x2="310" y2="220" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="210" y1="235" x2="310" y2="250" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="210" y1="305" x2="310" y2="280" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="690" y1="165" x2="590" y2="220" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="690" y1="235" x2="590" y2="250" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="690" y1="305" x2="590" y2="280" stroke="#1D4ED8" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+</svg>

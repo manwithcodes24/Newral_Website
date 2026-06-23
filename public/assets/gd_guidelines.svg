@@ -1,0 +1,32 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#F0F7FF"/>
+  <!-- Book / document -->
+  <rect x="140" y="70" width="300" height="380" rx="16" fill="#0F172A"/>
+  <rect x="440" y="70" width="300" height="380" rx="16" fill="white" stroke="#DCE7F7" stroke-width="2"/>
+  <!-- Left page (dark) - color swatches -->
+  <rect x="165" y="110" width="250" height="20" rx="5" fill="white" opacity="0.5"/>
+  <rect x="165" y="145" width="56" height="56" rx="10" fill="#0077FF"/>
+  <rect x="233" y="145" width="56" height="56" rx="10" fill="#0F172A"/>
+  <rect x="301" y="145" width="56" height="56" rx="10" fill="#60A5FA"/>
+  <rect x="165" y="215" width="120" height="10" rx="4" fill="white" opacity="0.3"/>
+  <rect x="165" y="235" width="90" height="8" rx="3" fill="white" opacity="0.2"/>
+  <!-- Typography on left -->
+  <rect x="165" y="290" width="240" height="26" rx="5" fill="white" opacity="0.15"/>
+  <rect x="165" y="325" width="200" height="14" rx="4" fill="white" opacity="0.1"/>
+  <rect x="165" y="348" width="220" height="14" rx="4" fill="white" opacity="0.08"/>
+  <rect x="165" y="371" width="180" height="14" rx="4" fill="white" opacity="0.06"/>
+  <!-- Right page (light) -->
+  <rect x="464" y="100" width="200" height="18" rx="5" fill="#0F172A" opacity="0.2"/>
+  <rect x="464" y="130" width="240" height="10" rx="4" fill="#0F172A" opacity="0.1"/>
+  <rect x="464" y="148" width="200" height="10" rx="4" fill="#0F172A" opacity="0.08"/>
+  <!-- Logo usage examples -->
+  <rect x="464" y="185" width="100" height="60" rx="8" fill="#0077FF" opacity="0.1"/>
+  <rect x="580" y="185" width="100" height="60" rx="8" fill="#0F172A" opacity="0.08"/>
+  <rect x="464" y="262" width="100" height="60" rx="8" fill="#E2EDFF"/>
+  <rect x="580" y="262" width="100" height="60" rx="8" fill="#F8FAFC" stroke="#DCE7F7" stroke-width="1.5"/>
+  <rect x="464" y="340" width="216" height="10" rx="4" fill="#0F172A" opacity="0.1"/>
+  <rect x="464" y="360" width="180" height="8" rx="3" fill="#0F172A" opacity="0.07"/>
+  <rect x="464" y="378" width="200" height="8" rx="3" fill="#0F172A" opacity="0.06"/>
+  <!-- Spine shadow -->
+  <rect x="430" y="70" width="20" height="380" fill="#0F172A" opacity="0.08"/>
+</svg>

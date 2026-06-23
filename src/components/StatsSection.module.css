@@ -1,0 +1,43 @@
+.section { height: 300vh; padding: 0 var(--pad); position: relative; }
+.sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.stage { position: relative; width: min(1320px, 100%); aspect-ratio: 1320/716; }
+
+.weAre, .newral {
+  font-family: var(--serif); font-style: italic;
+  font-size: var(--h-giant); color: #000; line-height: 1.3; white-space: nowrap;
+  position: absolute; z-index: 0; will-change: transform;
+}
+.weAre  { left: 0; top: 0; padding-left: var(--pad); }
+.newral { right: 0; bottom: 0; padding-right: var(--pad); }
+
+.cards { position: absolute; left: 0; top: 25%; width: 100%; z-index: 1; display: flex; justify-content: space-between; }
+.card  { position: relative; background: #fff; width: 23.64%; aspect-ratio: 312/378; border-radius: 16px; overflow: hidden; flex-shrink: 0; will-change: transform, opacity; }
+.wave  { position: absolute; left: -35%; bottom: -29%; width: 167%; pointer-events: none; }
+.cardContent { position: absolute; left: 11%; top: 5.3%; bottom: 5.3%; display: flex; flex-direction: column; justify-content: space-between; }
+.numLabel { font-size: var(--body-md); color: var(--text-secondary); }
+.big { font-family: var(--serif); font-style: italic; font-size: clamp(60px, 6.7vw, 96px); color: #000; line-height: 1; }
+.caption { font-size: var(--body-md); color: var(--text-primary); margin-top: 16px; }
+
+@media (max-width: 768px) {
+  /* same pinned scroll effect as desktop, sized for the 393px Figma frame;
+     cards overlap the bottom of "We are" and the top of "Newral" */
+  .stage  { width: 100%; aspect-ratio: auto; height: 460px; }
+  .cards  { 
+    justify-content: flex-start; 
+    gap: 18px; 
+    top: 92px; 
+    scrollbar-width: none; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    padding: 0 var(--pad);
+    scroll-snap-type: x mandatory;
+  }
+  .cards::-webkit-scrollbar { display: none; }
+  .card   { width: 234px; scroll-snap-align: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section { height: auto; padding: 80px var(--pad); }
+  .sticky  { position: static; height: auto; }
+  .weAre, .newral, .card { transform: none !important; opacity: 1 !important; }
+}

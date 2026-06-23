@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://newral.in/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://newral.in/</loc><lastmod>2025-06-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://newral.in/about</loc><lastmod>2025-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newral.in/services</loc><lastmod>2025-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newral.in/contact</loc><lastmod>2025-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://newral.in/ui-ux-design-noida</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://newral.in/graphic-design-noida</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://newral.in/app-development-noida</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://newral.in/web-development-noida</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://newral.in/devops-noida</loc><lastmod>2025-06-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://newral.in/blog</loc><lastmod>2025-06-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newral.in/blog/ui-ux-design-cost-noida-2025</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://newral.in/blog/how-to-choose-web-development-agency-noida</loc><lastmod>2025-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://newral.in/blog/signs-your-app-needs-ux-audit</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://newral.in/blog/react-native-vs-flutter-2025</loc><lastmod>2025-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://newral.in/blog/what-is-design-system-startup</loc><lastmod>2025-03-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

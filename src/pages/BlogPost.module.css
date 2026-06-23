@@ -1,0 +1,292 @@
+/* ── Individual blog post page ─────────────────────────────── */
+
+/* ── Top zone: breadcrumb + header — full width bg, content constrained ── */
+.topZone {
+  background: var(--bg, #F6F6F6);
+  padding: 160px var(--pad) 0;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-family: var(--satoshi, sans-serif);
+  font-size: 13px;
+  color: var(--text-secondary, #475569);
+  margin-bottom: 40px;
+}
+
+.breadcrumb a {
+  color: var(--text-secondary, #475569);
+  transition: color 0.2s ease;
+}
+.breadcrumb a:hover {
+  color: var(--text-primary, #0F172A);
+}
+
+.breadcrumbSep {
+  color: #CBD5E1;
+  font-size: 11px;
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary, #0F172A);
+  font-weight: 500;
+}
+
+/* ── Header ── */
+.header {
+  max-width: 860px;
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.headerMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.headerCategory {
+  font-family: var(--satoshi, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-blue, #2563EB);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.headerDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  display: inline-block;
+}
+
+.headerDate,
+.headerRead {
+  font-family: var(--satoshi, sans-serif);
+  font-size: 13px;
+  color: var(--text-secondary, #475569);
+}
+
+.headerTitle {
+  font-family: var(--aeonik, sans-serif);
+  font-weight: 500;
+  font-size: clamp(28px, 4.5vw, 64px);
+  letter-spacing: -0.04em;
+  color: var(--text-primary, #0F172A);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.headerExcerpt {
+  font-family: var(--aeonik, sans-serif);
+  font-size: var(--body-lg, clamp(16px, 1.4vw, 20px));
+  color: var(--text-secondary, #475569);
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  max-width: 640px;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-default, #DCE7F7);
+  margin: 0;
+  background: var(--bg, #F6F6F6);
+  /* keep the bg colour visible either side */
+  display: block;
+  height: 1px;
+  background-color: var(--border-default, #DCE7F7);
+}
+
+/* ── Article body ── */
+.body {
+  background: var(--bg, #F6F6F6);
+  padding: clamp(40px, 5vw, 72px) var(--pad) clamp(48px, 7vw, 96px);
+}
+
+.bodyInner {
+  max-width: 720px;
+}
+
+.intro {
+  font-family: var(--aeonik, sans-serif);
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.78;
+  color: var(--text-primary, #0F172A);
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-default, #DCE7F7);
+  letter-spacing: -0.01em;
+}
+
+.h2 {
+  font-family: var(--aeonik, sans-serif);
+  font-weight: 500;
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #0F172A);
+  margin: 2.75rem 0 0.85rem;
+  line-height: 1.25;
+}
+
+/* First h2 after intro shouldn't have excessive top margin */
+.h2:first-of-type {
+  margin-top: 0;
+}
+
+.p {
+  font-family: var(--aeonik, sans-serif);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.82;
+  color: var(--text-secondary, #475569);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.ctaBlock {
+  margin: 2.5rem 0 1rem;
+}
+
+/* ── Related posts ── */
+.related {
+  background: var(--surface, #fff);
+  padding: clamp(40px, 5vw, 72px) var(--pad) clamp(40px, 6vw, 80px);
+}
+
+.relatedHeading {
+  font-family: var(--aeonik, sans-serif);
+  font-weight: 500;
+  font-size: clamp(22px, 2.5vw, 36px);
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #0F172A);
+  margin-bottom: 24px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 20px;
+}
+
+/* ── Card (related + blog listing shared style) ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface, #fff);
+  border-radius: 16px;
+  border: 1px solid var(--border-default, #DCE7F7);
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  color: var(--text-primary, #0F172A);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.1);
+}
+.cardCategory {
+  font-family: var(--satoshi, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-blue, #2563EB);
+  margin-bottom: 14px;
+}
+.cardTitle {
+  font-family: var(--aeonik, sans-serif);
+  font-weight: 500;
+  font-size: clamp(17px, 1.4vw, 20px);
+  letter-spacing: -0.03em;
+  color: var(--text-primary, #0F172A);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.cardExcerpt {
+  font-family: var(--aeonik, sans-serif);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary, #475569);
+  flex: 1;
+  margin-bottom: 24px;
+}
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-default, #DCE7F7);
+  padding-top: 16px;
+}
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cardDate,
+.cardRead {
+  font-family: var(--satoshi, sans-serif);
+  font-size: 12px;
+  color: var(--text-secondary, #475569);
+}
+.cardArrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-default, #DCE7F7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-secondary, #475569);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+.card:hover .cardArrow {
+  background: var(--accent-blue, #2563EB);
+  border-color: var(--accent-blue, #2563EB);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+/* ── CTA band ── */
+.cta {
+  background: var(--surface, #fff);
+  border-top-right-radius: 40px;
+  overflow: hidden;
+  padding: clamp(48px, 8vw, 112px) var(--pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.ctaHeading {
+  font-family: var(--serif, 'Instrument Serif', serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 72px);
+  color: var(--text-primary, #0F172A);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+.ctaSub {
+  font-family: var(--aeonik, sans-serif);
+  font-size: var(--body-md, clamp(14px, 1.25vw, 18px));
+  color: var(--text-secondary, #475569);
+  max-width: 440px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+}

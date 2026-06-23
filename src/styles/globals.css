@@ -1,0 +1,161 @@
+/* ============ Base ============ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  font-family: var(--aeonik);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+/* Visually hidden but available to screen readers / search engines */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============ Reveal (scroll fade-in) ============ */
+/*
+ * No will-change on the base class — promoting every off-screen element
+ * simultaneously wastes GPU memory. Instead we add will-change only at the
+ * moment the element is about to animate (via JS in App.jsx's observer),
+ * then remove it once animation completes so the layer is freed.
+ */
+.reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), filter 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.animating { will-change: opacity, filter; }
+.reveal.visible { opacity: 1; filter: blur(0); will-change: auto; }
+.reveal.d1 { transition-delay: .15s; }
+.reveal.d2 { transition-delay: .30s; }
+.reveal.d3 { transition-delay: .45s; }
+
+.fade-text .word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-text.animating .word { will-change: opacity, filter; }
+.fade-text.visible .word { opacity: 1; filter: blur(0); will-change: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+  .fade-text .word { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+  * { animation: none !important; }
+}
+
+/* ============ Shared button styles ============ */
+.btn-dark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 500px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #0f172a, #334f90);
+  box-shadow:
+    -19px 22px 17px rgba(0,0,0,.05),
+    -8px 10px 13px rgba(0,0,0,.09),
+    -2px 2px 7px rgba(0,0,0,.1),
+    inset 0 -4px 4px rgba(255,255,255,.25),
+    inset 0 4px 4px rgba(181,181,181,.19);
+  color: #fff;
+  font-family: var(--aeonik);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: transform .35s ease;
+}
+.btn-dark:hover { transform: translateY(-2px); }
+.btn-dark .arrow-circle {
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.btn-dark .arrow-circle img { transform: rotate(42.77deg); transition: transform .35s ease; }
+.btn-dark:hover .arrow-circle img { transform: rotate(87deg); }
+
+.btn-lg { height: 56px; padding: 0 5px 0 22px; gap: 18px; font-size: 20px; letter-spacing: -.4px; }
+.btn-lg .arrow-circle { width: 46px; height: 46px; }
+.btn-lg .arrow-circle img { width: 24px; height: 24px; }
+
+.btn-sm { height: 48px; padding: 0 5px 0 15px; gap: 16px; font-size: 16px; }
+.btn-sm .arrow-circle { width: 37px; height: 37px; }
+.btn-sm .arrow-circle img { width: 19px; height: 19px; }
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  padding: 16px 32px;
+  border-radius: 500px;
+  font-size: 20px;
+  letter-spacing: -.4px;
+  color: #000;
+  filter:
+    drop-shadow(-12px 36px 11.5px rgba(0,0,0,.05))
+    drop-shadow(-5px 16px 8.5px rgba(0,0,0,.09))
+    drop-shadow(-1px 4px 4.5px rgba(0,0,0,.1));
+  cursor: pointer;
+  border: none;
+  font-family: var(--aeonik);
+  white-space: nowrap;
+  transition: transform .35s ease;
+}
+.btn-whatsapp:hover { transform: translateY(-2px); }
+.btn-whatsapp img { width: 24px; height: 24px; }
+
+/* ============ Section heading ============ */
+.section-heading {
+  font-family: var(--aeonik);
+  font-weight: 500;
+  font-size: var(--h-section);
+  letter-spacing: -.04em;
+  color: #000;
+  text-align: center;
+  line-height: normal;
+}
+.section-heading .serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* ============ Bottom strip ============ */
+.bottom-strip {
+  background: #2563EB;
+  height: clamp(160px, 38.7vw, 557px);
+  width: 100%;
+  margin-top: -1px;
+}
+@media (max-width: 768px) { .bottom-strip { display: none; } }

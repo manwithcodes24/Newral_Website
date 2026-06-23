@@ -1,0 +1,23 @@
+.section { padding: 80px var(--pad); }
+.inner { display: flex; flex-direction: column; gap: 40px; align-items: center; max-width: 1320px; margin: 0 auto; }
+.stack { width: 100%; }
+.stackItem { position: sticky; top: var(--stack-top); display: flex; justify-content: center; margin-bottom: 60px; }
+.card { position: relative; width: 100%; max-width: 1317px; height: 550px; border-radius: 24px; overflow: hidden; color: #fff; transform-origin: top center; will-change: transform, filter; }
+.c1 { background: #F46000; }
+.c2 { background: #107081; }
+.c3 { background: #2563EB; }
+.c4 { background: #6D28D9; }
+.c5 { background: #BE185D; }
+.idx  { position: absolute; left: 40px; top: 37px; font-size: 20px; letter-spacing: -.4px; }
+.title{ position: absolute; left: 40px; top: 67px; font-weight: 500; font-size: clamp(24px, 4.2vw, 60px); letter-spacing: -.04em; line-height: normal; white-space: nowrap; }
+.desc { position: absolute; left: 42px; bottom: 58px; width: min(493px, calc(100% - 84px)); font-size: var(--body-md); letter-spacing: -.02em; line-height: normal; }
+.shot { position: absolute; left: 43.5%; top: 25px; width: 55%; height: calc(100% - 48px); border-radius: 24px; object-fit: cover; }
+
+@media (max-width: 768px) {
+  .stackItem { top: var(--stack-top, 84px); margin-bottom: 32px; }
+  .card { height: 442px; border-radius: 16px; }
+  .idx  { left: 15px; top: 17px; font-size: 16px; }
+  .title{ left: 15px; top: 52px; font-size: 24px; letter-spacing: -.96px; }
+  .desc { left: 15px; top: 97px; bottom: auto; width: calc(100% - 30px); font-size: 16px; }
+  .shot { left: 9px; top: auto; bottom: 11px; width: calc(100% - 18px); height: 237px; border-radius: 16px; }
+}

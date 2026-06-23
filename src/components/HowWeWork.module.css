@@ -1,0 +1,46 @@
+.section { padding: 80px var(--pad); clip-path: inset(0); }
+.grid { position: relative; max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1fr; }
+.title { grid-column: 1; grid-row: 1; position: sticky; top: 50%; transform: translateY(-50%); left: 0; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: var(--h-how); color: #000; line-height: 1; width: 100%; z-index: 0; pointer-events: none; margin: 0; height: max-content; text-align: center; white-space: nowrap; }
+.cardsWrapper { grid-column: 1; grid-row: 1; --card-w: clamp(240px, 20vw, 340px); width: var(--card-w); --card-h: calc(var(--card-w) * 540 / 424); --stack-top: calc(50vh - var(--card-h) / 2 - 40px); display: flex; flex-direction: column; padding-top: 100vh; padding-bottom: 0; margin: 0 auto; z-index: 1; }
+
+.stack { position: sticky; margin-bottom: 0; }
+
+.spacer { height: 100vh; flex-shrink: 0; }
+
+.cardFront { 
+  position: relative; 
+  width: 100%; 
+  aspect-ratio: 424/540; 
+  border-radius: 16px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 42.9px rgba(0,0,0,.57); 
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.stack:nth-child(1) .cardFront { transform: rotate(-2deg); }
+.stack:nth-child(2) .cardFront { transform: rotate(3deg); }
+.stack:nth-child(3) .cardFront { transform: rotate(-4deg); }
+
+.bgImg { 
+  position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center center; 
+  border-radius: 16px; 
+}
+
+@media (max-width: 768px) {
+  .grid  { display: grid; grid-template-columns: 1fr; }
+  .title { position: sticky; top: 80px; transform: none; text-align: center; font-size: 128px; line-height: 1.25; z-index: 0; width: 280px; margin: 0 auto; white-space: normal; padding-top: 40px; }
+  .cardsWrapper { --card-w: clamp(200px, 80vw, 260px); width: var(--card-w); --card-h: calc(var(--card-w) * 540 / 424); --stack-top: calc(50vh - var(--card-h) / 2 - 40px); margin: 0 auto; padding-top: 60vh; padding-bottom: 0; z-index: 1; }
+  .spacer { height: 80vh; }
+  
+  .stack:nth-child(1) .cardFront { transform: rotate(-3deg); }
+  .stack:nth-child(2) .cardFront { transform: rotate(4deg); }
+  .stack:nth-child(3) .cardFront { transform: rotate(-2deg); }
+
+  .cardFront { border-radius: 10px; }
+}

@@ -1,0 +1,16 @@
+.section { padding: 80px var(--pad); overflow: hidden; }
+.inner { display: flex; flex-direction: column; gap: 40px; align-items: center; max-width: 1320px; margin: 0 auto; }
+.headGroup { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.sub { max-width: 830px; font-size: var(--body-lg); letter-spacing: -.02em; color: var(--text-secondary); text-align: center; line-height: normal; }
+.carousel { display: flex; gap: 32px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.planCard { background: #fff; width: 358px; max-width: 100%; height: 514px; border-radius: 16px; position: relative; overflow: hidden; transition-delay: var(--delay, 0s); }
+.planFeatured { background: linear-gradient(to bottom, #BFDBFE, #143D72); width: 370px; max-width: 100%; height: 561px; border-radius: 16px; position: relative; overflow: hidden; }
+.planInner { position: absolute; left: 6px; top: 5px; width: calc(100% - 12px); height: 514px; background: #fff; border-radius: 16px; overflow: hidden; }
+.planTitle { font-weight: 500; font-size: 32px; color: #000; position: absolute; left: 18px; top: 17px; width: 269px; line-height: normal; }
+.planPrice { position: absolute; left: 18px; top: 107px; font-family: var(--serif); font-style: italic; color: #000; }
+.starts { font-size: 20px; display: block; line-height: normal; }
+.amount { font-size: 40px; display: block; line-height: normal; }
+.planFeature { position: absolute; left: 18px; font-size: 20px; letter-spacing: -.4px; color: #000; line-height: normal; }
+.planWave { position: absolute; left: -86px; bottom: -100px; width: 570px; pointer-events: none; }
+.planSave { position: absolute; left: 0; right: 0; bottom: 9px; text-align: center; font-size: 20px; letter-spacing: -.4px; color: #DCE7F7; }
+@media (max-width: 768px) { .carousel { flex-direction: column; } }

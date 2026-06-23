@@ -1,0 +1,30 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#EFF6FF"/>
+  <!-- iPhone frame -->
+  <rect x="300" y="40" width="300" height="420" rx="44" fill="#0F172A"/>
+  <rect x="316" y="70" width="268" height="360" rx="28" fill="#1E3A8A"/>
+  <!-- Dynamic island -->
+  <rect x="380" y="82" width="140" height="22" rx="11" fill="#0F172A"/>
+  <!-- Screen content - App UI -->
+  <rect x="330" y="120" width="240" height="40" rx="8" fill="white" opacity="0.15"/>
+  <rect x="348" y="133" width="100" height="14" rx="4" fill="white" opacity="0.6"/>
+  <!-- App icon grid -->
+  <rect x="332" y="178" width="48" height="48" rx="12" fill="#2563EB"/>
+  <rect x="392" y="178" width="48" height="48" rx="12" fill="#7C3AED"/>
+  <rect x="452" y="178" width="48" height="48" rx="12" fill="#059669"/>
+  <rect x="512" y="178" width="48" height="48" rx="12" fill="#DC2626"/>
+  <rect x="332" y="238" width="48" height="48" rx="12" fill="#D97706"/>
+  <rect x="392" y="238" width="48" height="48" rx="12" fill="#0F172A"/>
+  <rect x="452" y="238" width="48" height="48" rx="12" fill="#2563EB" opacity="0.7"/>
+  <rect x="512" y="238" width="48" height="48" rx="12" fill="#1E293B"/>
+  <!-- Card below -->
+  <rect x="332" y="308" width="228" height="80" rx="14" fill="white" opacity="0.12"/>
+  <rect x="350" y="324" width="100" height="12" rx="4" fill="white" opacity="0.5"/>
+  <rect x="350" y="344" width="140" height="8" rx="3" fill="white" opacity="0.3"/>
+  <rect x="350" y="360" width="80" height="8" rx="3" fill="white" opacity="0.2"/>
+  <!-- Home indicator -->
+  <rect x="400" y="408" width="100" height="5" rx="3" fill="white" opacity="0.4"/>
+  <!-- Apple logo hint -->
+  <circle cx="730" cy="150" r="60" fill="#2563EB" opacity="0.07"/>
+  <circle cx="160" cy="350" r="50" fill="#2563EB" opacity="0.06"/>
+</svg>

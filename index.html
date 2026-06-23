@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/newral-favicon.png" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Primary SEO -->
+    <title>Newral — UI/UX Design &amp; App Development Agency in Noida, Delhi NCR</title>
+    <meta name="description" content="Newral is a Noida &amp; Delhi NCR based tech agency offering UI/UX design, graphic design, app development, web development and DevOps for startups and growing businesses." />
+    <meta name="keywords" content="UI/UX design agency Noida, app development Noida, graphic design Delhi NCR, web development agency, DevOps services, product design, tech agency Noida, software development Delhi NCR" />
+    <meta name="author" content="Newral" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://newral.in/" />
+
+    <!-- Local / geo targeting -->
+    <meta name="geo.region" content="IN-UP" />
+    <meta name="geo.placename" content="Noida, Delhi NCR" />
+    <meta name="geo.position" content="28.6280;77.3649" />
+    <meta name="ICBM" content="28.6280, 77.3649" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Newral" />
+    <meta property="og:title" content="Newral — UI/UX Design &amp; App Development Agency in Noida, Delhi NCR" />
+    <meta property="og:description" content="Noida-based tech agency offering UI/UX design, graphic design, app development, web development and DevOps for startups and growing businesses." />
+    <meta property="og:url" content="https://newral.in/" />
+    <meta property="og:image" content="https://newral.in/og-cover.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Newral — UI/UX Design &amp; App Development Agency in Noida" />
+    <meta name="twitter:description" content="Noida-based tech agency: UI/UX design, graphic design, app development, web development and DevOps for startups and growing businesses." />
+    <meta name="twitter:image" content="https://newral.in/og-cover.jpg" />
+
+    <meta name="theme-color" content="#2563EB" />
+
+    <!-- Preload critical local font (Aeonik Regular) — avoids FOUT on first paint -->
+    <link rel="preload" href="/fonts/Aeonik-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+    
+    <!-- Preload LCP Hero Images — correct .webp paths matching assets.js -->
+    <link rel="preload" as="image" href="/assets/e06f1ee1dbdc3c0071bcaaa40c94885039f10c93.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/73b26bce1817a7bdbe7d5b4a3508e620d4ef23ad.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high" />
+
+    <!-- Preload hero inline animation (WebP for modern browsers, GIF fallback) -->
+    <link rel="preload" as="image" href="/assets/hero_inline.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Preload VideoSection poster so it shows instantly (not a <link rel="preload as="video"> —
+         browsers ignore video preloads on mobile; just preload the poster thumbnail) -->
+    <link rel="preload" as="image" href="/assets/89882cd565da57a2292b79bc66bc4a33f62c6e64.webp" type="image/webp" />
+
+    <!-- Preload the 3 unique logo images — tiny files (~2–3 KB each), appear right after the video -->
+    <link rel="preload" as="image" href="/assets/2db09fd8a30c022f76d43d6204bacb4761fb36b6.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/assets/a1e0419105b9db5ae6455ee08ac4bc1faa354f27.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/assets/93a4eb3a20b9809d0102191ffc85deb7f16b5fc1.webp" type="image/webp" />
+
+    <!-- Google Fonts: Instrument Serif (asynchronous load) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" />
+    </noscript>
+
+    <!-- Fontshare: Satoshi (asynchronous load) -->
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
+    </noscript>
+
+    <!-- Structured data: local tech agency with reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://newral.in/#organization",
+      "name": "Newral",
+      "url": "https://newral.in/",
+      "image": "https://newral.in/og-cover.jpg",
+      "description": "Noida & Delhi NCR based tech agency offering UI/UX design, graphic design, app development, web development and DevOps for startups and growing businesses.",
+      "email": "tech@newral.in",
+      "telephone": "+91-700422422",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "412, 4th Floor, Tower-B, i-thum Building, Sector 62",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6280,
+        "longitude": 77.3649
+      },
+      "areaServed": ["Noida", "Delhi NCR", "Gurugram", "Greater Noida", "Delhi", "India"],
+      "knowsAbout": ["UI/UX Design", "Graphic Design", "App Development", "Web Development", "DevOps", "Product Design"],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps" } }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "32",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Rahul Sharma" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Newral completely transformed our SaaS product's UX. Conversion rates jumped by 35% within two months of the redesign going live.",
+          "datePublished": "2025-03-15"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Priya Mehta" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Outstanding design and development work. The team understood our product vision immediately and delivered ahead of schedule.",
+          "datePublished": "2025-04-20"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Aditya Verma" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Best design agency in Noida by a wide margin. We've been working with Newral for 18 months and they feel like an extension of our team.",
+          "datePublished": "2025-05-08"
+        }
+      ]
+    }
+    </script>
+
+    <!-- VideoObject schema for hero video -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Newral — UI/UX Design & Development Agency in Noida",
+      "description": "A showcase of Newral's design and development work — UI/UX design, app development, web development and DevOps for startups and growing businesses in Noida and Delhi NCR.",
+      "thumbnailUrl": "https://newral.in/og-cover.jpg",
+      "contentUrl": "https://newral.in/assets/hero_video.mp4",
+      "uploadDate": "2025-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Newral",
+        "logo": { "@type": "ImageObject", "url": "https://newral.in/newral-favicon.svg" }
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

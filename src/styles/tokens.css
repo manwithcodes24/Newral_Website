@@ -1,0 +1,44 @@
+/* ============ Aeonik font faces (local TTF) ============ */
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/fonts/Aeonik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+
+:root {
+  /* Brand colours */
+  --accent-blue: #2563EB;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --surface: #FFFFFF;
+  --bg: #F6F6F6;
+  --border-default: #DCE7F7;
+  --border-strong: #B6C7E5;
+
+  /* Typeface stacks */
+  --aeonik: 'Aeonik', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --satoshi: 'Satoshi', 'Inter', sans-serif;
+
+  /* Fluid type scale  (mobile 393px → desktop 1440px) */
+  --pad: clamp(16px, 4.2vw, 60px);
+  --h-display: clamp(42px, 6.7vw, 96px);
+  --h-section: clamp(32px, 3.9vw, 56px);
+  --h-giant:   clamp(108px, 16.2vw, 234px);
+  --h-how:     clamp(96px, 18.4vw, 265px);
+  --body-lg:   clamp(16px, 1.4vw, 20px);
+  --body-md:   clamp(14px, 1.25vw, 18px);
+}

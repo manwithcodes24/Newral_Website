@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#EFF6FF"/>
+  <!-- 3 social post frames -->
+  <!-- Post 1 -->
+  <rect x="80" y="60" width="230" height="230" rx="20" fill="#0F172A"/>
+  <rect x="96" y="76" width="198" height="148" rx="12" fill="#0077FF"/>
+  <circle cx="191" cy="150" r="30" fill="white" opacity="0.2"/>
+  <rect x="96" y="236" width="120" height="12" rx="6" fill="white" opacity="0.4"/>
+  <rect x="96" y="256" width="80" height="8" rx="4" fill="white" opacity="0.25"/>
+  <!-- Post 2 -->
+  <rect x="335" y="60" width="230" height="230" rx="20" fill="#1B2B5E"/>
+  <rect x="351" y="76" width="198" height="148" rx="12" fill="#3B82F6"/>
+  <circle cx="446" cy="150" r="30" fill="white" opacity="0.2"/>
+  <rect x="351" y="236" width="120" height="12" rx="6" fill="white" opacity="0.4"/>
+  <rect x="351" y="256" width="80" height="8" rx="4" fill="white" opacity="0.25"/>
+  <!-- Post 3 -->
+  <rect x="590" y="60" width="230" height="230" rx="20" fill="#0077FF"/>
+  <rect x="606" y="76" width="198" height="148" rx="12" fill="#0F172A"/>
+  <circle cx="701" cy="150" r="30" fill="white" opacity="0.2"/>
+  <rect x="606" y="236" width="120" height="12" rx="6" fill="white" opacity="0.4"/>
+  <rect x="606" y="256" width="80" height="8" rx="4" fill="white" opacity="0.25"/>
+  <!-- Bottom stats row -->
+  <rect x="80" y="320" width="740" height="60" rx="14" fill="#0F172A" opacity="0.06"/>
+  <rect x="100" y="338" width="80" height="24" rx="6" fill="#0077FF" opacity="0.3"/>
+  <rect x="200" y="338" width="80" height="24" rx="6" fill="#0077FF" opacity="0.2"/>
+  <rect x="300" y="338" width="80" height="24" rx="6" fill="#0077FF" opacity="0.15"/>
+  <text x="450" y="430" font-family="system-ui,sans-serif" font-size="13" fill="#0077FF" text-anchor="middle" opacity="0.4" letter-spacing="3">INSTAGRAM · LINKEDIN · META ADS</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0F172A"/>
+  <!-- Cloud shape -->
+  <ellipse cx="450" cy="160" rx="180" ry="80" fill="#1E3A8A" opacity="0.6"/>
+  <ellipse cx="320" cy="180" rx="100" ry="65" fill="#1E3A8A" opacity="0.6"/>
+  <ellipse cx="580" cy="180" rx="100" ry="65" fill="#1E3A8A" opacity="0.6"/>
+  <rect x="280" y="200" width="340" height="80" rx="0" fill="#1E3A8A" opacity="0.6"/>
+  <!-- Cloud bottom flat -->
+  <rect x="280" y="240" width="340" height="40" rx="8" fill="#1D4ED8" opacity="0.4"/>
+  <!-- Connection lines down to servers -->
+  <line x1="340" y1="280" x2="200" y2="350" stroke="#3B82F6" stroke-width="1.5" opacity="0.5" stroke-dasharray="6,4"/>
+  <line x1="450" y1="280" x2="450" y2="350" stroke="#3B82F6" stroke-width="1.5" opacity="0.5" stroke-dasharray="6,4"/>
+  <line x1="560" y1="280" x2="700" y2="350" stroke="#3B82F6" stroke-width="1.5" opacity="0.5" stroke-dasharray="6,4"/>
+  <!-- Server nodes -->
+  <rect x="140" y="350" width="120" height="90" rx="12" fill="#1E293B"/>
+  <rect x="152" y="364" width="96" height="10" rx="3" fill="#60A5FA" opacity="0.4"/>
+  <rect x="152" y="382" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <rect x="152" y="396" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <circle cx="228" cy="420" r="4" fill="#10B981"/>
+  <rect x="390" y="350" width="120" height="90" rx="12" fill="#1E293B"/>
+  <rect x="402" y="364" width="96" height="10" rx="3" fill="#60A5FA" opacity="0.4"/>
+  <rect x="402" y="382" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <rect x="402" y="396" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <circle cx="478" cy="420" r="4" fill="#10B981"/>
+  <rect x="640" y="350" width="120" height="90" rx="12" fill="#1E293B"/>
+  <rect x="652" y="364" width="96" height="10" rx="3" fill="#60A5FA" opacity="0.4"/>
+  <rect x="652" y="382" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <rect x="652" y="396" width="96" height="6" rx="2" fill="#94A3B8" opacity="0.2"/>
+  <circle cx="728" cy="420" r="4" fill="#10B981"/>
+  <!-- Labels -->
+  <text x="200" y="460" font-family="system-ui,sans-serif" font-size="10" fill="#60A5FA" text-anchor="middle" opacity="0.5">AWS</text>
+  <text x="450" y="460" font-family="system-ui,sans-serif" font-size="10" fill="#60A5FA" text-anchor="middle" opacity="0.5">GCP</text>
+  <text x="700" y="460" font-family="system-ui,sans-serif" font-size="10" fill="#60A5FA" text-anchor="middle" opacity="0.5">AZURE</text>
+  <!-- Terraform tag -->
+  <rect x="360" y="60" width="180" height="30" rx="8" fill="#1E293B"/>
+  <text x="450" y="80" font-family="system-ui,monospace" font-size="12" fill="#A78BFA" text-anchor="middle" opacity="0.7">terraform apply ✓</text>
+</svg>

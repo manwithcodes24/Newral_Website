@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Newral Website — React + Vite
 
-## Getting Started
-
-First, run the development server:
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:5173
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Get images working
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Images point to Figma's local asset server (`localhost:3845`).
+Run this **once** with Figma desktop open:
 
-## Learn More
+```bash
+node fetch-assets.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+This saves all 40 assets to `public/assets/`.
+Then open `src/lib/assets.js` and change the first line:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+// Before
+const BASE = 'http://localhost:3845/assets'
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+// After
+const BASE = '/assets'
+```
 
-## Deploy on Vercel
+Refresh — all images load from your own server permanently.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── components/       One file + one CSS module per section
+│   ├── Nav
+│   ├── StickyTag
+│   ├── Hero          Plainthing-style flip animation
+│   ├── VideoSection  Scroll-perspective tilt
+│   ├── Logos         Marquee strips
+│   ├── Pricing
+│   ├── Projects      Auto-scroll slider
+│   ├── StatsSection  Pinned scroll animation (Desktop 1→2→3)
+│   ├── Services      Sticky card stacking
+│   ├── HowWeWork
+│   ├── Testimonial
+│   ├── FooterCTA
+│   └── Footer
+├── hooks/
+│   └── useReveal.js  IntersectionObserver scroll fade-in
+├── lib/
+│   └── assets.js     Central asset URL map — swap BASE to go live
+└── styles/
+    ├── globals.css   Base reset, shared buttons, section heading
+    └── tokens.css    CSS vars, font faces, fluid scale
+```
+
+## Fonts
+
+Instrument Serif + Satoshi load from Google Fonts / Fontshare (no install needed).
+Aeonik is a licensed font. Drop your `.woff2` files in `public/fonts/`:
+- `Aeonik-Regular.woff2`
+- `Aeonik-Medium.woff2`
+- `Aeonik-Light.woff2`
+
+Falls back to Inter if the files aren't present.

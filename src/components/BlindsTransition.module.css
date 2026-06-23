@@ -1,0 +1,13 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column; /* Stack panels vertically as rows */
+  z-index: 999999;
+  pointer-events: auto; /* Block user clicks during transitions */
+}
+
+.blind {
+  width: 100%;
+  background: var(--accent-blue); /* Match brand blue */
+}

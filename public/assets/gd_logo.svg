@@ -1,0 +1,11 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#E8F2FF"/>
+  <rect x="220" y="60" width="460" height="380" rx="32" fill="#0F172A"/>
+  <polygon points="310,155 310,345 358,345 358,220 452,345 492,345 492,155 444,155 444,280 358,155" fill="#0077FF"/>
+  <circle cx="660" cy="110" r="22" fill="#0077FF" opacity="0.18"/>
+  <circle cx="700" cy="60" r="13" fill="#0077FF" opacity="0.13"/>
+  <circle cx="195" cy="390" r="18" fill="#0077FF" opacity="0.13"/>
+  <circle cx="155" cy="350" r="10" fill="#0077FF" opacity="0.1"/>
+  <circle cx="740" cy="420" r="30" fill="#0077FF" opacity="0.09"/>
+  <text x="450" y="462" font-family="system-ui,sans-serif" font-size="14" fill="#0077FF" text-anchor="middle" opacity="0.5" letter-spacing="4">LOGO DESIGN</text>
+</svg>

@@ -1,0 +1,143 @@
+.wrapper {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  /* keep it above mobile nav bars */
+  -webkit-transform: translateX(-50%) translateY(24px);
+}
+
+.wrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  -webkit-transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    bottom: 20px;
+    width: calc(100% - 32px);
+    left: 16px;
+    transform: translateY(24px);
+    -webkit-transform: translateY(24px);
+  }
+
+  .wrapper.show {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+
+  .frameParent {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .frameGroup {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+}
+
+/* Outer pill — clean frosted glass, no shadow */
+.frameParent {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1.5px 0 rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s ease;
+}
+
+.frameParent:hover {
+  transform: scale(1.02);
+}
+
+.frameParent:active {
+  transform: scale(0.97);
+}
+
+/* Inner row */
+.frameGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Dot + label */
+.ellipseParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Green pulse dot — 12×12 like the RN design */
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.35);
+  animation: ping 1.6s ease-out infinite;
+}
+
+@keyframes ping {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  80%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Label — matches RN: fontSize 20, letterSpacing -0.8, fontWeight 500, color #000 */
+.label {
+  font-family: var(--aeonik);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Circular white arrow button — 43×43, borderRadius 22, bg white */
+.arrowCircle {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: none;
+}

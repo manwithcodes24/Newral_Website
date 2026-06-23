@@ -1,0 +1,39 @@
+.footer { background: #fff; padding: 0 10px 22px; }
+.card {
+  position: relative; background: #2563EB;
+  width: 100%;
+  min-height: 693px; margin: 0 auto;
+  border-radius: 24px; overflow: hidden;
+  color: #fff; font-family: var(--satoshi);
+  padding: 62px 42px 80px;
+}
+.watermark {
+  position: absolute; left: 0; width: 100%; bottom: -18%;
+  text-align: center;
+  font-family: var(--satoshi); font-weight: 700; font-style: italic;
+  font-size: 27vw; letter-spacing: -.04em;
+  color: rgba(255,255,255,.4); line-height: 1; white-space: nowrap; pointer-events: none;
+}
+.cols { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 48px clamp(32px, 4.5vw, 65px); }
+.col h3 { font-weight: 500; font-size: 24px; letter-spacing: -.96px; margin-bottom: 16px; line-height: 1.2; }
+.col ul { display: flex; flex-direction: column; gap: 12px; font-weight: 400; font-size: 18px; letter-spacing: -.36px; line-height: 1.2; }
+.col ul a:hover { opacity: .8; }
+.brand { width: 331px; display: flex; flex-direction: column; gap: 24px; }
+.logo  { width: 144px; height: 71px; object-fit: contain; }
+.addr  { font-weight: 500; font-size: 18px; letter-spacing: -.04em; line-height: 1.2; }
+.contact { font-weight: 500; font-size: 18px; letter-spacing: -.04em; line-height: 1.2; display: flex; flex-direction: column; gap: 4px; }
+.touch { width: 332px; display: flex; flex-direction: column; gap: 51px; }
+.touchLabel { font-weight: 500; font-size: 24px; letter-spacing: -.96px; line-height: 1.2; }
+.email { font-weight: 700; font-size: clamp(32px, 3.3vw, 48px); letter-spacing: -.04em; line-height: 1.2; white-space: nowrap; }
+.socialRow { display: flex; justify-content: space-between; align-items: center; }
+.follow { font-weight: 500; font-size: 16px; letter-spacing: -.64px; }
+.social { display: flex; gap: 8px; }
+.social img { width: 24px; height: 24px; transition: transform .25s ease; }
+.social a:hover img { transform: translateY(-3px); }
+
+@media (max-width: 768px) {
+  .footer { padding: 0; }
+  .card { width: 100%; border-radius: 40px 40px 0 0; padding: 59px 16px 80px; min-height: 573px; }
+  .cols { flex-direction: column; gap: 36px; }
+  .logo { width: 128px; height: 63px; }
+}

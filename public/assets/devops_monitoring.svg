@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0F172A"/>
+  <!-- Monitoring dashboard -->
+  <rect x="60" y="40" width="780" height="420" rx="20" fill="#1E293B"/>
+  <!-- Header -->
+  <rect x="60" y="40" width="780" height="50" rx="20" fill="#0F172A"/>
+  <rect x="60" y="70" width="780" height="20" fill="#0F172A"/>
+  <rect x="86" y="55" width="140" height="16" rx="4" fill="#60A5FA" opacity="0.4"/>
+  <circle cx="790" cy="63" r="10" fill="#10B981"/>
+  <!-- Metric cards top row -->
+  <rect x="80" y="110" width="170" height="70" rx="12" fill="#0F172A"/>
+  <text x="97" y="135" font-family="system-ui,sans-serif" font-size="10" fill="#94A3B8" opacity="0.5">Uptime</text>
+  <text x="97" y="162" font-family="system-ui,sans-serif" font-size="22" fill="#10B981" font-weight="700">99.97%</text>
+  <rect x="268" y="110" width="170" height="70" rx="12" fill="#0F172A"/>
+  <text x="285" y="135" font-family="system-ui,sans-serif" font-size="10" fill="#94A3B8" opacity="0.5">Response</text>
+  <text x="285" y="162" font-family="system-ui,sans-serif" font-size="22" fill="#60A5FA" font-weight="700">142ms</text>
+  <rect x="456" y="110" width="170" height="70" rx="12" fill="#0F172A"/>
+  <text x="473" y="135" font-family="system-ui,sans-serif" font-size="10" fill="#94A3B8" opacity="0.5">Error Rate</text>
+  <text x="473" y="162" font-family="system-ui,sans-serif" font-size="22" fill="#34D399" font-weight="700">0.02%</text>
+  <rect x="644" y="110" width="176" height="70" rx="12" fill="#0F172A"/>
+  <text x="661" y="135" font-family="system-ui,sans-serif" font-size="10" fill="#94A3B8" opacity="0.5">Requests/s</text>
+  <text x="661" y="162" font-family="system-ui,sans-serif" font-size="22" fill="#A78BFA" font-weight="700">2,840</text>
+  <!-- Main chart -->
+  <rect x="80" y="198" width="620" height="220" rx="14" fill="#0F172A"/>
+  <line x1="100" y1="390" x2="680" y2="390" stroke="#334155" stroke-width="1"/>
+  <line x1="100" y1="350" x2="680" y2="350" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="310" x2="680" y2="310" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="270" x2="680" y2="270" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="230" x2="680" y2="230" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <!-- Chart line - smooth green line -->
+  <polyline points="110,340 160,330 210,335 260,320 310,325 360,310 410,315 430,370 460,290 510,295 560,285 610,280 660,275" stroke="#10B981" stroke-width="2.5" fill="none"/>
+  <polyline points="110,340 160,330 210,335 260,320 310,325 360,310 410,315 430,370 460,290 510,295 560,285 610,280 660,275 660,390 110,390" fill="#10B981" opacity="0.07"/>
+  <!-- Alert spike -->
+  <line x1="430" y1="230" x2="430" y2="390" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <rect x="414" y="218" width="80" height="24" rx="6" fill="#EF4444" opacity="0.2"/>
+  <text x="454" y="234" font-family="system-ui,sans-serif" font-size="10" fill="#EF4444" text-anchor="middle" opacity="0.8">spike</text>
+  <!-- Log panel right -->
+  <rect x="718" y="198" width="102" height="220" rx="14" fill="#0F172A"/>
+  <text x="730" y="220" font-family="system-ui,monospace" font-size="9" fill="#10B981" opacity="0.6">INFO</text>
+  <text x="730" y="238" font-family="system-ui,monospace" font-size="9" fill="#10B981" opacity="0.5">INFO</text>
+  <text x="730" y="256" font-family="system-ui,monospace" font-size="9" fill="#F59E0B" opacity="0.7">WARN</text>
+  <text x="730" y="274" font-family="system-ui,monospace" font-size="9" fill="#10B981" opacity="0.5">INFO</text>
+  <text x="730" y="292" font-family="system-ui,monospace" font-size="9" fill="#EF4444" opacity="0.8">ERROR</text>
+  <text x="730" y="310" font-family="system-ui,monospace" font-size="9" fill="#10B981" opacity="0.5">INFO</text>
+  <text x="730" y="328" font-family="system-ui,monospace" font-size="9" fill="#10B981" opacity="0.4">INFO</text>
+  <!-- Bottom alert row -->
+  <rect x="80" y="430" width="740" height="20" rx="8" fill="#7C3AED" opacity="0.15"/>
+  <circle cx="102" cy="440" r="5" fill="#7C3AED" opacity="0.6"/>
+  <rect x="116" y="434" width="120" height="12" rx="3" fill="#A78BFA" opacity="0.3"/>
+</svg>

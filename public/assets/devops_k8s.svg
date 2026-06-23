@@ -1,0 +1,46 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0F172A"/>
+  <!-- K8s cluster visual -->
+  <!-- Cluster border -->
+  <rect x="60" y="50" width="780" height="400" rx="24" fill="#1E293B" stroke="#1D4ED8" stroke-width="1.5" stroke-dasharray="8,5"/>
+  <!-- Cluster label -->
+  <rect x="60" y="38" width="100" height="24" rx="6" fill="#1D4ED8"/>
+  <text x="110" y="54" font-family="system-ui,sans-serif" font-size="11" fill="white" text-anchor="middle">cluster</text>
+  <!-- Node 1 -->
+  <rect x="90" y="80" width="220" height="340" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="200" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle" opacity="0.6">node-1</text>
+  <!-- Pods in node 1 -->
+  <rect x="108" y="114" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.7"/>
+  <rect x="108" y="174" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.7"/>
+  <rect x="108" y="234" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.5"/>
+  <rect x="206" y="114" width="90" height="50" rx="10" fill="#2563EB" opacity="0.6"/>
+  <rect x="206" y="174" width="90" height="50" rx="10" fill="#2563EB" opacity="0.4"/>
+  <rect x="206" y="234" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.3"/>
+  <!-- Node 2 -->
+  <rect x="340" y="80" width="220" height="340" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle" opacity="0.6">node-2</text>
+  <rect x="358" y="114" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.7"/>
+  <rect x="358" y="174" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.6"/>
+  <rect x="358" y="234" width="90" height="50" rx="10" fill="#7C3AED" opacity="0.5"/>
+  <rect x="456" y="114" width="90" height="50" rx="10" fill="#2563EB" opacity="0.6"/>
+  <rect x="456" y="174" width="90" height="50" rx="10" fill="#2563EB" opacity="0.5"/>
+  <rect x="456" y="234" width="90" height="50" rx="10" fill="#2563EB" opacity="0.4"/>
+  <!-- Node 3 -->
+  <rect x="590" y="80" width="220" height="340" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="700" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle" opacity="0.6">node-3</text>
+  <rect x="608" y="114" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.7"/>
+  <rect x="608" y="174" width="90" height="50" rx="10" fill="#1D4ED8" opacity="0.6"/>
+  <rect x="608" y="234" width="90" height="50" rx="10" fill="#10B981" opacity="0.5"/>
+  <rect x="706" y="114" width="90" height="50" rx="10" fill="#2563EB" opacity="0.6"/>
+  <rect x="706" y="174" width="90" height="50" rx="10" fill="#2563EB" opacity="0.5"/>
+  <rect x="706" y="234" width="90" height="50" rx="10" fill="#2563EB" opacity="0.3"/>
+  <!-- Pod labels -->
+  <text x="153" y="144" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.6">pod</text>
+  <text x="251" y="144" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.6">pod</text>
+  <!-- Status bar at bottom -->
+  <rect x="90" y="320" width="720" height="80" rx="12" fill="#1E293B" opacity="0.5"/>
+  <circle cx="125" cy="352" r="6" fill="#10B981"/>
+  <rect x="143" y="346" width="120" height="12" rx="3" fill="#94A3B8" opacity="0.3"/>
+  <circle cx="125" cy="376" r="6" fill="#10B981"/>
+  <rect x="143" y="370" width="90" height="10" rx="3" fill="#94A3B8" opacity="0.2"/>
+</svg>
