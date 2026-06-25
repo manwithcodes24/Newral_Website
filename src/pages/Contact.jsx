@@ -56,37 +56,60 @@ export default function Contact() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setSubmitting(true)
-    setSubmitError('')
+    e.preventDefault();
+
+    setSubmitting(true);
+    setSubmitError("");
+
+    const form = new FormData(e.target);
+
+    form.append(
+      "access_key",
+      "8c1a45e1-e43e-4676-8439-334f8d386da9"
+    );
+
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      const data = await res.json()
-      if (!res.ok) {
-        setSubmitError(data.error || 'Something went wrong. Please try again.')
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: form,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          source: "",
+          stage: "",
+          message: "",
+        });
+
+        e.target.reset();
       } else {
-        setSubmitted(true)
+        setSubmitError(data.message || "Something went wrong.");
       }
-    } catch {
-      setSubmitError('Network error. Please check your connection and try again.')
+    } catch (err) {
+      setSubmitError("Network error. Please try again.");
     } finally {
-      setSubmitting(false)
+      setSubmitting(false);
     }
-  }
+  };
 
   return (
     <>
       <section className={styles.contactPage}>
         <div className={styles.glow} aria-hidden="true" />
-        
+
         <div className="container relative z-10">
           <AnimatePresence mode="wait">
             {!submitted ? (
-              <motion.div 
+              <motion.div
                 key="form"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -124,46 +147,50 @@ export default function Contact() {
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px' }}>
                     <div className={styles.fieldGroup}>
                       <label className={styles.label}>Name*</label>
-                      <input 
-                        required 
-                        type="text" 
+                      <input
+                        required
+                        type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Enter your name" 
-                        className={styles.input} 
+                        placeholder="Enter your name"
+                        className={styles.input}
                       />
                     </div>
                     <div className={styles.fieldGroup}>
                       <label className={styles.label}>Email*</label>
-                      <input 
-                        required 
-                        type="email" 
+                      <input
+                        required
+                        type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="Enter your e-mail" 
-                        className={styles.input} 
+                        placeholder="Enter your e-mail"
+                        className={styles.input}
                       />
                     </div>
                   </div>
-
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Contact Form Submission"
+                  />
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px' }}>
                     <div className={styles.fieldGroup}>
                       <label className={styles.label}>How did you hear of us?</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="source"
                         value={formData.source}
                         onChange={handleChange}
-                        placeholder="Google, LinkedIn, etc." 
-                        className={styles.input} 
+                        placeholder="Google, LinkedIn, etc."
+                        className={styles.input}
                       />
                     </div>
                     <div className={styles.fieldGroup}>
                       <label className={styles.label}>Company Stage</label>
                       <div className={styles.selectWrapper}>
-                        <select 
+                        <select
                           name="stage"
                           value={formData.stage}
                           onChange={handleChange}
@@ -181,14 +208,14 @@ export default function Contact() {
 
                   <div className={styles.fieldGroup}>
                     <label className={styles.label}>Message*</label>
-                    <textarea 
-                      required 
+                    <textarea
+                      required
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows="6" 
-                      placeholder="Write your message" 
-                      className={styles.textarea} 
+                      rows="6"
+                      placeholder="Write your message"
+                      className={styles.textarea}
                     />
                   </div>
 
@@ -204,7 +231,7 @@ export default function Contact() {
                 </form>
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 key="success"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -214,7 +241,7 @@ export default function Contact() {
                 <div className={styles.successIcon}>✓</div>
                 <h2 className={styles.successTitle}>Message Sent!</h2>
                 <p className={styles.successText}>
-                  Thank you for reaching out, {formData.name}. Our team will review your message and get back to you shortly.
+                  Thank you for reaching out. Our team will review your message and get back to you shortly.
                 </p>
                 <button onClick={() => setSubmitted(false)} className={styles.btnSubmit} style={{ marginTop: '24px' }}>
                   Send another message

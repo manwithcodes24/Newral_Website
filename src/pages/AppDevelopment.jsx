@@ -454,7 +454,7 @@ export default function AppDevelopment() {
                   Check the services
                   <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
                 </button>
-                <button className="btn-whatsapp">
+                <button onClick={()=> window.open("https://api.whatsapp.com/send?phone=+917080682448&text=https://api.whatsapp.com/send?phone=+917080682448&text=hi i am interested to work with newral for web or App Dev")} className="btn-whatsapp">
                   <img src={A.whatsapp} alt="" />
                   Chat on WhatsApp
                 </button>
