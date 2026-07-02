@@ -50,7 +50,47 @@ export default function StickyTag() {
                 </p>
               </div>
 
-              {/* Grid Cards */}
+              {/* Video Reviews Section */}
+              <div className={styles.videoSection}>
+                <h3 className={styles.sectionTitle}>YC Founder Reviews</h3>
+                <div className={styles.videoGrid}>
+                  {/* Video Card 1 */}
+                  <div className={styles.videoCard}>
+                    <div className={styles.videoWrap}>
+                      <video 
+                        src="https://res.cloudinary.com/dmpsz3ohd/video/upload/v1783011302/cd94xztz060xfyluxpvl.mp4" 
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className={styles.videoPlayer}
+                      />
+                    </div>
+                    <div className={styles.videoBody}>
+                      <span className={styles.videoTag}>CEO, Synphony (Ex-NVIDIA AI)</span>
+                      <h4 className={styles.videoTitle}>Founder Feedback</h4>
+                    </div>
+                  </div>
+
+                  {/* Video Card 2 */}
+                  <div className={styles.videoCard}>
+                    <div className={styles.videoWrap}>
+                      <video 
+                        src="https://res.cloudinary.com/dmpsz3ohd/video/upload/v1783011338/hfeeifgpbrj2rwi99klf.mp4" 
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className={styles.videoPlayer}
+                      />
+                    </div>
+                    <div className={styles.videoBody}>
+                      <span className={styles.videoTag}>Founders, Up2</span>
+                      <h4 className={styles.videoTitle}>Founder Feedback</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Grid Cards (Achievements) */}
               <div className={styles.cardsGrid}>
                 {/* Card 1 */}
                 <div className={styles.card}>
@@ -88,6 +128,7 @@ export default function StickyTag() {
                   </div>
                 </div>
               </div>
+
             </motion.div>
           </motion.div>
         )}
