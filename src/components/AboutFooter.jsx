@@ -14,7 +14,7 @@ export default function AboutFooter() {
             </p>
             <div className={styles.contactInfo}>
               <p>Contact us</p>
-              <p>+91 700422422</p>
+              <p>+91 8826574478</p>
             </div>
           </div>
 

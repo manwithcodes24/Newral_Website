@@ -18,7 +18,7 @@ const CONTACT_JSONLD = {
     name: 'Newral',
     '@id': 'https://newral.in/#organization',
     email: 'tech@newral.in',
-    telephone: '+91-700422422',
+    telephone: '+91-8826574478',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '412, 4th Floor, Tower-B, i-thum Building, Sector 62',

@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
             <div className={styles.contact}>
               <p>Contact us</p>
-              <p>+91 700422422</p>
+              <p>+91 8826574478</p>
             </div>
           </div>
 
