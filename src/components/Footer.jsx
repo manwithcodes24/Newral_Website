@@ -4,10 +4,10 @@ import styles from './Footer.module.css'
 import { useReveal } from '../hooks/useReveal'
 
 const NAV = [
-  { label: 'Home',    href: '/' },
-  { label: 'About',   href: '/about' },
-  { label: 'Services',href: '/services' },
-  { label: 'Blog',    href: '/blog' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
 const SERVICES = [
@@ -23,7 +23,7 @@ export default function Footer() {
   const r2 = useReveal()
   const r3 = useReveal()
   const r4 = useReveal()
-  
+
   return (
     <footer className={styles.footer}>
       <div className={styles.card}>
@@ -32,9 +32,18 @@ export default function Footer() {
 
           <div ref={r1} className={`${styles.col} ${styles.brand} reveal`}>
             <img className={styles.logo} src={A.footerLogo} alt="Newral" />
+            <div className={styles.contact}>
+              <p>HQ Office Address ↓ </p>
+            </div>
             <p className={styles.addr}>
               412, 4th Floor, Tower-B, i-thum Building, Sector 62
               (Near Electronic City Metro Station), Noida, Uttar Pradesh, India
+            </p>
+            <div className={styles.contact}>
+              <p>Representative Office Address ↓ </p>
+            </div>
+            <p className={styles.addr}>
+              2333 Matthews Ave, Bronx, NY 10467
             </p>
             <div className={styles.contact}>
               <p>Contact us</p>
@@ -70,8 +79,8 @@ export default function Footer() {
               <p className={styles.follow}>Follow us</p>
               <div className={styles.social}>
                 <a href="https://www.instagram.com/newralofficial" target="_blank" rel="noopener noreferrer"><img src={A.instagram} alt="Newral on Instagram" /></a>
-                <a href="https://www.linkedin.com/company/newraloffical/" target="_blank" rel="noopener noreferrer"><img src={A.linkedin}  alt="Newral on LinkedIn"  /></a>
-                <a href="https://dribbble.com/newral" target="_blank" rel="noopener noreferrer"><img src={A.dribbble}  alt="Newral on Dribbble"  /></a>
+                <a href="https://www.linkedin.com/company/newraloffical/" target="_blank" rel="noopener noreferrer"><img src={A.linkedin} alt="Newral on LinkedIn" /></a>
+                <a href="https://dribbble.com/newral" target="_blank" rel="noopener noreferrer"><img src={A.dribbble} alt="Newral on Dribbble" /></a>
               </div>
             </div>
           </div>

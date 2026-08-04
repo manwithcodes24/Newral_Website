@@ -9,6 +9,11 @@ export default function AboutFooter() {
           {/* Column 1: Info */}
           <div className={styles.colInfo}>
             <img src={A.footerLogo} alt="Newral" className={styles.logo} />
+            <p>HQ Office Address</p>
+            <p className={styles.address}>
+              412, 4th Floor, Tower-B, i-thum Building, Sector 62 (Near Electronic City Metro Station), Noida, Uttar Pradesh, India
+            </p>
+            <p>Representative Office Address</p>
             <p className={styles.address}>
               412, 4th Floor, Tower-B, i-thum Building, Sector 62 (Near Electronic City Metro Station), Noida, Uttar Pradesh, India
             </p>
@@ -72,7 +77,7 @@ export default function AboutFooter() {
           </div>
         </div>
       </div>
-      
+
       <div className={styles.watermarkContainer}>
         <div className={styles.watermark}>Newral</div>
       </div>
