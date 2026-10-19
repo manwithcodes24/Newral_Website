@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { A } from '../lib/assets'
 import { getService } from '../data/services'
 import { useSeo } from '../hooks/useSeo'
+import { serviceJsonLd } from '../lib/schema'
 import { TextAnimate } from '../components/TextAnimate'
 import FadeText from '../components/FadeText'
 import Logos from '../components/Logos'
@@ -11,39 +12,8 @@ import Testimonial from '../components/Testimonial'
 import FooterCTA from '../components/FooterCTA'
 import Footer from '../components/Footer'
 import styles from './ServicePage.module.css'
+import { WHATSAPP_URL } from '../lib/site'
 
-function buildJsonLd(s) {
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: s.h1,
-      serviceType: s.nav,
-      url: `https://newral.in/${s.slug}`,
-      provider: { '@type': 'ProfessionalService', name: 'Newral', '@id': 'https://newral.in/#organization' },
-      areaServed: ['Noida', 'Delhi NCR', 'Greater Noida', 'Gurugram', 'Delhi', 'India'],
-      description: s.metaDescription,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: s.faqs.map((f) => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://newral.in/' },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://newral.in/services' },
-        { '@type': 'ListItem', position: 3, name: s.nav, item: `https://newral.in/${s.slug}` },
-      ],
-    },
-  ]
-}
 
 function HeroShowcase({ serviceColor }) {
   const [rotateX, setRotateX] = useState(0)
@@ -391,19 +361,15 @@ function FaqSection({ faqs, serviceColor }) {
                   </motion.span>
                 </button>
                 
-                <AnimatePresence initial={false}>
-                  {open && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                      style={{ overflow: 'hidden' }}
-                    >
-                      <p className={styles.faqA}>{faq.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Answer stays in the DOM when collapsed so crawlers / AI engines can read every FAQ */}
+                <motion.div
+                  initial={false}
+                  animate={open ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <p className={styles.faqA}>{faq.a}</p>
+                </motion.div>
               </div>
             )
           })}
@@ -420,7 +386,7 @@ export default function AppDevelopment() {
     title: service?.metaTitle,
     description: service?.metaDescription,
     path: `/${service?.slug}`,
-    jsonLd: service ? buildJsonLd(service) : null,
+    jsonLd: service ? serviceJsonLd(service) : null,
   })
 
   if (!service) return <Navigate to="/" replace />
@@ -454,7 +420,7 @@ export default function AppDevelopment() {
                   Check the services
                   <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
                 </button>
-                <button onClick={()=> window.open("https://api.whatsapp.com/send?phone=+917080682448&text=https://api.whatsapp.com/send?phone=+917080682448&text=hi i am interested to work with newral for web or App Dev")} className="btn-whatsapp">
+                <button onClick={()=> window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')} className="btn-whatsapp">
                   <img src={A.whatsapp} alt="" />
                   Chat on WhatsApp
                 </button>
@@ -548,6 +514,9 @@ export default function AppDevelopment() {
               ['app-development-noida', 'App Development'],
               ['web-development-noida', 'Web Development'],
               ['devops-noida', 'DevOps'],
+              ['saas-development-noida', 'SaaS Development'],
+              ['ai-automation-noida', 'AI Automation'],
+              ['custom-software-development-noida', 'Custom Software'],
             ]
               .filter(([sl]) => sl !== service.slug)
               .map(([sl, label], idx, arr) => (

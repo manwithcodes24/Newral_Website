@@ -5,6 +5,10 @@ export default defineConfig({
   plugins: [react()],
 
   build: {
+    // Manifest maps each page to its CSS/JS chunks; scripts/prerender.mjs uses it to
+    // link the right stylesheets into each prerendered HTML file, then deletes it.
+    manifest: true,
+
     // Target modern browsers — smaller, faster output (no legacy polyfills)
     target: 'es2020',
 

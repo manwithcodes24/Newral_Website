@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { SERVICES } from '../data/services'
+import { MORE_SERVICES } from '../data/moreServices'
 import { useSeo, SITE_URL } from '../hooks/useSeo'
+import { breadcrumbs } from '../lib/schema'
 import { TextAnimate } from '../components/TextAnimate'
 import FadeText from '../components/FadeText'
 import Logos from '../components/Logos'
@@ -8,23 +10,27 @@ import FooterCTA from '../components/FooterCTA'
 import Footer from '../components/Footer'
 import { A } from '../lib/assets'
 import styles from './ServicesHub.module.css'
+import { WHATSAPP_URL } from '../lib/site'
 
 export default function ServicesHub() {
   useSeo({
-    title: 'Services — UI/UX, Graphic Design, App & Web Development, DevOps | Newral',
+    title: 'Services — UI/UX, App & Web Development, SaaS, AI Automation, DevOps | Newral',
     description:
-      'Newral is a Noida, Delhi NCR tech agency. Explore our services: UI/UX design, graphic design, app development, web development and DevOps for startups and businesses.',
+      'Newral is a Noida, Delhi NCR tech agency. Explore our services: UI/UX design, branding, web & app development, SaaS, custom software, AI automation and DevOps.',
     path: '/services',
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      itemListElement: SERVICES.map((s, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        url: `${SITE_URL}/${s.slug}`,
-        name: s.h1,
-      })),
-    },
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: SERVICES.map((s, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `${SITE_URL}/${s.slug}`,
+          name: s.h1,
+        })),
+      },
+      breadcrumbs([['Home', '/'], ['Services', '/services']]),
+    ],
   })
 
   return (
@@ -53,7 +59,7 @@ export default function ServicesHub() {
                 Check the services
                 <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
               </button>
-              <button onClick={()=> window.open("https://api.whatsapp.com/send?phone=+917080682448&text=https://api.whatsapp.com/send?phone=+917080682448&text=hi i am interested to work with newral for web or App Dev")} className="btn-whatsapp">
+              <button onClick={()=> window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')} className="btn-whatsapp">
                 <img src={A.whatsapp} alt="" />
                 Chat on WhatsApp
               </button>
@@ -112,7 +118,7 @@ export default function ServicesHub() {
             </Link>
 
             {/* Small Card 3: Custom SaaS & APIs */}
-            <Link to="/web-development-noida" className={`${styles.card} ${styles.smallCard} ${styles.card3} reveal`}>
+            <Link to="/saas-development-noida" className={`${styles.card} ${styles.smallCard} ${styles.card3} reveal`}>
               <div className={styles.cardContent}>
                 <span className={styles.cardMeta}>{`{ 04 }`}</span>
                 <h3 className={styles.cardTitle}>Custom SaaS & APIs</h3>
@@ -324,6 +330,26 @@ export default function ServicesHub() {
               Check the services
               <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* AI & custom software — links to the data-driven landing pages */}
+      <section className={styles.bentoSection}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>AI &amp; Custom Software</h2>
+            <p className={styles.sectionDesc}>
+              Automate repetitive work with AI, launch a SaaS product or replace spreadsheets with software built around how your business actually runs.
+            </p>
+          </div>
+          <div className={styles.bottomCtaWrapper} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center' }}>
+            {MORE_SERVICES.map((s) => (
+              <Link key={s.slug} to={`/${s.slug}`} className="btn-dark btn-lg">
+                {s.nav}
+                <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

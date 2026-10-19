@@ -1,6 +1,13 @@
-import { useEffect } from 'react'
+import { createContext, useContext, useEffect } from 'react'
+import { SITE_URL, absUrl } from '../lib/site'
 
-export const SITE_URL = 'https://newral.in'
+export { SITE_URL }
+
+// During build-time prerendering (src/entry-server.jsx) a collector object is
+// provided here; pages write their SEO data into it while rendering so the
+// prerender script can bake title / meta / canonical / JSON-LD into static HTML.
+// In the browser there is no provider and the effect below manages <head>.
+export const SeoContext = createContext(null)
 
 function upsertMeta(attr, key, content) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`)
@@ -23,14 +30,18 @@ function upsertLink(rel, href) {
 }
 
 /**
- * Client-side SEO head manager for route pages (SPA — no SSR).
- * Sets title, description, canonical, Open Graph, Twitter Card, and an optional JSON-LD block,
- * then restores the title and removes the JSON-LD on unmount.
+ * Per-route head manager.
+ * Sets title, description, canonical, robots, Open Graph, Twitter Card and route JSON-LD.
  */
-export function useSeo({ title, description, path = '/', image, jsonLd }) {
+export function useSeo({ title, description, path = '/', image, jsonLd, noindex = false, ogType = 'website' }) {
+  const collector = useContext(SeoContext)
+  if (collector) {
+    Object.assign(collector, { title, description, path, image, jsonLd, noindex, ogType })
+  }
+
   useEffect(() => {
     const prevTitle = document.title
-    const url = `${SITE_URL}${path}`
+    const url = absUrl(path)
     const ogImage = image || `${SITE_URL}/og-cover.jpg`
 
     if (title) {
@@ -43,11 +54,15 @@ export function useSeo({ title, description, path = '/', image, jsonLd }) {
       upsertMeta('property', 'og:description', description)
       upsertMeta('name', 'twitter:description', description)
     }
+    upsertMeta('name', 'robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1')
     upsertLink('canonical', url)
     upsertMeta('property', 'og:url', url)
+    upsertMeta('property', 'og:type', ogType)
     upsertMeta('property', 'og:image', ogImage)
     upsertMeta('name', 'twitter:image', ogImage)
 
+    // Replace (never duplicate) route JSON-LD — including the copy baked in by the prerenderer.
+    document.head.querySelectorAll('script[data-route-jsonld]').forEach((s) => s.remove())
     let script
     if (jsonLd) {
       script = document.createElement('script')

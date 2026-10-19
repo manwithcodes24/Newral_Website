@@ -1,5 +1,6 @@
 import { A } from '../lib/assets'
 import styles from './AboutFooter.module.css'
+import { SOCIAL } from '../lib/site'
 
 export default function AboutFooter() {
   return (
@@ -69,9 +70,9 @@ export default function AboutFooter() {
             <div className={styles.socials}>
               <span>Follow us</span>
               <div className={styles.icons}>
-                <a href="https://www.instagram.com/newralofficial" target="_blank" rel="noopener noreferrer"><img src={A.instagram} alt="Instagram" /></a>
-                <a href="https://www.linkedin.com/company/newraloffical/" target="_blank" rel="noopener noreferrer"><img src={A.linkedin} alt="LinkedIn" /></a>
-                <a href="https://dribbble.com/newral" target="_blank" rel="noopener noreferrer"><img src={A.dribbble} alt="Dribbble" /></a>
+                <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer"><img src={A.instagram} alt="Newral on Instagram" /></a>
+                <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer"><img src={A.linkedin} alt="Newral on LinkedIn" /></a>
+                <a href={SOCIAL.dribbble} target="_blank" rel="noopener noreferrer"><img src={A.dribbble} alt="Newral on Dribbble" /></a>
               </div>
             </div>
           </div>

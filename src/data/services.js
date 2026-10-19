@@ -1,7 +1,9 @@
 // Service landing-page content. Each entry drives one of the individual SEO pages.
 // Keep titles short (display font), descriptions keyword-rich + Noida/Delhi NCR local.
 
-export const SERVICES = [
+import { MORE_SERVICES } from './moreServices'
+
+const CORE_SERVICES = [
   {
     slug: 'ui-ux-design-noida',
     nav: 'UI/UX Design',
@@ -407,5 +409,8 @@ export const SERVICES = [
     ],
   },
 ]
+
+// Core pages have bespoke components; MORE_SERVICES render through pages/ServiceLanding.jsx
+export const SERVICES = [...CORE_SERVICES, ...MORE_SERVICES]
 
 export const getService = (slug) => SERVICES.find((s) => s.slug === slug)

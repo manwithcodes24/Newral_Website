@@ -4,31 +4,19 @@ import Footer from '../components/Footer'
 import { TextAnimate } from '../components/TextAnimate'
 import { A } from '../lib/assets'
 import { useSeo } from '../hooks/useSeo'
+import { webPage, breadcrumbs } from '../lib/schema'
 import styles from './Contact.module.css'
 
-const CONTACT_JSONLD = {
-  '@context': 'https://schema.org',
-  '@type': 'ContactPage',
-  name: 'Contact Newral',
-  url: 'https://newral.in/contact',
-  description:
-    'Contact Newral — a UI/UX design, app and web development agency in Sector 62, Noida, Delhi NCR.',
-  mainEntity: {
-    '@type': 'ProfessionalService',
-    name: 'Newral',
-    '@id': 'https://newral.in/#organization',
-    email: 'tech@newral.in',
-    telephone: '+91-8826574478',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '412, 4th Floor, Tower-B, i-thum Building, Sector 62',
-      addressLocality: 'Noida',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: '201301',
-      addressCountry: 'IN',
-    },
-  },
-}
+const CONTACT_JSONLD = [
+  webPage({
+    type: 'ContactPage',
+    path: '/contact',
+    title: 'Contact Newral',
+    description:
+      'Contact Newral — a UI/UX design, app and web development agency in Sector 62, Noida, Delhi NCR.',
+  }),
+  breadcrumbs([['Home', '/'], ['Contact', '/contact']]),
+]
 
 export default function Contact() {
   useSeo({

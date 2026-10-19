@@ -56,7 +56,7 @@ export default function Testimonial() {
                 onClick={() => setActiveIndex(i)}
                 className={`${styles.thumb} ${i === TESTIMONIALS.length - 1 ? styles.fadeOut : ''} ${i === activeIndex ? styles.active : ''}`}
               >
-                <img src={t.thumb} alt="" loading="lazy" decoding="async" />
+                <img src={t.thumb} alt={`${t.name}, ${t.role}`} loading="lazy" decoding="async" />
               </div>
             ))}
           </div>
@@ -69,7 +69,7 @@ export default function Testimonial() {
                 </p>
               </div>
               <div className={styles.author}>
-                <img className={styles.avatar} src={activeData.thumb} alt="" />
+                <img className={styles.avatar} src={activeData.thumb} alt={activeData.name} />
                 <p className={styles.name}>{activeData.name}</p>
                 <p className={styles.role}>{activeData.role}</p>
               </div>

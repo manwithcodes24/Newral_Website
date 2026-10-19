@@ -1,5 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useSeo, SITE_URL } from '../hooks/useSeo'
+import { ORG_ID } from '../lib/site'
+import { breadcrumbs } from '../lib/schema'
 import { getBlogPost, BLOG_POSTS } from '../data/blog'
 import Footer from '../components/Footer'
 import { A } from '../lib/assets'
@@ -54,36 +56,31 @@ export default function BlogPost() {
           title: post.metaTitle,
           description: post.metaDescription,
           path: `/blog/${post.slug}`,
-          jsonLd: {
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.title,
-            description: post.metaDescription,
-            url: `${SITE_URL}/blog/${post.slug}`,
-            datePublished: post.date,
-            dateModified: post.date,
-            image: `${SITE_URL}/og-cover.jpg`,
-            author: {
-              '@type': 'Organization',
-              name: 'Newral',
-              url: SITE_URL,
+          ogType: 'article',
+          jsonLd: [
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BlogPosting',
+              '@id': `${SITE_URL}/blog/${post.slug}#article`,
+              headline: post.title,
+              description: post.metaDescription,
+              url: `${SITE_URL}/blog/${post.slug}`,
+              datePublished: post.date,
+              dateModified: post.updated || post.date,
+              inLanguage: 'en-IN',
+              articleSection: post.category,
+              wordCount: post.content.reduce((n, b) => n + b.text.split(/\s+/).length, 0),
+              image: `${SITE_URL}/og-cover.jpg`,
+              // TODO(owner): switch to a named Person author (with bio + LinkedIn) for stronger E-E-A-T
+              author: { '@type': 'Organization', '@id': ORG_ID, name: 'Newral', url: `${SITE_URL}/` },
+              publisher: { '@id': ORG_ID },
+              isPartOf: { '@id': `${SITE_URL}/blog#blog` },
+              mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
             },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Newral',
-              '@id': `${SITE_URL}/#organization`,
-              logo: {
-                '@type': 'ImageObject',
-                url: `${SITE_URL}/og-cover.jpg`,
-              },
-            },
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': `${SITE_URL}/blog/${post.slug}`,
-            },
-          },
+            breadcrumbs([['Home', '/'], ['Blog', '/blog'], [post.title, `/blog/${post.slug}`]]),
+          ],
         }
-      : { title: 'Post Not Found | Newral', description: '', path: `/blog/${slug}` }
+      : { title: 'Post Not Found | Newral', description: '', path: `/blog/${slug}`, noindex: true }
   )
 
   if (!post) return <Navigate to="/blog" replace />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { A } from '../lib/assets'
 import { useReveal } from '../hooks/useReveal'
 import { TextAnimate } from './TextAnimate'
@@ -43,10 +44,10 @@ export default function Projects() {
           </div>
         </div>
 
-        <button ref={rB} className="btn-dark btn-lg reveal d2" style={{ letterSpacing: '-0.8px' }}>
+        <Link ref={rB} to="/work" className="btn-dark btn-lg reveal d2" style={{ letterSpacing: '-0.8px' }}>
           View all projects
           <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
-        </button>
+        </Link>
       </div>
     </section>
   )

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { A } from '../lib/assets'
 import { useTransitionNavigate } from '../context/TransitionContext'
 import styles from './Hero.module.css'
+import { WHATSAPP_URL } from '../lib/site'
 
 function FlipBox({ images, className, intervalMs = 2600, startDelay = 1200 }) {
   const boxRef = useRef(null)
@@ -44,7 +45,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <picture>
         <source media="(max-width: 768px)" srcSet={A.heroBgMobile} />
-        <img className={styles.bg} src={A.heroBg} alt="" fetchPriority="high" loading="eager" />
+        <img className={styles.bg} src={A.heroBg} alt="" fetchpriority="high" loading="eager" />
       </picture>
       <div className={`${styles.content} container`}>
 
@@ -82,7 +83,7 @@ export default function Hero() {
                 className={`${styles.inlineFlip} ${styles.hf3}`}
                 src={A.heroInlineGif}
                 alt=""
-                fetchPriority="high"
+                fetchpriority="high"
                 loading="eager"
               />
             </picture>
@@ -96,7 +97,7 @@ export default function Hero() {
               Explore our services
               <span className="arrow-circle"><img src={A.arrowLg} alt="" /></span>
             </button>
-            <button onClick={()=> window.open("https://api.whatsapp.com/send?phone=+917080682448&text=https://api.whatsapp.com/send?phone=+917080682448&text=hi i am interested to work with newral for web or App Dev")} className="btn-whatsapp">
+            <button onClick={()=> window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')} className="btn-whatsapp">
               <img src={A.whatsapp} alt="" />
               Chat on WhatsApp
             </button>

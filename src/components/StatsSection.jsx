@@ -3,7 +3,7 @@ import { A } from '../lib/assets'
 import styles from './StatsSection.module.css'
 
 const STATS = [
-  { num: '{ 01 }', big: '5+',    caption: 'Years of Experience',    wave: A.wave1 },
+  { num: '{ 01 }', big: '5+',    caption: 'Years of Team Experience',    wave: A.wave1 },
   { num: '{ 02 }', big: '120+',  caption: 'Successful Launches',    wave: A.wave2 },
   { num: '{ 03 }', big: '100%',  caption: 'On-Time Agile Delivery', wave: A.wave3 },
   { num: '{ 04 }', big: '12+',   caption: 'Modern Tech Stacks',     wave: A.wave4 },

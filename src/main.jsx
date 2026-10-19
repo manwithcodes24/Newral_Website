@@ -1,11 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import { BrowserRouter } from 'react-router-dom'
+import App, { preloadRoute } from './App'
 import './styles/globals.css'
 import './styles/tokens.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+const container = document.getElementById('root')
+
+function mount() {
+  ReactDOM.createRoot(container).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  )
+}
+
+// Load the current page's chunk first so the prerendered HTML is swapped for the
+// live app in a single commit. Never block the app if the preload fails.
+preloadRoute(window.location.pathname).then(mount, mount)

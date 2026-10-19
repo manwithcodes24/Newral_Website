@@ -7,6 +7,9 @@ import styles from './Logos.module.css'
 // Keep the array at exactly 8 items so [...LOGOS, ...LOGOS] = 16 cards per
 // strip, which is enough for a seamless loop without extra DOM bloat.
 const LOGOS = [A.logoImg8, A.logoImg9, A.logoImg10, A.logoImg11, A.logoImg12, A.logoImg13]
+const LOGO_NAMES = ['Omega Elevators', 'FIZZ', 'Bansal Classes', 'NEET Kaka JEE', 'Competishun', 'Up-to']
+// Only the first copy of each logo is announced / indexed; marquee duplicates are decorative.
+const logoAlt = (i) => (i < LOGOS.length ? `${LOGO_NAMES[i]} logo — Newral client` : '')
 
 // Preload the 3 unique logo files so they're in-cache by the time the
 // marquee animation starts (each file is ~2–3 KB, negligible cost).
@@ -30,7 +33,7 @@ export default function Logos() {
           <div className={`${styles.strip} ${styles.left}`}>
             {[...LOGOS, ...LOGOS].map((src, i) => (
               <div key={i} className={styles.card}>
-                <img src={src} alt="" loading="eager" decoding="sync" />
+                <img src={src} alt={logoAlt(i)} loading="eager" decoding="sync" />
               </div>
             ))}
           </div>

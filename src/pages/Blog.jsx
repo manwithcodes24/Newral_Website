@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useSeo } from '../hooks/useSeo'
+import { useSeo, SITE_URL } from '../hooks/useSeo'
+import { ORG_ID } from '../lib/site'
+import { breadcrumbs } from '../lib/schema'
 import { BLOG_POSTS } from '../data/blog'
 import Footer from '../components/Footer'
 import { A } from '../lib/assets'
@@ -19,26 +21,28 @@ export default function Blog() {
     description:
       'Expert articles on UI/UX design, app development, web development and design systems from Newral — a design and tech agency based in Noida, Delhi NCR.',
     path: '/blog',
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: 'Newral Blog',
-      url: 'https://newral.in/blog',
-      description:
-        'Expert articles on UI/UX design, app development and web development from Newral, Noida.',
-      publisher: {
-        '@type': 'ProfessionalService',
-        name: 'Newral',
-        '@id': 'https://newral.in/#organization',
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        '@id': `${SITE_URL}/blog#blog`,
+        name: 'Newral Blog',
+        url: `${SITE_URL}/blog`,
+        inLanguage: 'en-IN',
+        description:
+          'Expert articles on UI/UX design, app development and web development from Newral, Noida.',
+        publisher: { '@id': ORG_ID },
+        blogPost: BLOG_POSTS.map(p => ({
+          '@type': 'BlogPosting',
+          headline: p.title,
+          url: `${SITE_URL}/blog/${p.slug}`,
+          datePublished: p.date,
+          dateModified: p.updated || p.date,
+          description: p.excerpt,
+        })),
       },
-      blogPost: BLOG_POSTS.map(p => ({
-        '@type': 'BlogPosting',
-        headline: p.title,
-        url: `https://newral.in/blog/${p.slug}`,
-        datePublished: p.date,
-        description: p.excerpt,
-      })),
-    },
+      breadcrumbs([['Home', '/'], ['Blog', '/blog']]),
+    ],
   })
 
   // App.jsx handles all .reveal elements globally — no local observer needed.

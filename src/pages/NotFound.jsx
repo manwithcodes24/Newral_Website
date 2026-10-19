@@ -7,6 +7,7 @@ export default function NotFound() {
     title: '404 — Page Not Found | Newral',
     description: 'The page you are looking for does not exist. Return to Newral, a UI/UX design and development agency in Noida.',
     path: '/404',
+    noindex: true,
   })
 
   return (

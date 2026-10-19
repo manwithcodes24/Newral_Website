@@ -1,0 +1,67 @@
+.section {
+  padding: clamp(64px, 7vw, 120px) 0;
+  background: var(--bg);
+}
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  margin: 0 0 12px;
+}
+.name {
+  font-family: var(--aeonik);
+  font-weight: 500;
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+}
+.role {
+  display: block;
+  margin-top: 8px;
+  font-size: var(--body-md);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+}
+.bio {
+  font-size: var(--body-md);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+.bio a {
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-default);
+}
+.bio a:hover,
+.link:hover {
+  color: var(--accent-blue);
+}
+.link {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}

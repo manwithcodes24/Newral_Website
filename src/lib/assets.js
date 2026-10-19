@@ -36,10 +36,10 @@ export const A = {
 
   // logo strips
   logoImg8:        `${BASE}/omega.png`,         // Omega Elevators
-  logoImg9:        `${BASE}/logo1.png`,         // Competishun
+  logoImg9:        `${BASE}/logo1.png`,         // FIZZ
   logoImg10:       `${BASE}/logo3.png`,         // Bansal Classes
   logoImg11:       `${BASE}/neet.png`,          // NEET kaka JEE
-  logoImg12:       `${BASE}/logo4.png`,         // FIZZ
+  logoImg12:       `${BASE}/logo4.png`,         // Competishun
   logoImg13:       `${BASE}/upto_cropped.png`,  // Up-to
 
   // pricing

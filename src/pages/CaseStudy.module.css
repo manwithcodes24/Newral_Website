@@ -1,0 +1,91 @@
+/* Case-study extras layered on top of BlogPost.module.css */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px 32px;
+  padding: 24px 28px;
+  margin-bottom: 2.5rem;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border-default, #DCE7F7);
+  border-radius: 20px;
+}
+.factLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #475569);
+  margin-bottom: 6px;
+}
+.factValue {
+  font-family: var(--aeonik, sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary, #0F172A);
+}
+.factValue a {
+  color: inherit;
+  border-bottom: 1px solid var(--border-default, #DCE7F7);
+}
+.factValue a:hover {
+  color: var(--accent-blue, #2563EB);
+  border-color: currentColor;
+}
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.list {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  font-family: var(--aeonik, sans-serif);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.82;
+  color: var(--text-secondary, #475569);
+}
+.list li {
+  margin-bottom: 0.4rem;
+}
+.quote {
+  margin: 2.75rem 0;
+  padding: 28px 32px;
+  background: var(--surface, #fff);
+  border-left: 3px solid var(--accent-blue, #2563EB);
+  border-radius: 0 20px 20px 0;
+}
+.quoteText {
+  font-family: var(--aeonik, sans-serif);
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: var(--text-primary, #0F172A);
+  margin: 0 0 16px;
+}
+.quoteAuthor {
+  font-size: 15px;
+  color: var(--text-secondary, #475569);
+}
+.quoteAuthor strong {
+  color: var(--text-primary, #0F172A);
+  font-weight: 500;
+}
+.sources {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-default, #DCE7F7);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary, #475569);
+}
+.sources ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+.sources a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

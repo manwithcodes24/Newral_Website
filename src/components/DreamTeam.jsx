@@ -58,31 +58,31 @@ export default function DreamTeam() {
         style={{ y: yImg1 }}
         className={`${styles.img} ${styles.img1}`}
         src={A.dreamTeam7}
-        alt="Team Member"
+        alt="Newral team members collaborating at a hackathon"
       />
       <motion.img
         style={{ y: yImg2 }}
         className={`${styles.img} ${styles.img2}`}
         src={A.dreamTeam2}
-        alt="Team Member"
+        alt="Newral team member working on a laptop in Sector 62, Noida"
       />
       <motion.img
         style={{ y: yImg3 }}
         className={`${styles.img} ${styles.img3}`}
         src={A.dreamTeam3}
-        alt="Team Member"
+        alt="Newral team reviewing a project together"
       />
       <motion.img
         style={{ y: yImg4 }}
         className={`${styles.img} ${styles.img4}`}
         src={A.dreamTeam4}
-        alt="Team Member"
+        alt="Newral team member at work"
       />
       <motion.img
         style={{ y: yImg5 }}
         className={`${styles.img} ${styles.img5}`}
         src={A.dreamTeam5}
-        alt="Team Member"
+        alt="Yash Rajan Shukla, founder of Newral"
       />
     </section>
   )
