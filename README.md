@@ -67,3 +67,8 @@ Aeonik is a licensed font. Drop your `.woff2` files in `public/fonts/`:
 - `Aeonik-Light.woff2`
 
 Falls back to Inter if the files aren't present.
+
+
+build
+
+
