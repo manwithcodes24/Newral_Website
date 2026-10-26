@@ -112,6 +112,14 @@ export default function BlogPost() {
               <time className={styles.headerDate} dateTime={post.date}>
                 {formatDate(post.date)}
               </time>
+              {post.updated && (
+                <>
+                  <span className={styles.headerDot} aria-hidden="true" />
+                  <span className={styles.headerDate}>
+                    Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                  </span>
+                </>
+              )}
               <span className={styles.headerDot} aria-hidden="true" />
               <span className={styles.headerRead}>{post.readTime}</span>
             </div>

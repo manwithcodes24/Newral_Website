@@ -53,6 +53,15 @@ export const FOUNDER = {
   sameAs: ['https://www.linkedin.com/in/yashrajanshukla', 'https://x.com/manwithcodes'],
 }
 
+// Newral's own product. `id` must match the Organization @id on synappses.in,
+// which points back here via parentOrganization.
+export const PRODUCT = {
+  name: 'Synappses',
+  url: 'https://synappses.in',
+  id: 'https://synappses.in/#organization',
+  description: 'White-label LMS and creator commerce platform',
+}
+
 export const SOCIAL = {
   instagram: 'https://www.instagram.com/newral.in',
   linkedin: 'https://www.linkedin.com/company/newraloffical/',
