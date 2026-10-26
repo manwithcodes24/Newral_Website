@@ -8,7 +8,7 @@ import { SERVICES } from './data/services'
 import { BLOG_POSTS } from './data/blog'
 import { CASE_STUDIES } from './data/caseStudies'
 import { organizationGraph } from './lib/schema'
-import { SITE_URL, BUSINESS, TESTIMONIALS, CLIENTS, WHATSAPP_URL, CONTENT_UPDATED, FOUNDER } from './lib/site'
+import { SITE_URL, BUSINESS, TESTIMONIALS, CLIENTS, WHATSAPP_URL, CONTENT_UPDATED, FOUNDER, PRODUCT } from './lib/site'
 
 export { preloadAllRoutes }
 
@@ -37,4 +37,4 @@ export function render(url) {
 }
 
 // Data used to generate sitemap.xml, llms.txt and llms-full.txt
-export const siteData = { SITE_URL, CONTENT_UPDATED, BUSINESS, FOUNDER, TESTIMONIALS, CLIENTS, WHATSAPP_URL, SERVICES, BLOG_POSTS, CASE_STUDIES, organizationGraph }
+export const siteData = { SITE_URL, CONTENT_UPDATED, BUSINESS, FOUNDER, PRODUCT, TESTIMONIALS, CLIENTS, WHATSAPP_URL, SERVICES, BLOG_POSTS, CASE_STUDIES, organizationGraph }

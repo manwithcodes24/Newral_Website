@@ -9,7 +9,9 @@
     { "source": "/index", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/about-us", "destination": "/about", "permanent": true },
-    { "source": "/contact-us", "destination": "/contact", "permanent": true }
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/blog/ui-ux-design-cost-noida-2025", "destination": "/blog/ui-ux-design-cost-noida", "permanent": true },
+    { "source": "/blog/react-native-vs-flutter-2025", "destination": "/blog/react-native-vs-flutter", "permanent": true }
   ],
   "headers": [
     {

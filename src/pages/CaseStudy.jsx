@@ -26,13 +26,8 @@ function caseStudyJsonLd(c) {
       publisher: { '@id': ORG_ID },
       about: { '@type': 'Organization', name: c.client },
       mentions: c.sources.map((s) => ({ '@type': 'WebPage', name: s.label, url: s.url })),
-      review: {
-        '@type': 'Review',
-        itemReviewed: { '@id': ORG_ID },
-        author: { '@type': 'Person', name: c.quote.name, jobTitle: c.quote.role },
-        reviewBody: c.quote.text,
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      },
+      // The client quote is shown on the page but not marked up as a Review:
+      // a rating Newral publishes about itself is self-serving review markup.
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     },
     breadcrumbs([['Home', '/'], ['Work', '/work'], [c.client, `/work/${c.slug}`]]),

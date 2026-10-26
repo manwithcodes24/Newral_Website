@@ -35,7 +35,7 @@ if (!ssrEntry) fail('dist-ssr/entry-server.js missing — run `vite build --ssr 
 const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8')
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'))
 const { render, routeFile, ROUTE_LIST, preloadAllRoutes, siteData } = await import(pathToFileURL(ssrEntry).href)
-const { SITE_URL, CONTENT_UPDATED, BUSINESS, FOUNDER, TESTIMONIALS, CLIENTS, SERVICES, BLOG_POSTS, CASE_STUDIES, organizationGraph } = siteData
+const { SITE_URL, CONTENT_UPDATED, BUSINESS, FOUNDER, PRODUCT, TESTIMONIALS, CLIENTS, SERVICES, BLOG_POSTS, CASE_STUDIES, organizationGraph } = siteData
 
 await preloadAllRoutes()
 
@@ -161,6 +161,7 @@ console.log('  ✓ 404.html')
   const facts = [
     `- Company: ${BUSINESS.name} — ${BUSINESS.tagline}`,
     `- Founded: ${BUSINESS.foundingDate} by ${FOUNDER.name} (${FOUNDER.linkedin})`,
+    `- Product: ${PRODUCT.name} (${PRODUCT.url}): ${PRODUCT.description}, built and run by Newral`,
     `- Availability: open 24/7`,
     `- Headquarters: ${addr}`,
     `- Serves: ${BUSINESS.areaServed.join(', ')}, plus remote clients in the US, UK and Southeast Asia`,

@@ -1,6 +1,6 @@
 // JSON-LD builders. Every entity references the one Organization node by @id so
 // search engines and LLMs resolve all pages to a single "Newral" entity.
-import { SITE_URL, ORG_ID, WEBSITE_ID, BUSINESS, TESTIMONIALS, FOUNDER, absUrl } from './site'
+import { SITE_URL, ORG_ID, WEBSITE_ID, BUSINESS, FOUNDER, PRODUCT, absUrl } from './site'
 import { SERVICES } from '../data/services'
 
 const orgRef = { '@id': ORG_ID }
@@ -84,12 +84,16 @@ export function organizationGraph() {
             itemOffered: { '@type': 'Service', name: s.nav, url: absUrl(`/${s.slug}`) },
           })),
         },
-        review: TESTIMONIALS.map((t) => ({
-          '@type': 'Review',
-          author: { '@type': 'Person', name: t.name, jobTitle: t.role },
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          reviewBody: t.quote,
-        })),
+        // No `review` here: reviews a business publishes about itself are not
+        // eligible for review rich results and count as self-serving markup.
+        // Testimonials stay as visible text on the page instead.
+        subOrganization: {
+          '@type': 'Organization',
+          '@id': PRODUCT.id,
+          name: PRODUCT.name,
+          url: PRODUCT.url,
+          description: PRODUCT.description,
+        },
       },
       founderPerson(),
       {

@@ -65,7 +65,7 @@ export default function Footer() {
             <h3>Products</h3>
             <ul>
               <li>
-                <a href="https://synappses.in" target="_blank" rel="noopener noreferrer">LMS</a>
+                <a href="https://synappses.in" target="_blank" rel="noopener">Synappses: white-label LMS</a>
               </li>
             </ul>
           </div>
