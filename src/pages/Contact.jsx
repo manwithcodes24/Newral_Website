@@ -5,6 +5,7 @@ import { TextAnimate } from '../components/TextAnimate'
 import { A } from '../lib/assets'
 import { useSeo } from '../hooks/useSeo'
 import { webPage, breadcrumbs } from '../lib/schema'
+import { getAttribution, track } from '../lib/analytics'
 import styles from './Contact.module.css'
 
 const CONTACT_JSONLD = [
@@ -56,6 +57,13 @@ export default function Contact() {
       "8c1a45e1-e43e-4676-8439-334f8d386da9"
     );
 
+    // Where this visitor first came from (UTM, referrer, landing page), so each
+    // enquiry email says which channel produced it.
+    const attribution = getAttribution();
+    Object.entries(attribution).forEach(([key, value]) => {
+      if (value) form.append(key, value);
+    });
+
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -68,6 +76,11 @@ export default function Contact() {
       const data = await res.json();
 
       if (data.success) {
+        track("generate_lead", {
+          form: "contact",
+          lead_source: attribution.utm_source || attribution.referrer || "(direct)",
+          stage: formData.stage,
+        });
         setSubmitted(true);
 
         setFormData({
