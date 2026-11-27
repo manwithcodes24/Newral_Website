@@ -57,6 +57,7 @@ export const ROUTES = [
   { path: '/fix-ai-built-app', Page: ServiceLanding, file: 'src/pages/ServiceLanding.jsx' },
   { path: '/ai-chatbot-development', Page: ServiceLanding, file: 'src/pages/ServiceLanding.jsx' },
   { path: '/white-label-app-development', Page: ServiceLanding, file: 'src/pages/ServiceLanding.jsx' },
+  { path: '/edtech-app-development', Page: ServiceLanding, file: 'src/pages/ServiceLanding.jsx' },
   { path: '/contact', Page: Contact, file: 'src/pages/Contact.jsx' },
   { path: '/blog', Page: Blog, file: 'src/pages/Blog.jsx' },
   { path: '/blog/:slug', Page: BlogPost, file: 'src/pages/BlogPost.jsx' },

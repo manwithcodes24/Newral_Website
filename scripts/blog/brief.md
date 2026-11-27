@@ -33,7 +33,11 @@ Bolt, Cursor, Replit and v0.
   improving operational efficiency and the student experience.
 - OTT Bharat and NEET Kaka JEE: Newral built the OTT Bharat app and now runs the
   tech for NEET Kaka JEE.
-- Omega Elevators is also a client (no details).
+- Omega Elevators and Up-to are also clients (no details).
+- Newral has worked with founders featured on Shark Tank India.
+- Newral is recognised by Y Combinator founders (word it exactly like that).
+(Up-to, Shark Tank India and Y Combinator confirmed as real by the founder,
+27 Nov 2026.)
 No other client names. No numbers, percentages or results for any client.
 Mention a client only when it genuinely supports the point; most articles
 should not name clients at all.

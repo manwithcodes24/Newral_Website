@@ -18,6 +18,7 @@ doorway pages). Synappses and LMS terms belong to synappses.in, never here.
 | `/fix-ai-built-app` | fix AI-built app | vibe-coded app rescue, Lovable/Bolt/Cursor/Replit app not working, AI-generated app security | **New page** |
 | `/ai-chatbot-development` | AI chatbot development company | WhatsApp AI chatbot, website chatbot, custom chatbot India | **New page** |
 | `/white-label-app-development` | white-label app development | white-label development partner for agencies, outsource app development | **New page** (offer confirmed by the user, 27 Nov 2026) |
+| `/edtech-app-development` | edtech app development company | test prep app development, live class and video platform development, scale edtech platform | **New page** (requested 27 Nov 2026; proof: Competishun, Bansal Classes, OTT Bharat / NEET Kaka JEE; no LMS pitch) |
 | `/ai-automation-noida` | AI automation company | AI agent development, workflow automation, LLM integration | Title adds India; chatbot FAQ now points to the chatbot page |
 | `/saas-development-noida` | SaaS development company | SaaS MVP development | unchanged |
 | `/custom-software-development-noida` | custom software development company Noida | MVP development company | unchanged |
@@ -28,7 +29,7 @@ doorway pages). Synappses and LMS terms belong to synappses.in, never here.
 | `/work/*` | "<client> case study" | proof for the service pages they link to | unchanged |
 
 ### Deliberately not built
-- **Edtech app development page.** The SEO audit recommends it (Newral's proof is in EdTech), but the 24 Nov 2026 brand rule says coaching institutes are Synappses leads. A page aimed at *edtech product companies* (not institutes) would be defensible; it needs your decision.
+- **Edtech app development page:** built 27 Nov 2026 at your request. It sells engineering (build, scale, video, DevOps), never a ready-made LMS, so it does not compete with Synappses.
 - **Grow (marketing) service pages.** No case studies yet; product notes forbid claiming results. Add pages when there is proof.
 - **City pages** (Delhi, Gurgaon…): doorway-page risk.
 
@@ -38,6 +39,7 @@ Each post supports one money page and links to it with a CTA.
 
 | Slug | Keyword | Supports |
 |---|---|---|
+| how-to-build-an-edtech-app | edtech app development | /edtech-app-development |
 | fix-ai-built-app-before-launch | fix AI built app | /fix-ai-built-app (**drafted**, awaiting review) |
 | ai-built-app-security-checklist | is my AI generated app secure | /fix-ai-built-app |
 | ai-chatbot-development-cost-india | AI chatbot development cost India | /ai-chatbot-development |
@@ -60,3 +62,6 @@ development agency in Noida, UX audit signs, React Native vs Flutter, design sys
 - Every FAQ answer is written answer-first so assistants can quote it alone.
 - Internal links: footer, services hub, every service page's "Explore more" row and the AI automation FAQ link to the new pages; non-local pages are not labelled "in Noida".
 - Blog: posts can now have `h3`, `ul` blocks and a visible FAQ (with FAQPage JSON-LD), and `author: 'founder'` credits Yash Rajan Shukla as a Person.
+
+## Claims confirmed by the founder (27 Nov 2026)
+Up-to is a client; Newral has worked with founders featured on Shark Tank India; Newral is "recognised by Y Combinator founders". These stay on the site and are allowed in blog drafts (scripts/blog/brief.md).

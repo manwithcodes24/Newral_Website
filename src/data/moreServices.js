@@ -292,4 +292,55 @@ export const MORE_SERVICES = [
       { q: 'Can you maintain the app after launch under our brand?', a: 'Yes. We offer monthly maintenance and feature work that you can resell to your clients under your agency\'s name.' },
     ],
   },
+  {
+    // Newral's strongest proof area. Written for edtech companies and test-prep
+    // brands that need engineering (build, scale, video, DevOps). It never
+    // pitches a ready-made LMS: that is Synappses, a separate brand.
+    slug: 'edtech-app-development',
+    local: false,
+    nav: 'EdTech App Development',
+    color: '#EA580C',
+    metaTitle: 'EdTech App Development Company in India | Newral',
+    metaDescription:
+      'EdTech app development company in Noida, India. Newral builds and scales learning apps, test platforms and video streaming for edtech and test-prep brands.',
+    eyebrow: 'EdTech App Development · India',
+    h1: 'EdTech App Development',
+    h1Serif: 'built for exam-day traffic',
+    intro:
+      'Newral is an edtech app development company in Sector 62, Noida that builds, scales and runs learning platforms for edtech companies and test-prep brands. We handle the hard parts of education products: live classes and video delivery, online tests that thousands of students take at once, result-day traffic, and cloud and video bills that grow faster than revenue. Newral runs the complete tech for Competishun, upgraded the technology at Bansal Classes, and built the OTT Bharat app for NEET Kaka JEE.',
+    highlights: ['Learning apps for iOS, Android and web', 'Live classes and video streaming', 'Online tests and exam platforms', 'Scaling for peak traffic', 'Video and cloud cost optimisation'],
+    whyHeading: 'Engineering that holds up',
+    whyHeadingSerif: 'when every student logs in at once',
+    whyText:
+      'Education traffic is spiky: a live class starts, a test window opens, results go out, and everyone arrives in the same minute. We design, build and operate platforms for exactly that pattern, with the same team owning the app, the backend and the infrastructure.',
+    processHeading: 'edtech build process',
+    included: [
+      { title: 'Learning App Development', desc: 'Native and cross-platform student apps for iOS and Android, plus web apps and admin panels for teachers and operations teams.' },
+      { title: 'Live Classes & Video Delivery', desc: 'Live streaming, recorded lectures and secure video playback, with encoding and CDN set-up tuned for students on slow mobile networks.' },
+      { title: 'Online Tests & Exam Platforms', desc: 'Timed tests, question banks, results and analytics, engineered for the moment a whole batch starts the same test.' },
+      { title: 'Scaling for Peak Traffic', desc: 'Load testing, caching, autoscaling and queues so live classes, test windows and result days stay up.' },
+      { title: 'Video & Cloud Cost Optimisation', desc: 'Find where video delivery and cloud spend are going and bring the bill down without hurting playback or performance.' },
+      { title: 'DevOps, Monitoring & Support', desc: 'CI/CD, 24x7 monitoring and incident response, so problems are caught before students notice them.' },
+    ],
+    why: [
+      { title: 'Proven on test-prep platforms', desc: 'We run the complete tech for Competishun, improving performance and scalability with major cost optimisation and faster video delivery.' },
+      { title: 'Build and run, not build and leave', desc: 'The team that builds your platform also operates it, so nothing is lost in a hand-over to a separate support vendor.' },
+      { title: 'Design, engineering and DevOps together', desc: 'Student experience, backend and infrastructure decisions are made by one team that sees the whole product.' },
+      { title: 'You own everything', desc: 'Source code, cloud accounts and data stay yours, with documentation for your own team.' },
+    ],
+    process: [
+      { title: 'Audit or Discover', desc: 'For a live platform, we review the app, infrastructure and costs. For a new product, we define users, flows and the first release.' },
+      { title: 'Design', desc: 'Student, teacher and admin flows designed in Figma and validated before development starts.' },
+      { title: 'Build & Load-Test', desc: 'Short sprints with working builds, and load tests that simulate your busiest live class or test window before launch.' },
+      { title: 'Operate & Optimise', desc: 'Monitoring, incident response and regular cost reviews after launch, so the platform keeps up as you grow.' },
+    ],
+    faqs: [
+      { q: 'What does an edtech app development company do?', a: 'It designs, builds and runs the software behind online learning: student apps, live classes and video, online tests, payments and the infrastructure that keeps them up. Newral does this for edtech companies and test-prep brands, and runs the complete tech for Competishun.' },
+      { q: 'Which edtech companies has Newral worked with?', a: 'Newral handles the complete tech for Competishun (IIT-JEE and NEET coaching), upgraded the technology at Bansal Classes (Kota), and built the OTT Bharat app and now runs the tech for NEET Kaka JEE. The case studies on our Work page go into detail.' },
+      { q: 'Can you fix an edtech platform that crashes during live classes or tests?', a: 'Yes. We start with an audit of the app and infrastructure, fix the bottlenecks that fail under load, and load-test against your busiest moments before the next exam window.' },
+      { q: 'Can you reduce our video streaming and cloud costs?', a: 'Usually, yes. Encoding settings, CDN choice, caching and right-sized infrastructure are common places where spend can come down. We review your set-up first and tell you what is realistic before any paid work.' },
+      { q: 'How much does edtech app development cost?', a: 'It depends on the platforms, features, video and testing needs, and expected traffic. Newral starts with a free consultation and then gives a fixed-price first milestone.' },
+      { q: 'Do I own the code and data?', a: 'Yes. Source code, designs, cloud accounts and student data stay with you.' },
+    ],
+  },
 ]

@@ -2,6 +2,20 @@
   "_comment": "Topic queue for scripts/blog/draft.mjs. Generated from docs/seo/KEYWORD-PLAN.md. status: queued -> drafted -> published (or skipped). Each topic supports exactly one target page (supports); never queue two topics for the same keyword.",
   "topics": [
     {
+      "slug": "how-to-build-an-edtech-app",
+      "keyword": "edtech app development",
+      "secondary": [
+        "how to build an edtech app",
+        "edtech app features",
+        "test prep app development"
+      ],
+      "angle": "For edtech founders and test-prep brands: what to build first (student app, live classes, video, tests, payments), what breaks at scale (live classes, test windows, result days) and how to plan for it. Write as engineering advice; do not pitch a ready-made platform.",
+      "category": "EdTech",
+      "categorySlug": "edtech",
+      "supports": "/edtech-app-development",
+      "status": "queued"
+    },
+    {
       "slug": "fix-ai-built-app-before-launch",
       "keyword": "fix AI built app",
       "secondary": [

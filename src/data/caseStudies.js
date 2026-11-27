@@ -14,8 +14,8 @@ export const CASE_STUDIES = [
       'Newral handles the complete technology for Competishun, improving platform performance and scalability, optimising costs and speeding up video delivery for thousands of JEE and NEET aspirants.',
     industry: 'EdTech — IIT-JEE & NEET coaching',
     location: 'India',
-    services: ['DevOps & Cloud', 'Web Development', 'UI/UX Design'],
-    serviceLinks: ['/devops-noida', '/web-development-noida', '/ui-ux-design-noida'],
+    services: ['EdTech App Development', 'DevOps & Cloud', 'Web Development', 'UI/UX Design'],
+    serviceLinks: ['/edtech-app-development', '/devops-noida', '/web-development-noida', '/ui-ux-design-noida'],
     logo: '/assets/logo4.png',
     about:
       'Competishun is an IIT-JEE and NEET coaching brand led by Mohit Kumar Tyagi. It runs online and offline courses, structured study material and books for JEE (Main + Advanced) and NEET (UG) aspirants, with live classes, recorded lectures, mock tests and doubt support delivered through its website and mobile app.',
@@ -94,8 +94,8 @@ export const CASE_STUDIES = [
       'Newral provided software development support that helped Bansal Classes upgrade its technology, improving operational efficiency and the overall student experience.',
     industry: 'Education — IIT-JEE coaching',
     location: 'Kota, Rajasthan, India',
-    services: ['Web Development', 'Custom Software'],
-    serviceLinks: ['/web-development-noida', '/custom-software-development-noida'],
+    services: ['EdTech App Development', 'Web Development', 'Custom Software'],
+    serviceLinks: ['/edtech-app-development', '/web-development-noida', '/custom-software-development-noida'],
     logo: '/assets/logo3.png',
     about:
       'Bansal Classes is one of the best-known names in Kota’s IIT-JEE coaching ecosystem. Founded by the late V.K. Bansal — widely regarded as a pioneer of the Kota coaching industry — the institute has grown to many branches across India and is today led by Sameer Bansal.',
@@ -133,8 +133,8 @@ export const CASE_STUDIES = [
       'Newral built the OTT Bharat app with precision and a user-friendly experience, and the relationship grew into managing the technology for the parent company, NEET Kaka JEE.',
     industry: 'EdTech & streaming — NEET / JEE preparation',
     location: 'India',
-    services: ['App Development', 'UI/UX Design', 'DevOps & Cloud'],
-    serviceLinks: ['/app-development-noida', '/ui-ux-design-noida', '/devops-noida'],
+    services: ['EdTech App Development', 'App Development', 'UI/UX Design', 'DevOps & Cloud'],
+    serviceLinks: ['/edtech-app-development', '/app-development-noida', '/ui-ux-design-noida', '/devops-noida'],
     logo: '/assets/neet.png',
     about:
       'NEET Kaka JEE, founded by Abhimanyu Kumawat, is an exam-preparation brand for NEET and JEE aspirants. Its app offers video lectures, notes, practice questions, topic-wise quizzes, mock tests, performance analytics and live doubt-clearing sessions. OTT Bharat is a video platform from the same founder.',

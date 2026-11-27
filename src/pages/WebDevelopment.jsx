@@ -540,6 +540,7 @@ export default function WebDevelopment() {
               ['saas-development-noida', 'SaaS Development'],
               ['ai-automation-noida', 'AI Automation'],
               ['custom-software-development-noida', 'Custom Software'],
+              ['edtech-app-development', 'EdTech App Development', false],
               ['ai-chatbot-development', 'AI Chatbot Development', false],
               ['fix-ai-built-app', 'AI-Built App Rescue', false],
             ]

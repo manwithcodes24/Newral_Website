@@ -9,16 +9,16 @@ const BLOCK_TYPES = new Set(['intro', 'h2', 'h3', 'p', 'ul', 'cta'])
 const FORBIDDEN = [
   [/synappses?/i, 'mentions Synappses (separate brand; never on newral.in)'],
   [/\bLMS\b|learning management system/i, 'mentions an LMS (Synappses territory)'],
-  // "Up-to" the client, not "up-to-date" / "up to": capitalised, not followed by another hyphenated word.
-  [/\b(rapido|synphony)\b|(?<![\w-])Up-to(?![\w-])/i, 'names a client the product notes do not allow'],
-  [/shark tank/i, 'Shark Tank claim is not in the approved facts'],
+  // Up-to, Shark Tank India and Y Combinator claims were confirmed real on 27 Nov 2026
+  // (see brief.md); they are listed for a wording check below instead of blocked.
+  [/\b(rapido|synphony)\b/i, 'names a client the product notes do not allow'],
   [/\b(#1|number one|best (agency|company)|leading (agency|company))\b/i, 'superlative claim about Newral'],
   [/\b(5|five)[- ]star|rated \d/i, 'rating/review claim'],
   [/in business (for )?(5|five)\+? years/i, 'Newral was founded in 2024'],
 ]
 const PRICE = /(₹|rs\.?\s?\d|inr\s?\d|\$\s?\d|\blakh\b|\bcrore\b|per hour)/i
 const NUMBER = /\d/
-const CLIENTS = /\b(competishun|fizz|bansal classes|ott bharat|neet kaka jee|omega elevators)\b/i
+const CLIENTS = /\b(competishun|fizz|bansal classes|ott bharat|neet kaka jee|omega elevators|shark tank|y ?combinator)\b|(?<![\w-])Up-to(?![\w-])/i
 
 export function knownPaths(root) {
   const read = (p) => fs.readFileSync(path.join(root, p), 'utf8')
