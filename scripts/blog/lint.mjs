@@ -9,7 +9,8 @@ const BLOCK_TYPES = new Set(['intro', 'h2', 'h3', 'p', 'ul', 'cta'])
 const FORBIDDEN = [
   [/synappses?/i, 'mentions Synappses (separate brand; never on newral.in)'],
   [/\bLMS\b|learning management system/i, 'mentions an LMS (Synappses territory)'],
-  [/\b(rapido|synphony|up-to)\b/i, 'names a client the product notes do not allow'],
+  // "Up-to" the client, not "up-to-date" / "up to": capitalised, not followed by another hyphenated word.
+  [/\b(rapido|synphony)\b|(?<![\w-])Up-to(?![\w-])/i, 'names a client the product notes do not allow'],
   [/shark tank/i, 'Shark Tank claim is not in the approved facts'],
   [/\b(#1|number one|best (agency|company)|leading (agency|company))\b/i, 'superlative claim about Newral'],
   [/\b(5|five)[- ]star|rated \d/i, 'rating/review claim'],

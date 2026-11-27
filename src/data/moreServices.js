@@ -54,7 +54,7 @@ export const MORE_SERVICES = [
     slug: 'ai-automation-noida',
     nav: 'AI Automation',
     color: '#7C3AED',
-    metaTitle: 'AI Automation & AI Agent Development Company in Noida, India | Newral',
+    metaTitle: 'AI Automation & AI Agent Development in Noida | Newral',
     metaDescription:
       'AI automation agency in Noida, Delhi NCR. Newral builds AI chatbots, AI agents, workflow automation and LLM integrations that cut manual work for startups and businesses.',
     eyebrow: 'AI Automation & AI Agents · Noida, Delhi NCR',
@@ -154,7 +154,7 @@ export const MORE_SERVICES = [
     local: false,
     nav: 'AI-Built App Rescue',
     color: '#DC2626',
-    metaTitle: 'Fix Your AI-Built App: Lovable, Bolt, Cursor & Replit App Rescue | Newral',
+    metaTitle: 'Fix AI-Built Apps: Lovable, Bolt & Cursor App Rescue | Newral',
     metaDescription:
       'Built an app with Lovable, Bolt, Cursor, Replit or v0 and it breaks, leaks data or will not launch? Newral fixes, secures and finishes AI-built apps. Free review first.',
     eyebrow: 'App Rescue · Vibe-coded and half-built apps',
@@ -202,7 +202,7 @@ export const MORE_SERVICES = [
     local: false,
     nav: 'AI Chatbot Development',
     color: '#9333EA',
-    metaTitle: 'AI Chatbot Development Company in India: Website & WhatsApp Chatbots | Newral',
+    metaTitle: 'AI Chatbot Development Company in India | Newral',
     metaDescription:
       'AI chatbot development company in Noida, India. Newral builds custom AI chatbots for websites, WhatsApp and apps that answer from your own content and hand over to your team.',
     eyebrow: 'AI Chatbot Development · India',
@@ -250,7 +250,7 @@ export const MORE_SERVICES = [
     local: false,
     nav: 'White-Label App Development',
     color: '#0F766E',
-    metaTitle: 'White-Label App & Web Development Partner for Agencies | Newral',
+    metaTitle: 'White-Label App Development for Agencies | Newral',
     metaDescription:
       'White-label app and web development for agencies and consultancies. Newral designs and builds mobile apps, web apps and websites that you deliver under your own brand.',
     eyebrow: 'White-Label Development · For agencies',

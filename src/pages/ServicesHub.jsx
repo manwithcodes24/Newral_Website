@@ -14,7 +14,7 @@ import { WHATSAPP_URL } from '../lib/site'
 
 export default function ServicesHub() {
   useSeo({
-    title: 'Services: App & Web Development, UI/UX, AI Chatbots, SaaS, DevOps | Newral',
+    title: 'Services: App & Web Development, AI, DevOps | Newral',
     description:
       'Newral is an app and web development company in Noida, India. Services: mobile and web app development, UI/UX, AI chatbots and automation, AI-built app rescue, SaaS and DevOps.',
     path: '/services',

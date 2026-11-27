@@ -184,7 +184,7 @@ const CORE_SERVICES = [
     slug: 'app-development-noida',
     nav: 'App Development',
     color: '#2563EB',
-    metaTitle: 'App Development Company in Noida, India: iOS, Android, React Native | Newral',
+    metaTitle: 'App Development Company in Noida, India | Newral',
     metaDescription:
       'Mobile app development company in Noida, India. Newral designs and builds fast, scalable iOS, Android and React Native apps, from MVP to App Store launch. Free consultation.',
     eyebrow: 'Mobile App Development · Noida, Sector 62',
@@ -260,7 +260,7 @@ const CORE_SERVICES = [
     slug: 'web-development-noida',
     nav: 'Web Development',
     color: '#3B82F6',
-    metaTitle: 'Web Development Company in Noida, India: Websites & Web Apps | Newral',
+    metaTitle: 'Web Development Company in Noida, India | Newral',
     metaDescription:
       'Web development company in Noida, India. Newral builds fast, SEO-ready websites and web apps in React and Next.js for startups and businesses. Book a free consultation.',
     eyebrow: 'Web Development · Noida, Sector 62',
