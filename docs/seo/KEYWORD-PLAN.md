@@ -17,7 +17,7 @@ doorway pages). Synappses and LMS terms belong to synappses.in, never here.
 | `/web-development-noida` | web development company in Noida | web development company India, website development company Noida, Next.js development | Title + meta retargeted to add India |
 | `/fix-ai-built-app` | fix AI-built app | vibe-coded app rescue, Lovable/Bolt/Cursor/Replit app not working, AI-generated app security | **New page** |
 | `/ai-chatbot-development` | AI chatbot development company | WhatsApp AI chatbot, website chatbot, custom chatbot India | **New page** |
-| `/white-label-app-development` | white-label app development | white-label development partner for agencies, outsource app development | **New page** (confirm the offer, see report) |
+| `/white-label-app-development` | white-label app development | white-label development partner for agencies, outsource app development | **New page** (offer confirmed by the user, 27 Nov 2026) |
 | `/ai-automation-noida` | AI automation company | AI agent development, workflow automation, LLM integration | Title adds India; chatbot FAQ now points to the chatbot page |
 | `/saas-development-noida` | SaaS development company | SaaS MVP development | unchanged |
 | `/custom-software-development-noida` | custom software development company Noida | MVP development company | unchanged |
