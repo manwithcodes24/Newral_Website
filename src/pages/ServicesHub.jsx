@@ -14,9 +14,9 @@ import { WHATSAPP_URL } from '../lib/site'
 
 export default function ServicesHub() {
   useSeo({
-    title: 'Services — UI/UX, App & Web Development, SaaS, AI Automation, DevOps | Newral',
+    title: 'Services: App & Web Development, UI/UX, AI Chatbots, SaaS, DevOps | Newral',
     description:
-      'Newral is a Noida, Delhi NCR tech agency. Explore our services: UI/UX design, branding, web & app development, SaaS, custom software, AI automation and DevOps.',
+      'Newral is an app and web development company in Noida, India. Services: mobile and web app development, UI/UX, AI chatbots and automation, AI-built app rescue, SaaS and DevOps.',
     path: '/services',
     jsonLd: [
       {
@@ -338,9 +338,9 @@ export default function ServicesHub() {
       <section className={styles.bentoSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>AI &amp; Custom Software</h2>
+            <h2 className={styles.sectionTitle}>AI, App Rescue &amp; Custom Software</h2>
             <p className={styles.sectionDesc}>
-              Automate repetitive work with AI, launch a SaaS product or replace spreadsheets with software built around how your business actually runs.
+              Automate repetitive work with AI, add a chatbot to your website or WhatsApp, fix an app built with AI tools, launch a SaaS product, or have us build apps that your agency delivers under its own brand.
             </p>
           </div>
           <div className={styles.bottomCtaWrapper} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center' }}>

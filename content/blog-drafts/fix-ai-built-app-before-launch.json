@@ -1,0 +1,218 @@
+{
+  "slug": "fix-ai-built-app-before-launch",
+  "title": "How to Fix AI Built App Problems: Repair or Rebuild?",
+  "metaTitle": "Fix AI Built App: Repair or Rebuild? | Newral",
+  "metaDescription": "Fix AI built app problems the right way: why apps made with Lovable, Bolt, Cursor, Replit or v0 break with real users, and when to repair or rebuild.",
+  "readTime": "7 min read",
+  "category": "App Rescue",
+  "categorySlug": "app-rescue",
+  "excerpt": "Apps built with Lovable, Bolt, Cursor, Replit or v0 tend to break for the same few reasons once real users arrive. Here is how to find the cause and decide between fixing and rebuilding.",
+  "coverAlt": "Developer reviewing the code of an AI built app on a laptop",
+  "content": [
+    {
+      "type": "intro",
+      "text": "To fix AI built app problems, first find out which of a few usual causes is behind them: missing security rules, a database nobody designed, no error handling, or code that no one fully understands. Most apps built with Lovable, Bolt, Cursor, Replit or v0 can be repaired without starting over, and a rebuild only makes sense when the data model or the core architecture is wrong. This guide explains why these apps break once real users arrive and how to choose between fixing and rebuilding."
+    },
+    {
+      "type": "h2",
+      "text": "Why do AI built apps break when real users arrive?"
+    },
+    {
+      "type": "p",
+      "text": "AI app builders are very good at one thing: turning a description into a working screen quickly. That is real value. Founders can now test an idea without hiring a development team first."
+    },
+    {
+      "type": "p",
+      "text": "The trouble is that a demo and a product are tested by different things. A demo has one user, clean data and a patient owner who knows where to click. A product has strangers, messy input, slow networks, two people editing the same record and, sooner or later, someone actively poking at it."
+    },
+    {
+      "type": "p",
+      "text": "The AI tool built what you asked for. It usually did not build what you did not know to ask for: access rules, backups, error handling, monitoring. Those gaps stay invisible until real users arrive, which is why so many AI generated app bugs seem to appear overnight after launch."
+    },
+    {
+      "type": "h2",
+      "text": "What are the most common vibe coded app problems?"
+    },
+    {
+      "type": "p",
+      "text": "The same few issues come up again and again, whichever tool wrote the code."
+    },
+    {
+      "type": "h3",
+      "text": "Security and access rules are missing"
+    },
+    {
+      "type": "p",
+      "text": "This is the most serious one. The app has a login screen, so it looks secure, but the database behind it may let any signed-in user, or sometimes anyone at all, read or change other people's data. Checks often live only in the browser, where they can be bypassed. API keys and other secrets sometimes end up in front-end code or in a public repository."
+    },
+    {
+      "type": "h3",
+      "text": "The database was never designed"
+    },
+    {
+      "type": "p",
+      "text": "Each prompt added a table or a column to solve the problem in front of it. Nobody decided how the data should fit together. The result is duplicated fields, missing relationships and no indexes, which works with a handful of rows and slows to a crawl as data grows. Changing it later is harder because real customer data now lives in that shape."
+    },
+    {
+      "type": "h3",
+      "text": "Only the happy path exists"
+    },
+    {
+      "type": "p",
+      "text": "The code assumes the payment succeeds, the file uploads, the third-party API replies and the user types what you expected. When any of those fails, the user sees a blank screen or a spinner that never stops. You see nothing at all, because there is no logging."
+    },
+    {
+      "type": "h3",
+      "text": "Every fix breaks something else"
+    },
+    {
+      "type": "p",
+      "text": "With no tests and a codebase rewritten by many prompts, each change is a gamble. You ask the tool to fix checkout and it quietly changes how sign-up works. Duplicate components and dead code pile up, the AI loses track of which version is live, and you spend more prompts going in circles than making progress."
+    },
+    {
+      "type": "h3",
+      "text": "There is no safe way to release"
+    },
+    {
+      "type": "p",
+      "text": "Many of these apps have one environment: production. Changes go straight to live users. There is no staging copy, no backup that anyone has tried restoring, and no alert when the app goes down."
+    },
+    {
+      "type": "h2",
+      "text": "Lovable app not working? Check these things first"
+    },
+    {
+      "type": "p",
+      "text": "If you searched for something like lovable app not working, or the equivalent for Bolt, Replit or v0, start with the cheap checks before you assume the worst. They apply to any of these tools."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Open the browser console and the network tab while you reproduce the bug. A red error message usually points at the real cause faster than another prompt will.",
+        "Check the environment variables and API keys in the deployed version. Many apps work in preview and fail in production because a key or URL is missing or still points at a test service.",
+        "Look at the logs of your database and hosting provider for failed or denied requests.",
+        "Test with a second, ordinary user account. Bugs that only appear for non-owner accounts are almost always permission issues.",
+        "Confirm that every connected service, such as payments, email and authentication, is in live mode and its account is active."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "If the bug is isolated and one of these explains it, you may not need anyone's help. If the same kind of bug keeps coming back, the problem is structural, and the next section is for you."
+    },
+    {
+      "type": "h2",
+      "text": "How to fix AI built app issues without making things worse"
+    },
+    {
+      "type": "p",
+      "text": "The instinct is to keep prompting until the error goes away. That is how small problems become tangled ones. A calmer order of work looks like this."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Stop adding features. Freeze the scope until the app is stable.",
+        "Get the code into version control you own, such as a GitHub repository, so every change can be reviewed and undone.",
+        "Back up the database, and check that you can actually restore from the backup.",
+        "Audit security first: access rules, authentication, exposed secrets. Rotate any key that has ever been visible in front-end code or a public repository.",
+        "Write down the three or four journeys the business depends on, such as sign-up, payment and the core action, and add tests around them.",
+        "Add error logging and basic monitoring so you learn about failures before your users tell you.",
+        "Only then fix bugs, most damaging first, one change at a time."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Notice that bug fixing comes last. Without the safety net above it, each fix risks creating the next bug. With it, the work becomes predictable, and you can keep using your AI tool for new screens because mistakes now get caught."
+    },
+    {
+      "type": "h2",
+      "text": "Should you fix or rebuild an AI built app?"
+    },
+    {
+      "type": "p",
+      "text": "Rebuilding feels clean, and developers often recommend it because working in code they did not write is less pleasant than starting fresh. But a rebuild throws away working features and delays everything else, so it should be the exception. Decide on evidence, not on frustration."
+    },
+    {
+      "type": "h3",
+      "text": "Fixing usually makes sense when"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "The core data model is roughly right, even if it is untidy.",
+        "The app is built on a mainstream stack that most developers can work with.",
+        "The problems are concentrated in a few areas, such as authentication, payments or performance.",
+        "You have active or paying users who cannot wait for a second launch."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Rebuilding usually makes sense when"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "The data model is wrong for the business. For example, it cannot represent teams, roles or multiple organisations and you now need them.",
+        "Security was never part of the design and would have to be retrofitted into every screen and query.",
+        "The product has changed direction and most existing screens will be thrown away anyway.",
+        "The code is so duplicated and inconsistent that understanding it would cost more than replacing it."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "There is a middle path that is often the right answer: keep the front end, which is usually the strongest part of an AI built app, and rebuild the backend and database properly behind it. Users see the same product while the fragile parts are replaced. Even a full rebuild rarely starts from zero, because the existing app is a detailed specification of what your users want."
+    },
+    {
+      "type": "h2",
+      "text": "Can you fix it yourself, or do you need a developer?"
+    },
+    {
+      "type": "p",
+      "text": "Honestly, not everyone needs an agency. If the app is an internal tool, a prototype for investor conversations or an experiment with a few friendly users, and it holds no payments or sensitive personal data, keep going with the AI tool and the checklist above. Paying for professional engineering before you have proof of demand is often the wrong use of money."
+    },
+    {
+      "type": "p",
+      "text": "Bring in an experienced developer when the stakes change: you are taking payments, storing personal, financial or health data, signing business customers who will ask security questions, or losing users to bugs you cannot reproduce. A freelancer can be enough for a contained fix list. A team makes more sense when the work spans backend, security and DevOps at once."
+    },
+    {
+      "type": "p",
+      "text": "Whoever you hire, ask for the same things: a written review of the code before any quote, a prioritised list of fixes with the reasoning, a clear opinion on fix versus rebuild, and full ownership of the code and accounts staying with you."
+    },
+    {
+      "type": "h2",
+      "text": "How does Newral rescue AI built apps?"
+    },
+    {
+      "type": "p",
+      "text": "Newral is a product design and software development agency in Noida. Rescuing half-built or AI generated apps made with tools such as Lovable, Bolt, Cursor, Replit and v0 is part of what we do. We start with a free review of your app and codebase. You then get a fixed-price fix list, so you know what will be repaired and what it will cost before any work starts."
+    },
+    {
+      "type": "p",
+      "text": "If the review shows your app is fine for its current stage, we will tell you so. If a rebuild is the more honest recommendation, we will explain why and what can be carried over. Security is part of every stage of how we build, so access rules and secrets are looked at first, not last."
+    },
+    {
+      "type": "cta",
+      "text": "Get a free review of your AI built app",
+      "href": "/fix-ai-built-app"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can an app built with Lovable, Bolt or Replit be used in production?",
+      "a": "Yes, many can, but usually not in the state they were first generated. Before real users and real data arrive, the app needs proper access rules, secrets kept out of front-end code, tested backups, error logging and tests around the key user journeys. With that work done, an AI built app can be a sound base for a real product."
+    },
+    {
+      "q": "Why did my AI built app stop working after launch?",
+      "a": "The most common causes are missing or incorrect environment variables in production, database permission rules that block ordinary users, and code that only handles the case where everything goes right. Real users bring messy input, failed payments and simultaneous edits that a demo never tested. Check the browser console, the hosting and database logs, and a non-owner test account first."
+    },
+    {
+      "q": "Is it better to fix or rebuild a vibe coded app?",
+      "a": "Fix it when the data model is roughly right and the problems are concentrated in a few areas such as authentication, payments or performance. Rebuild when the data model does not fit the business, security would have to be retrofitted everywhere, or the product has changed direction. A common middle path is to keep the front end and rebuild the backend and database behind it."
+    },
+    {
+      "q": "How much does it cost to fix an AI built app?",
+      "a": "It depends on what a code review finds: a few contained bugs cost far less to fix than a database that needs redesigning. Ask for a written review and a prioritised fix list before accepting any quote. Newral offers a free review followed by a fixed-price fix list, so the cost is agreed before work begins."
+    }
+  ],
+  "draftedAt": "2026-11-27",
+  "targetKeyword": "fix AI built app"
+}

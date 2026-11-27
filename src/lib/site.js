@@ -106,4 +106,4 @@ export const absUrl = (path = '/') => (path === '/' ? `${SITE_URL}/` : `${SITE_U
 
 // Bump when page copy changes meaningfully — used as <lastmod> in sitemap.xml
 // for non-blog pages. Blog posts use their own `updated` / `date` fields.
-export const CONTENT_UPDATED = '2026-10-19'
+export const CONTENT_UPDATED = '2026-11-27'

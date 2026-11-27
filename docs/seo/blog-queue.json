@@ -1,0 +1,164 @@
+{
+  "_comment": "Topic queue for scripts/blog/draft.mjs. Generated from docs/seo/KEYWORD-PLAN.md. status: queued -> drafted -> published (or skipped). Each topic supports exactly one target page (supports); never queue two topics for the same keyword.",
+  "topics": [
+    {
+      "slug": "fix-ai-built-app-before-launch",
+      "keyword": "fix AI built app",
+      "secondary": [
+        "vibe coded app problems",
+        "lovable app not working",
+        "AI generated app bugs"
+      ],
+      "angle": "The most common reasons apps built with Lovable, Bolt, Cursor, Replit or v0 break once real users arrive, and how to decide between fixing and rebuilding.",
+      "category": "App Rescue",
+      "categorySlug": "app-rescue",
+      "supports": "/fix-ai-built-app",
+      "status": "drafted",
+      "draftedAt": "2026-11-27"
+    },
+    {
+      "slug": "ai-built-app-security-checklist",
+      "keyword": "is my AI generated app secure",
+      "secondary": [
+        "lovable app security",
+        "supabase row level security",
+        "exposed API keys frontend"
+      ],
+      "angle": "A plain-English security checklist for founders who shipped an app built with an AI tool: exposed keys, open database tables, missing permission checks, payments.",
+      "category": "App Rescue",
+      "categorySlug": "app-rescue",
+      "supports": "/fix-ai-built-app",
+      "status": "queued"
+    },
+    {
+      "slug": "ai-chatbot-development-cost-india",
+      "keyword": "AI chatbot development cost India",
+      "secondary": [
+        "how much does an AI chatbot cost",
+        "custom chatbot for business India"
+      ],
+      "angle": "What drives the cost of a custom AI chatbot (channels, content, integrations, conversation volume, model choice) and how to scope a first version. Explain cost drivers; quote no prices.",
+      "category": "AI",
+      "categorySlug": "ai",
+      "supports": "/ai-chatbot-development",
+      "status": "queued"
+    },
+    {
+      "slug": "whatsapp-ai-chatbot-for-business",
+      "keyword": "WhatsApp AI chatbot for business",
+      "secondary": [
+        "WhatsApp chatbot India",
+        "WhatsApp Business API chatbot"
+      ],
+      "angle": "What a WhatsApp AI chatbot can and cannot do for a business, what the WhatsApp Business Platform requires, and how hand-over to a human should work.",
+      "category": "AI",
+      "categorySlug": "ai",
+      "supports": "/ai-chatbot-development",
+      "status": "queued"
+    },
+    {
+      "slug": "ai-agent-vs-chatbot-vs-automation",
+      "keyword": "AI agent vs chatbot",
+      "secondary": [
+        "AI agent development company",
+        "AI automation vs AI agent"
+      ],
+      "angle": "Clear definitions and when a business needs a chatbot, an AI agent or plain workflow automation, with examples.",
+      "category": "AI",
+      "categorySlug": "ai",
+      "supports": "/ai-automation-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "how-to-choose-app-development-company-india",
+      "keyword": "app development company India",
+      "secondary": [
+        "how to choose an app development company",
+        "questions to ask app developers"
+      ],
+      "angle": "A buyer's guide to choosing a mobile app development company in India: what to ask, red flags, fixed price vs time and materials, code ownership, post-launch support.",
+      "category": "App Development",
+      "categorySlug": "app-development",
+      "supports": "/app-development-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "app-development-cost-factors",
+      "keyword": "app development cost India",
+      "secondary": [
+        "how much does it cost to build an app",
+        "mobile app cost factors"
+      ],
+      "angle": "The factors that decide what an app costs to build and run (platforms, features, backend, design, integrations, maintenance). No price figures.",
+      "category": "App Development",
+      "categorySlug": "app-development",
+      "supports": "/app-development-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "white-label-app-development-for-agencies",
+      "keyword": "white label app development",
+      "secondary": [
+        "white label development partner",
+        "outsource app development agency"
+      ],
+      "angle": "How white-label app development works for digital and marketing agencies: contracts, NDAs, branding, code ownership, pricing your clients, and how to pick a partner.",
+      "category": "App Development",
+      "categorySlug": "app-development",
+      "supports": "/white-label-app-development",
+      "status": "queued"
+    },
+    {
+      "slug": "scale-app-for-traffic-spikes",
+      "keyword": "scale app for high traffic",
+      "secondary": [
+        "handle traffic spikes",
+        "app crashes during peak traffic"
+      ],
+      "angle": "How to prepare a web or mobile app for predictable traffic spikes (launches, sales, live events, exam results): load testing, caching, autoscaling, queues, monitoring.",
+      "category": "DevOps",
+      "categorySlug": "devops",
+      "supports": "/devops-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "reduce-video-streaming-costs",
+      "keyword": "reduce video streaming cost",
+      "secondary": [
+        "video hosting cost optimisation",
+        "CDN cost reduction"
+      ],
+      "angle": "Practical ways to cut video delivery and cloud bills for apps that stream video: encoding ladders, CDN choice, caching, storage tiers. No invented savings figures.",
+      "category": "DevOps",
+      "categorySlug": "devops",
+      "supports": "/devops-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "nextjs-vs-react-business-website",
+      "keyword": "Next.js vs React for business website",
+      "secondary": [
+        "is Next.js good for SEO",
+        "React website SEO"
+      ],
+      "angle": "When a business website or web app should use Next.js versus a plain React single-page app, with SEO, speed and hosting trade-offs.",
+      "category": "Web Development",
+      "categorySlug": "web-development",
+      "supports": "/web-development-noida",
+      "status": "queued"
+    },
+    {
+      "slug": "mvp-development-guide-startups",
+      "keyword": "MVP development for startups",
+      "secondary": [
+        "how to build an MVP",
+        "MVP development company India"
+      ],
+      "angle": "How to scope, build and launch an MVP without wasting runway: what to cut, what never to cut (security, analytics), and how to work with a development partner.",
+      "category": "Startups",
+      "categorySlug": "startups",
+      "supports": "/custom-software-development-noida",
+      "status": "queued"
+    }
+  ]
+}

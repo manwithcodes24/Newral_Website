@@ -74,7 +74,8 @@ export function organizationGraph() {
           'UI/UX design', 'Product design', 'Design systems', 'Branding', 'Graphic design',
           'Web development', 'Mobile app development', 'React', 'React Native', 'Flutter', 'Next.js',
           'SaaS development', 'Custom software development', 'MVP development',
-          'AI automation', 'DevOps', 'Cloud infrastructure', 'AWS', 'CI/CD',
+          'AI automation', 'AI chatbot development', 'AI agent development', 'Fixing AI-generated apps',
+          'White-label app development', 'DevOps', 'Cloud infrastructure', 'AWS', 'CI/CD',
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',

@@ -15,9 +15,9 @@ import { ORG_ID } from '../lib/site'
 import { webPage, faqPage } from '../lib/schema'
 import { HOME_FAQS } from '../data/homeFaqs'
 
-const TITLE = 'Newral — UI/UX Design & App Development Agency in Noida, Delhi NCR'
+const TITLE = 'Newral: App & Web Development Company in Noida, India'
 const DESCRIPTION =
-  'Newral is a Noida, Delhi NCR product agency: UI/UX design, branding, website & mobile app development and DevOps for startups and growing businesses. Book a free call.'
+  'Newral is an app and web development company in Noida, Delhi NCR. We design, build and scale mobile apps, websites, SaaS and AI chatbots for startups across India. Free call.'
 
 const HOME_JSONLD = [
   webPage({ path: '/', title: TITLE, description: DESCRIPTION }),

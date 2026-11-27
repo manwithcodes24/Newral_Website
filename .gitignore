@@ -24,3 +24,6 @@ check_errors.cjs
 scratch-*.cjs
 scratch_*.txt
 screenshot_*.png
+
+# Blog pipeline scheduled-run log
+content/blog-drafts/*.log

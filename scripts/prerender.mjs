@@ -267,7 +267,13 @@ console.log('  ✓ 404.html')
       '',
       `URL: ${absUrl(`/blog/${p.slug}`)} · Published ${p.date}${p.updated ? ` · Updated ${p.updated}` : ''}`,
       '',
-      ...p.content.filter((b) => b.type !== 'cta').map((b) => (b.type === 'h2' ? `### ${b.text}\n` : `${b.text}\n`)),
+      ...p.content.filter((b) => b.type !== 'cta').map((b) => {
+        if (b.type === 'h2') return `### ${b.text}\n`
+        if (b.type === 'h3') return `#### ${b.text}\n`
+        if (b.type === 'ul') return `${b.items.map((i) => `- ${i}`).join('\n')}\n`
+        return `${b.text}\n`
+      }),
+      ...(p.faq || []).flatMap((f) => [`**Q: ${f.q}**`, '', f.a, '']),
     ]),
   ].join('\n')
   writeFile('llms-full.txt', full)

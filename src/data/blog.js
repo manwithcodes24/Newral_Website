@@ -1,7 +1,22 @@
 // Blog post data — each entry drives one static blog page.
 // Keep content keyword-rich and locally relevant (Noida/Delhi NCR).
+//
+// Two sources:
+//  1. HAND_WRITTEN_POSTS below.
+//  2. Approved posts in ./posts/*.json, written by the blog pipeline
+//     (scripts/blog/). Drafts live in content/blog-drafts/, outside src/, so
+//     an unreviewed draft can never be built or deployed. A draft only gets
+//     here when someone runs `npm run blog:approve -- <slug>` after reading it.
+//
+// Block types: intro, h2, h3, p, ul ({ items: [] }), cta ({ text, href }).
+// Optional post fields: faq ([{ q, a }], rendered on the page and as FAQPage
+// JSON-LD) and author ('founder' credits Yash Rajan Shukla; default: Newral).
 
-export const BLOG_POSTS = [
+const APPROVED_POSTS = Object.values(
+  import.meta.glob('./posts/*.json', { eager: true, import: 'default' })
+)
+
+const HAND_WRITTEN_POSTS = [
   {
     slug: 'ui-ux-design-cost-noida',
     title: 'UI/UX Design Cost in Noida & Delhi NCR: 2026 Pricing Guide',
@@ -359,6 +374,9 @@ export const BLOG_POSTS = [
     ],
   },
 ]
+
+// Newest first, by first-published date.
+export const BLOG_POSTS = [...APPROVED_POSTS, ...HAND_WRITTEN_POSTS].sort((a, b) => b.date.localeCompare(a.date))
 
 export const getBlogPost = (slug) => BLOG_POSTS.find(p => p.slug === slug)
 export const getBlogPostsByCategory = (categorySlug) =>

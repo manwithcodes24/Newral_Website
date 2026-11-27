@@ -51,7 +51,7 @@ export default function Hero() {
 
         {/* Single semantic H1 for SEO; the stylised lines below are visual only */}
         <h1 className="sr-only">
-          UI/UX Design &amp; App Development Agency in Noida, Delhi NCR — Newral builds products that scale beautifully.
+          App &amp; Web Development Company in Noida, India — Newral builds products that scale beautifully.
         </h1>
 
         <div className={styles.title} aria-hidden="true">

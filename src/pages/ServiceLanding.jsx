@@ -293,7 +293,7 @@ export default function ServiceLanding() {
             {SERVICES.filter((s) => s.slug !== service.slug).map((s, idx, arr) => (
               <span key={s.slug}>
                 <Link to={`/${s.slug}`} className={styles.relatedLink} style={{ '--accent-color': service.color }}>
-                  {s.nav} in Noida
+                  {s.local === false ? s.nav : `${s.nav} in Noida`}
                 </Link>
                 {idx < arr.length - 1 ? ' · ' : ''}
               </span>
