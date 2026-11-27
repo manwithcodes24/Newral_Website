@@ -21,6 +21,10 @@ const SERVICES = [
   { label: 'SaaS Development', href: '/saas-development-noida' },
   { label: 'AI Automation', href: '/ai-automation-noida' },
   { label: 'Custom Software & MVP', href: '/custom-software-development-noida' },
+  { label: 'EdTech App Development', href: '/edtech-app-development' },
+  { label: 'AI Chatbot Development', href: '/ai-chatbot-development' },
+  { label: 'Fix an AI-Built App', href: '/fix-ai-built-app' },
+  { label: 'White-Label Development', href: '/white-label-app-development' },
 ]
 
 export default function Footer() {

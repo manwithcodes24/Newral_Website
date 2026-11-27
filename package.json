@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "build:spa": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "blog:draft": "node scripts/blog/draft.mjs",
+    "blog:approve": "node scripts/blog/approve.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

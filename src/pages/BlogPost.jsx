@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useSeo, SITE_URL } from '../hooks/useSeo'
-import { ORG_ID } from '../lib/site'
-import { breadcrumbs } from '../lib/schema'
+import { ORG_ID, FOUNDER } from '../lib/site'
+import { breadcrumbs, faqPage, FOUNDER_ID } from '../lib/schema'
 import { getBlogPost, BLOG_POSTS } from '../data/blog'
 import Footer from '../components/Footer'
 import { A } from '../lib/assets'
@@ -14,6 +14,8 @@ function formatDate(iso) {
     day: 'numeric',
   })
 }
+
+const blockText = (b) => (b.items ? b.items.join(' ') : b.text || '')
 
 function formatDateShort(iso) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -30,8 +32,16 @@ function Block({ block }) {
       return <p className={styles.intro}>{block.text}</p>
     case 'h2':
       return <h2 className={styles.h2}>{block.text}</h2>
+    case 'h3':
+      return <h3 className={styles.h3}>{block.text}</h3>
     case 'p':
       return <p className={styles.p}>{block.text}</p>
+    case 'ul':
+      return (
+        <ul className={styles.list}>
+          {block.items.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      )
     case 'cta':
       return (
         <div className={styles.ctaBlock}>
@@ -69,15 +79,21 @@ export default function BlogPost() {
               dateModified: post.updated || post.date,
               inLanguage: 'en-IN',
               articleSection: post.category,
-              wordCount: post.content.reduce((n, b) => n + b.text.split(/\s+/).length, 0),
+              wordCount: post.content.reduce((n, b) => n + blockText(b).split(/\s+/).length, 0),
               image: `${SITE_URL}/og-cover.jpg`,
-              // TODO(owner): switch to a named Person author (with bio + LinkedIn) for stronger E-E-A-T
-              author: { '@type': 'Organization', '@id': ORG_ID, name: 'Newral', url: `${SITE_URL}/` },
+              // Posts with `author: 'founder'` (set when the founder has reviewed the post)
+              // credit a named Person for stronger E-E-A-T; the rest credit the company.
+              author:
+                post.author === 'founder'
+                  ? { '@type': 'Person', '@id': FOUNDER_ID, name: FOUNDER.name, url: FOUNDER.linkedin }
+                  : { '@type': 'Organization', '@id': ORG_ID, name: 'Newral', url: `${SITE_URL}/` },
               publisher: { '@id': ORG_ID },
               isPartOf: { '@id': `${SITE_URL}/blog#blog` },
               mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
             },
             breadcrumbs([['Home', '/'], ['Blog', '/blog'], [post.title, `/blog/${post.slug}`]]),
+            // FAQ markup only where the same questions are visible on the page (rendered below)
+            ...(post.faq?.length ? [faqPage(post.faq)] : []),
           ],
         }
       : { title: 'Post Not Found | Newral', description: '', path: `/blog/${slug}`, noindex: true }
@@ -122,6 +138,14 @@ export default function BlogPost() {
               )}
               <span className={styles.headerDot} aria-hidden="true" />
               <span className={styles.headerRead}>{post.readTime}</span>
+              {post.author === 'founder' && (
+                <>
+                  <span className={styles.headerDot} aria-hidden="true" />
+                  <span className={styles.headerRead}>
+                    By <a href={FOUNDER.linkedin} target="_blank" rel="noopener noreferrer author">{FOUNDER.name}</a>
+                  </span>
+                </>
+              )}
             </div>
             <h1 className={styles.headerTitle}>{post.title}</h1>
             <p className={styles.headerExcerpt}>{post.excerpt}</p>
@@ -136,6 +160,17 @@ export default function BlogPost() {
             {post.content.map((block, i) => (
               <Block key={i} block={block} />
             ))}
+            {post.faq?.length > 0 && (
+              <>
+                <h2 className={styles.h2}>Frequently asked questions</h2>
+                {post.faq.map((f) => (
+                  <div key={f.q}>
+                    <h3 className={styles.h3}>{f.q}</h3>
+                    <p className={styles.p}>{f.a}</p>
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </section>

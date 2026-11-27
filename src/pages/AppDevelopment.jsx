@@ -517,11 +517,14 @@ export default function AppDevelopment() {
               ['saas-development-noida', 'SaaS Development'],
               ['ai-automation-noida', 'AI Automation'],
               ['custom-software-development-noida', 'Custom Software'],
+              ['edtech-app-development', 'EdTech App Development', false],
+              ['ai-chatbot-development', 'AI Chatbot Development', false],
+              ['fix-ai-built-app', 'AI-Built App Rescue', false],
             ]
               .filter(([sl]) => sl !== service.slug)
-              .map(([sl, label], idx, arr) => (
+              .map(([sl, label, local = true], idx, arr) => (
                 <span key={sl}>
-                  <Link to={`/${sl}`} className={styles.relatedLink} style={{ '--accent-color': service.color }}>{label} in Noida</Link>
+                  <Link to={`/${sl}`} className={styles.relatedLink} style={{ '--accent-color': service.color }}>{local ? `${label} in Noida` : label}</Link>
                   {idx < arr.length - 1 ? ' · ' : ''}
                 </span>
               ))}
